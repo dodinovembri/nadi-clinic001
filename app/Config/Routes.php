@@ -36,7 +36,12 @@ $routes->get('ext-login', [\App\Controllers\Extranet\Authcontroller::class, 'log
 $routes->post('ext-auth', [\App\Controllers\Extranet\Authcontroller::class, 'auth']);
 $routes->get('ext-logout', [\App\Controllers\Extranet\Authcontroller::class, 'logout']);
 $routes->group('extranet', ['filter' => 'auth'], function($routes){
-	$routes->get('/', [\App\Controllers\Extranet\Extranethomecontroller::class, 'index']);
+	$routes->get('/', [\App\Controllers\Extranet\HomeExtranetController::class, 'index']);
+
+	$routes->group('config', function ($routes) {
+		$routes->get('/', [\App\Controllers\Extranet\ConfigController::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\ConfigController::class, 'update']);
+    });	
 
 	$routes->group('prospective-customer', function ($routes) {
 		$routes->get('/', [\App\Controllers\Extranet\ProspectiveCustomerController::class, 'index']);
