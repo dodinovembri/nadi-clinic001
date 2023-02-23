@@ -125,174 +125,66 @@
 					<h3 class="box_header"><?= $config->latest_news_label ?></h3>
 					<div class="columns clearfix">
 						<ul class="blog column_left">
-							<li class="post">
-								<ul class="comment_box clearfix">
-									<li class="date">
-										<div class="value">12 DEC 12</div>
-										<div class="arrow_date"></div>
-									</li>
-									<li class="comments_number">
-										<a href="indexb878.html?page=post#comments_list" title="2 comments">
-											2
+							<?php foreach ($blogs as $key => $value) { ?>
+								<li class="post">
+									<ul class="comment_box clearfix">
+										<li class="date">
+											<div class="value"><?= $value->date ?></div>
+											<div class="arrow_date"></div>
+										</li>
+										<li class="comments_number">
+											<a href="<?= base_url('blog/show/' . $value->id) ?>">2</a>
+										</li>
+									</ul>
+									<div class="post_content">
+										<a class="post_image" href="<?= base_url('blog/show/' . $value->id) ?>">
+											<img src="<?= base_url('assets/images/blog/' . $value->image) ?>" alt="" />
 										</a>
-									</li>
-								</ul>
-								<div class="post_content">
-									<a class="post_image" href="indexb878.html?page=post" title="Lorem ipsum dolor sit amat velum">
-										<img src="<?= base_url('assets/images/') ?>samples/480x300/image_03.jpg" alt="" />
-									</a>
-									<h2>
-										<a href="indexb878.html?page=post" title="Lorem ipsum dolor sit amat velum">
-											Lorem ipsum dolor sit amat velum
-										</a>
-									</h2>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin.
-										Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit.
-										Mauris adipiscing mauris.
-									</p>
-									<div class="post_footer">
-										<ul class="post_footer_details">
-											<li>Posted in </li>
-											<li>
-												<a href="#" title="General">
-													General,
-												</a>
-											</li>
-											<li>
-												<a href="#" title="Dental clinic">
-													Dental clinic
-												</a>
-											</li>
-										</ul>
+										<h2><a href="<?= base_url('blog/show/' . $value->id) ?>"><?= $value->title ?></a></h2>
+										<p><?= $value->description ?></p>
+										<div class="post_footer">
+											<ul class="post_footer_details">
+												<li>Posted in </li>
+												<li><a href="#" title="General">General,</a></li>
+												<li><a href="#" title="Dental clinic">Dental clinic</a></li>
+											</ul>
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="post">
-								<ul class="comment_box clearfix">
-									<li class="date">
-										<div class="value">11 DEC 12</div>
-										<div class="arrow_date"></div>
-									</li>
-									<li class="comments_number">
-										<a href="indexb878.html?page=post#comments_list" title="8 comments">
-											8
-										</a>
-									</li>
-								</ul>
-								<div class="post_content">
-									<h2>
-										<a href="indexb878.html?page=post" title="Lorem ipsum dolor sit amat velum">
-											Lorem ipsum dolor sit amat velum
-										</a>
-									</h2>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin.
-										Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit.
-										Mauris adipiscing mauris.
-									</p>
-									<div class="post_footer">
-										<ul class="post_footer_details">
-											<li>Posted in</li>
-											<li>
-												<a href="#" title="General">
-													General,
-												</a>
-											</li>
-											<li>
-												<a href="#" title="Outpatient surgery">
-													Outpatient surgery
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</li>
+								</li>
+							<?php if($key == 1) break; } ?>
 						</ul>
 						<ul class="blog column_right">
-							<li class="post">
-								<ul class="comment_box clearfix">
-									<li class="date">
-										<div class="value">12 DEC 12</div>
-										<div class="arrow_date"></div>
-									</li>
-									<li class="comments_number">
-										<a href="indexb878.html?page=post#comments_list" title="3 comments">
-											3
+							<?php foreach ($blogs as $key => $value) { if ($key <= 1) continue; ?>								
+								<li class="post">
+									<ul class="comment_box clearfix">
+										<li class="date">
+											<div class="value"><?= $value->date ?></div>
+											<div class="arrow_date"></div>
+										</li>
+										<li class="comments_number">
+											<a href="<?= base_url('blog/show/' . $value->id) ?>" title="5 comments">5</a>
+										</li>
+									</ul>
+									<div class="post_content">
+										<a class="post_image" href="<?= base_url('blog/show/' . $value->id) ?>">
+											<img src="<?= base_url('assets/images/blog/' . $value->image) ?>" alt="" />
 										</a>
-									</li>
-								</ul>
-								<div class="post_content">
-									<h2>
-										<a href="indexb878.html?page=post" title="Lorem ipsum dolor sit amat velum">
-											Lorem ipsum dolor sit amat velum
-										</a>
-									</h2>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin.
-										Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit.
-										Mauris adipiscing mauris.
-									</p>
-									<div class="post_footer">
-										<ul class="post_footer_details">
-											<li>Posted in </li>
-											<li>
-												<a href="#" title="General">
-													General,
-												</a>
-											</li>
-											<li>
-												<a href="#" title="Dental clinic">
-													Dental clinic
-												</a>
-											</li>
-										</ul>
+										<h2>
+											<a href="<?= base_url('blog/show/' . $value->id) ?>"><?= $value->title ?></a>
+										</h2>
+										<p>
+											<?= $value->description ?>
+										</p>
+										<div class="post_footer">
+											<ul class="post_footer_details">
+												<li>Posted in</li>
+												<li><a href="#" title="General">General,</a></li>
+												<li><a href="#" title="Outpatient surgery">Outpatient surgery</a></li>
+											</ul>
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="post">
-								<ul class="comment_box clearfix">
-									<li class="date">
-										<div class="value">11 DEC 12</div>
-										<div class="arrow_date"></div>
-									</li>
-									<li class="comments_number">
-										<a href="indexb878.html?page=post#comments_list" title="5 comments">
-											5
-										</a>
-									</li>
-								</ul>
-								<div class="post_content">
-									<a class="post_image" href="indexb878.html?page=post" title="Lorem ipsum dolor sit amat velum">
-										<img src="<?= base_url('assets/images/') ?>samples/480x300/image_02.jpg" alt="" />
-									</a>
-									<h2>
-										<a href="indexb878.html?page=post" title="Lorem ipsum dolor sit amat velum">
-											Lorem ipsum dolor sit amat velum
-										</a>
-									</h2>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin.
-										Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit.
-										Mauris adipiscing mauris.
-									</p>
-									<div class="post_footer">
-										<ul class="post_footer_details">
-											<li>Posted in</li>
-											<li>
-												<a href="#" title="General">
-													General,
-												</a>
-											</li>
-											<li>
-												<a href="#" title="Outpatient surgery">
-													Outpatient surgery
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</li>
+								</li>
+							<?php if($key == 3) break; } ?>
 						</ul>
 					</div>
 					<div class="show_all clearfix">

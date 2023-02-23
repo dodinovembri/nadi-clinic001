@@ -9,6 +9,7 @@ use App\Models\SliderFeatureModel;
 use App\Models\FooterFeatureModel;
 use App\Models\ConfigSocialMediaModel;
 use App\Models\AppointmentTypeModel;
+use App\Models\BlogModel;
 
 class Homecontroller extends BaseController
 {
@@ -34,7 +35,10 @@ class Homecontroller extends BaseController
         $data['social_medias'] = $config_social_media->get()->getResult();   
         // apppointment type
         $appointment = new AppointmentTypeModel();
-        $data['appointment_types'] = $appointment->get()->getResult();                           
+        $data['appointment_types'] = $appointment->get()->getResult();  
+        // blog
+        $blog = new BlogModel();
+        $data['blogs'] = $blog->get()->getResult();                                   
 
         return view('frontend/home/index', $data);
     }
