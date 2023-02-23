@@ -186,27 +186,27 @@
 									<div class="row">
 										<div class="col-md-6 form-group mb-3">
 											<label for="picker2">About Us - Title</label>
-											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config->title ?>" />
+											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config_about->title ?>" />
 										</div>
 										<div class="col-md-6 form-group mb-3">
 											<label for="picker2">About Us - Description</label>
-											<textarea class="form-control" id="picker2" rows="5" placeholder="Enter address" name="address"><?= $config->description ?></textarea>
+											<textarea class="form-control" id="picker2" rows="5" placeholder="Enter address" name="address"><?= $config_about->description ?></textarea>
 										</div>
 										<div class="col-md-6 form-group mb-3">
 											<label for="picker2">Motto</label>
-											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config->motto ?>" />
+											<textarea class="form-control" id="picker2" rows="5" placeholder="Enter address" name="address"><?= $config_about->motto ?></textarea>
 										</div>
 										<div class="col-md-6 form-group mb-3">
 											<label for="picker2">Motto By</label>
-											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config->motto_by ?>" />
+											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config_about->motto_by ?>" />
 										</div>
 										<div class="col-md-6 form-group mb-3">
 											<label for="picker2">Our Features</label>
-											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config->our_feature ?>" />
+											<textarea class="form-control" id="picker2" rows="5" placeholder="Enter address" name="address"><?= $config_about->our_feature ?></textarea>
 										</div>
 										<div class="col-md-6 form-group mb-3">
-											<label for="picker2">Our Feature</label>
-											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config->our_feature ?>" />
+											<label for="picker2">Our Feature By</label>
+											<input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $config_about->our_feature_by ?>" />
 										</div>										
 									</div>
 								</div>

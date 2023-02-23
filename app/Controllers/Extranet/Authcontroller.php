@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Extranet;
 use App\Models\UserModel;
+use App\Models\ConfigModel;
 
 class Authcontroller extends BaseController
 {
@@ -12,7 +13,10 @@ class Authcontroller extends BaseController
 
     public function login()
     {
-        return view('extranet/auth/login');
+        $config = new ConfigModel();
+        $data['config'] = $config->get()->getFirstRow();
+
+        return view('extranet/auth/login', $data);
     }
 
     public function save()
