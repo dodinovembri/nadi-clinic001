@@ -188,7 +188,7 @@
 						</ul>
 					</div>
 					<div class="show_all clearfix">
-						<a class="more" href="indexf6f2.html?page=blog" title="Show all">
+						<a class="more" href="#" title="Show all">
 							Show all &rarr;
 						</a>
 					</div>
