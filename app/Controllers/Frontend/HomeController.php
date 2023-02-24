@@ -3,6 +3,7 @@
 namespace App\Controllers\Frontend;
 
 use App\Models\ConfigModel;
+use App\Models\ConfigMenuModel;
 use App\Models\DepartmentModel;
 use App\Models\SliderModel;
 use App\Models\SliderFeatureModel;
@@ -10,6 +11,7 @@ use App\Models\FooterFeatureModel;
 use App\Models\ConfigSocialMediaModel;
 use App\Models\AppointmentTypeModel;
 use App\Models\BlogModel;
+use App\Models\TweetModel;
 
 class Homecontroller extends BaseController
 {
@@ -18,6 +20,9 @@ class Homecontroller extends BaseController
         // configuration
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
+        // configuration menu
+        $config_menu = new ConfigMenuModel();
+        $data['config_menu'] = $config_menu->get()->getFirstRow();        
         // department
         $department = new DepartmentModel();
         $data['departments'] = $department->get()->getResult();
@@ -38,7 +43,19 @@ class Homecontroller extends BaseController
         $data['appointment_types'] = $appointment->get()->getResult();  
         // blog
         $blog = new BlogModel();
-        $data['blogs'] = $blog->get()->getResult();                                   
+        $data['blogs'] = $blog->get()->getResult();  
+        $db = \Config\Database::connect();
+        $data['blogs'] = $db->query('
+            SELECT 
+                blogs.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')->getResult(); 
+        // tweets
+        $tweet = new TweetModel();
+        $data['tweets'] = $tweet->get()->getResult();                                  
 
         return view('frontend/home/index', $data);
     }

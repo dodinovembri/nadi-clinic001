@@ -1,0 +1,80 @@
+CRITICAL - 2023-02-24 07:38:17 --> Undefined property: stdClass::$our
+in APPPATH\Views\frontend\home\index.php on line 45.
+ 1 APPPATH\Views\frontend\home\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$our', 'APPPATH\\Views\\frontend\\home\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(60): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 07:38:59 --> Undefined property: stdClass::$our
+in APPPATH\Views\frontend\home\index.php on line 45.
+ 1 APPPATH\Views\frontend\home\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$our', 'APPPATH\\Views\\frontend\\home\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(60): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 07:39:12 --> Undefined property: stdClass::$our_doctor
+in APPPATH\Views\frontend\home\index.php on line 45.
+ 1 APPPATH\Views\frontend\home\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$our_doctor', 'APPPATH\\Views\\frontend\\home\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(60): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 07:43:17 --> Undefined property: stdClass::$medical_care
+in APPPATH\Views\frontend\home\index.php on line 46.
+ 1 APPPATH\Views\frontend\home\index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$medical_care', 'APPPATH\\Views\\frontend\\home\\index.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(60): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 07:54:03 --> Undefined property: stdClass::$opening_hour
+in APPPATH\Views\frontend\home\index.php on line 106.
+ 1 APPPATH\Views\frontend\home\index.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$opening_hour', 'APPPATH\\Views\\frontend\\home\\index.php', 106)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(60): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 08:46:13 --> Invalid file: "frontend/components/style.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('frontend/components/style.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/style', null, true)
+ 3 APPPATH\Views\frontend\home\index.php(13): CodeIgniter\View\View->include('frontend/components/style')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 7 APPPATH\Controllers\Frontend\HomeController.php(60): view('frontend/home/index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-24 09:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-24 09:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-24 09:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-24 09:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-24 09:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-24 09:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
