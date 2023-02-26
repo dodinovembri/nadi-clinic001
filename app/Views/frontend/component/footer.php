@@ -18,15 +18,15 @@
                 <p class="info"><?= $config->short_description ?></p>
                 <ul class="footer_contact_info_container clearfix">
                     <li class="footer_contact_info_row">
-                        <div class="footer_contact_info_left"><?= $config->name ?></div>
+                        <div class="footer_contact_info_left"><?= $config_menu->address ?></div>
                     </li>
-                    <li class="info"><?= $config->address ?></li>
+                    <p class="info"><?= $config->address ?></p>
                 </ul>
                 <ul class="social_icons clearfix">
-                    <?php foreach ($social_medias as $key => $value) { ?>
-                        <li><a class="social_icon <?= $value->icon ?>" href="<?= $value->link ?>" target="_blank">&nbsp;</a>
-                        </li>
-                    <?php } ?>
+                    <li><a class="social_icon facebook" href="<?= $config->facebook_url ?>" target="_blank">&nbsp;</a></li>
+                    <li><a class="social_icon googleplus" href="<?= $config->googleplus_url ?>" target="_blank">&nbsp;</a></li>
+                    <li><a class="social_icon mail" href="<?= $config->mail_url ?>" target="_blank">&nbsp;</a></li>
+                    <li><a class="social_icon forrst" href="<?= $config->forrst_url ?>" target="_blank">&nbsp;</a></li>
                 </ul>
             </div>
             <div class="footer_box">

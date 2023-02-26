@@ -78,3 +78,553 @@ INFO - 2023-02-24 09:12:36 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-02-24 09:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-02-24 09:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-02-24 09:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-24 11:46:54 --> mysqli_sql_exception: Table 'nadi-clinic001.config_menus' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(25): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#11 {main}
+CRITICAL - 2023-02-24 11:46:54 --> Table 'nadi-clinic001.config_menus' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `config_menus`', [], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Frontend\HomeController.php(25): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 11:53:31 --> Undefined variable $departments
+in APPPATH\Views\frontend\component\header.php on line 24.
+ 1 APPPATH\Views\frontend\component\header.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departments', 'APPPATH\\Views\\frontend\\component\\header.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\component\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/component/header', null, true)
+ 5 APPPATH\Views\frontend\blog\index.php(18): CodeIgniter\View\View->include('frontend/component/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 9 APPPATH\Controllers\Frontend\BlogController.php(27): view('frontend/blog/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 11:53:55 --> Undefined variable $departments
+in APPPATH\Views\frontend\component\header.php on line 24.
+ 1 APPPATH\Views\frontend\component\header.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departments', 'APPPATH\\Views\\frontend\\component\\header.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\component\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/component/header', null, true)
+ 5 APPPATH\Views\frontend\blog\index.php(18): CodeIgniter\View\View->include('frontend/component/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 9 APPPATH\Controllers\Frontend\BlogController.php(27): view('frontend/blog/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 11:56:26 --> Undefined variable $blogs
+in APPPATH\Views\frontend\component\footer.php on line 46.
+ 1 APPPATH\Views\frontend\component\footer.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $blogs', 'APPPATH\\Views\\frontend\\component\\footer.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\component\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/component/footer', null, true)
+ 5 APPPATH\Views\frontend\blog\index.php(628): CodeIgniter\View\View->include('frontend/component/footer')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 9 APPPATH\Controllers\Frontend\BlogController.php(31): view('frontend/blog/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 11:58:18 --> Class "App\Controllers\Frontend\BlogModel" not found
+in APPPATH\Controllers\Frontend\BlogController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 12:13:49 --> Undefined property: stdClass::$read_more
+in APPPATH\Views\frontend\blog\index.php on line 71.
+ 1 APPPATH\Views\frontend\blog\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$read_more', 'APPPATH\\Views\\frontend\\blog\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 5 APPPATH\Controllers\Frontend\BlogController.php(48): view('frontend/blog/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 12:14:08 --> Undefined property: stdClass::$read_more
+in APPPATH\Views\frontend\blog\index.php on line 71.
+ 1 APPPATH\Views\frontend\blog\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$read_more', 'APPPATH\\Views\\frontend\\blog\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 5 APPPATH\Controllers\Frontend\BlogController.php(48): view('frontend/blog/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 12:14:09 --> Undefined property: stdClass::$read_more
+in APPPATH\Views\frontend\blog\index.php on line 71.
+ 1 APPPATH\Views\frontend\blog\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$read_more', 'APPPATH\\Views\\frontend\\blog\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 5 APPPATH\Controllers\Frontend\BlogController.php(48): view('frontend/blog/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 12:14:11 --> Undefined property: stdClass::$read_more
+in APPPATH\Views\frontend\blog\index.php on line 71.
+ 1 APPPATH\Views\frontend\blog\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$read_more', 'APPPATH\\Views\\frontend\\blog\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 5 APPPATH\Controllers\Frontend\BlogController.php(48): view('frontend/blog/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:12:44 --> mysqli_sql_exception: Unknown column 'blogs.blog_gallery_id' in 'on clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(36): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:12:44 --> Unknown column 'blogs.blog_gallery_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(36): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                blogs.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            LEFT JOIN blog_galleries
+            ON blogs.blog_gallery_id = blog_galleries.id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:13:18 --> mysqli_sql_exception: Unknown column 'blog_galleries.blog_category_id' in 'on clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(36): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:13:18 --> Unknown column 'blog_galleries.blog_category_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(36): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                blogs.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            LEFT JOIN blog_galleries
+            ON blogs.id = blog_galleries.blog_category_id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:13:32 --> mysqli_sql_exception: Unknown column 'blog_galleries.blog_id' in 'on clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(36): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:13:32 --> Unknown column 'blog_galleries.blog_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(36): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                blogs.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            LEFT JOIN blog_galleries
+            ON blogs.id = blog_galleries.blog_id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:22:12 --> mysqli_sql_exception: Unknown table 'nadi-clinic001.about' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(50): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:22:12 --> Unknown table 'nadi-clinic001.about'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(50): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:22:39 --> mysqli_sql_exception: Unknown table 'nadi-clinic001.about' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(50): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:22:39 --> Unknown table 'nadi-clinic001.about'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(50): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:23:12 --> mysqli_sql_exception: Unknown table 'nadi-clinic001.about' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(50): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:23:12 --> Unknown table 'nadi-clinic001.about'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(50): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:23:56 --> mysqli_sql_exception: Unknown table 'nadi-clinic001.about' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(49): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:23:56 --> Unknown table 'nadi-clinic001.about'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(49): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:25:41 --> mysqli_sql_exception: Unknown column 'about_galleries.about_id' in 'on clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:25:41 --> Unknown column 'about_galleries.about_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            about_galleries.image as about_image
+            FROM about JOIN about_galleries
+            ON about.id = about_galleries.about_id
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:30:01 --> mysqli_sql_exception: Table 'nadi-clinic001.about_image' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:30:01 --> Table 'nadi-clinic001.about_image' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            (SELECT image from about_image as about_image where about_imgae.about_id = about.id)
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:30:24 --> mysqli_sql_exception: Table 'nadi-clinic001.about_image' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:30:24 --> Table 'nadi-clinic001.about_image' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            (SELECT image from about_image as about_galleries where about_imgae.about_id = about.id)
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:30:36 --> mysqli_sql_exception: Table 'nadi-clinic001.about_image' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:30:36 --> Table 'nadi-clinic001.about_image' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            (SELECT image from about_image as about_galleries where about_galleries.about_id = about.id)
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:30:39 --> mysqli_sql_exception: Table 'nadi-clinic001.about_image' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:30:39 --> Table 'nadi-clinic001.about_image' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            (SELECT image from about_image as about_galleries where about_galleries.about_id = about.id)
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:30:50 --> mysqli_sql_exception: Unknown table 'nadi-clinic001.about' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:30:50 --> Unknown table 'nadi-clinic001.about'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            (SELECT image from about_galleries as about_galleries where about_galleries.about_id = about.id)
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 15:31:04 --> mysqli_sql_exception: Subquery returns more than 1 row in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-02-24 15:31:04 --> Subquery returns more than 1 row
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+            about.*,
+            (SELECT image from about_galleries as about_galleries where about_galleries.about_id = about.id)
+            from about
+            WHERE about.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-24 16:07:56 --> mysqli_sql_exception: Table 'nadi-clinic001.config_about' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\AboutController.php(48): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#11 {main}
+CRITICAL - 2023-02-24 16:07:56 --> Table 'nadi-clinic001.config_about' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `config_about`', [], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Frontend\AboutController.php(48): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 16:15:35 --> Attempt to read property "title" on array
+in APPPATH\Views\frontend\about\index.php on line 66.
+ 1 APPPATH\Views\frontend\about\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'APPPATH\\Views\\frontend\\about\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\about\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/about/index', [], true)
+ 5 APPPATH\Controllers\Frontend\AboutController.php(50): view('frontend/about/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-24 16:51:10 --> Undefined property: stdClass::$image1
+in APPPATH\Views\frontend\about\index.php on line 47.
+ 1 APPPATH\Views\frontend\about\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$image1', 'APPPATH\\Views\\frontend\\about\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\about\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/about/index', [], true)
+ 5 APPPATH\Controllers\Frontend\AboutController.php(50): view('frontend/about/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\AboutController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\AboutController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -8,7 +8,6 @@ use App\Models\DepartmentModel;
 use App\Models\SliderModel;
 use App\Models\SliderFeatureModel;
 use App\Models\FooterFeatureModel;
-use App\Models\ConfigSocialMediaModel;
 use App\Models\AppointmentTypeModel;
 use App\Models\BlogModel;
 use App\Models\TweetModel;
@@ -35,9 +34,6 @@ class Homecontroller extends BaseController
         // footer feature
         $footer_feature = new FooterFeatureModel();
         $data['footer_features'] = $footer_feature->get()->getResult();  
-        // social media
-        $config_social_media = new ConfigSocialMediaModel();
-        $data['social_medias'] = $config_social_media->get()->getResult();   
         // apppointment type
         $appointment = new AppointmentTypeModel();
         $data['appointment_types'] = $appointment->get()->getResult();  

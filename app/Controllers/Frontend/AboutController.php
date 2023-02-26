@@ -4,25 +4,56 @@ namespace App\Controllers\Frontend;
 
 use App\Models\ConfigModel;
 use App\Models\ConfigMenuModel;
+use App\Models\DepartmentModel;
 use App\Models\FooterFeatureModel;
-use App\Models\ConfigSocialMediaModel;
+use App\Models\TweetModel;
+use App\Models\AboutModel;
+use App\Models\FaqModel;
+use App\Models\BenefitModel;
+use App\Models\TeamModel;
 
 class AboutController extends BaseController
 {
     public function index()
     {
+        // db connect
+        $db = \Config\Database::connect();
         // configuration
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
         // configuration menu
         $config_menu = new ConfigMenuModel();
-        $data['config_menu'] = $config_menu->get()->getFirstRow();           
+        $data['config_menu'] = $config_menu->get()->getFirstRow();     
+        // department
+        $department = new DepartmentModel();
+        $data['departments'] = $department->get()->getResult();              
         // footer feature
         $footer_feature = new FooterFeatureModel();
-        $data['footer_features'] = $footer_feature->get()->getResult();  
-        // social media
-        $config_social_media = new ConfigSocialMediaModel();
-        $data['social_medias'] = $config_social_media->get()->getResult();                                  
+        $data['footer_features'] = $footer_feature->get()->getResult();
+        // blog
+        $data['blogs'] = $db->query('
+            SELECT 
+                blogs.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')->getResult(); 
+        // tweets
+        $tweet = new TweetModel();
+        $data['tweets'] = $tweet->get()->getResult();
+        // about
+        $about = new AboutModel();
+        $data['about'] = $about->get()->getFirstRow();     
+        // faqs
+        $faq = new FaqModel();
+        $data['faqs'] = $faq->get()->getResult();
+        // benefit
+        $benefit = new BenefitModel();
+        $data['benefits'] = $benefit->get()->getResult(); 
+        // team
+        $team = new TeamModel();
+        $data['teams'] = $team->get()->getResult();                
 
         return view('frontend/about/index', $data);
     }

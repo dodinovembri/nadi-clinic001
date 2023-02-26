@@ -4,8 +4,10 @@ namespace App\Controllers\Frontend;
 
 use App\Models\ConfigModel;
 use App\Models\ConfigMenuModel;
+use App\Models\DepartmentModel;
 use App\Models\FooterFeatureModel;
-use App\Models\ConfigSocialMediaModel;
+use App\Models\BlogModel;
+use App\Models\TweetModel;
 
 class DepartmentController extends BaseController
 {
@@ -16,13 +18,27 @@ class DepartmentController extends BaseController
         $data['config'] = $config->get()->getFirstRow();
         // configuration menu
         $config_menu = new ConfigMenuModel();
-        $data['config_menu'] = $config_menu->get()->getFirstRow();           
+        $data['config_menu'] = $config_menu->get()->getFirstRow(); 
+        // department
+        $department = new DepartmentModel();
+        $data['departments'] = $department->get()->getResult();                  
         // footer feature
-        $footer_feature = new FooterFeatureModel();
-        $data['footer_features'] = $footer_feature->get()->getResult();  
-        // social media
-        $config_social_media = new ConfigSocialMediaModel();
-        $data['social_medias'] = $config_social_media->get()->getResult();                                  
+        $footer_feature = new FooterFeatureModel();  
+        // blog
+        $blog = new BlogModel();
+        $data['blogs'] = $blog->get()->getResult();  
+        $db = \Config\Database::connect();
+        $data['blogs'] = $db->query('
+            SELECT 
+                blogs.*,
+                blog_categories.name as category_name
+            FROM blogs JOIN blog_categories
+            ON blogs.blog_category_id = blog_categories.id
+            WHERE blogs.status != 0
+        ')->getResult(); 
+        // tweets
+        $tweet = new TweetModel();
+        $data['tweets'] = $tweet->get()->getResult();                                
 
         return view('frontend/department/index', $data);
     }

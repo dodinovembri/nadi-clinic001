@@ -1,5 +1,3 @@
-<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Volkhov:400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?= base_url('assets/frontend/') ?>style/reset.css" />
 <link rel="stylesheet" type="text/css" href="<?= base_url('assets/frontend/') ?>style/superfish.css" />
 <link rel="stylesheet" type="text/css" href="<?= base_url('assets/frontend/') ?>style/fancybox/jquery.fancybox.css" />
