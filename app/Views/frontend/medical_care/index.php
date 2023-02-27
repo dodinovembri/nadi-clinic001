@@ -139,71 +139,59 @@
 						<?= ucwords($config_menu->laboratory) ?>
 					</h3>
 					<div class="columns columns_3 page_margin_top clearfix">
+						<?php $each = round($laboratory_feature_count / 3); ?>
 						<ul class="column">
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_small/family.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									Donec ipsum diam, pretium no mollis dapibus risus. Nullam dolor nibh retro pulvinar at interdum eget, suscipit id felis tincidunt risus.
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_small/thumb.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									Donec ipsum diam, pretium no mollis dapibus risus. Nullam dolor nibh retro pulvinar at interdum eget, suscipit id felis tincidunt risus.
-								</div>
-							</li>
+							<?php foreach ($laboratory_features as $key => $value) { ?>
+								<li class="item_content clearfix">
+									<a class="features_image" href="#" title="">
+										<img src="<?= base_url('assets/images/laboratory_feature/' . $value->icon) ?>" alt="" class="animated_element animation-scale" />
+									</a>
+									<div class="text">
+										<?= ucfirst($value->description) ?>
+									</div>
+								</li>
+							<?php if ($key+1 == $each) break;
+							} ?>
 						</ul>
 						<ul class="column">
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_small/briefcase.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									Donec ipsum diam, pretium no mollis dapibus risus. Nullam dolor nibh retro pulvinar at interdum eget, suscipit id felis tincidunt risus.
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_small/info.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									Donec ipsum diam, pretium no mollis dapibus risus. Nullam dolor nibh retro pulvinar at interdum eget, suscipit id felis tincidunt risus.
-								</div>
-							</li>
+							<?php foreach ($laboratory_features as $key => $value) {
+								if ($key < $each) continue; ?>
+								<li class="item_content clearfix">
+									<a class="features_image" href="#" title="">
+										<img src="<?= base_url('assets/images/laboratory_feature/' . $value->icon) ?>" alt="" class="animated_element animation-scale" />
+									</a>
+									<div class="text">
+										<?= ucfirst($value->description) ?>
+									</div>
+								</li>
+							<?php if ($key+1 == $each*2) break;
+							} ?>
 						</ul>
 						<ul class="column">
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_small/stats.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									Donec ipsum diam, pretium no mollis dapibus risus. Nullam dolor nibh retro pulvinar at interdum eget, suscipit id felis tincidunt risus.
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_small/hourglass.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									Donec ipsum diam, pretium no mollis dapibus risus. Nullam dolor nibh retro pulvinar at interdum eget, suscipit id felis tincidunt risus.
-								</div>
-							</li>
+							<?php foreach ($laboratory_features as $key => $value) {
+								if ($key < $each*2) continue; ?>
+								<li class="item_content clearfix">
+									<a class="features_image" href="#" title="">
+										<img src="<?= base_url('assets/images/laboratory_feature/' . $value->icon) ?>" alt="" class="animated_element animation-scale" />
+									</a>
+									<div class="text">
+										<?= ucfirst($value->description) ?>
+									</div>
+								</li>
+							<?php if ($key+1 == $each*3) break;
+							} ?>
 						</ul>
 					</div>
 					<div class="announcement page_margin_top_section clearfix">
 						<ul class="columns no_width">
 							<li class="column_left">
-								<h1>We offer a no obligation a free initial consultation</h1>
-								<p>Fees are an estimate only and may be more depending on your situation</p>
+								<h1><?= ucfirst($config->make_appointment_text_title) ?></h1>
+								<p><?= ucfirst($config->make_appointment_text_subtitle) ?></p>
 							</li>
 							<li class="column_right">
 								<div class="vertical_align">
 									<div class="vertical_align_cell">
-										<a title="Make an Appointment" href="index53a6.html?page=contact" class="more blue medium animated_element animation-slideLeft">Make an Appointment</a>
+										<a title="<?= ucfirst($config_menu->make_an_appointment) ?>" href="#" class="more blue medium animated_element animation-slideLeft"><?= ucfirst($config_menu->make_an_appointment) ?></a>
 									</div>
 								</div>
 							</li>

@@ -66,7 +66,7 @@
 										</a>
 									</h2>
 									<p>
-										<?= substr($value->description, 0, 600) ?>...
+										<?= substr($value->description, 0, 400) ?>...
 									</p>
 									<a title="<?= $config_menu->read_more ?>" href="<?= base_url('blog/show/' . $value->id) ?>" class="more">
 										<?= ucwords($config_menu->read_more) ?> &rarr;
@@ -89,11 +89,11 @@
 							</li>
 						<?php } ?>
 					</ul>
-					<ul class="pagination page_margin_top">
+					<!-- <ul class="pagination page_margin_top">
 						<li class="selected"><a href="#" title="">1</a></li>
 						<li><a href="#" title="">2</a></li>
 						<li><a href="#" title="">3</a></li>
-					</ul>
+					</ul> -->
 				</div>
 				<div class="page_right">
 					<!-- categories -->

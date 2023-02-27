@@ -10,6 +10,7 @@ use App\Models\BlogModel;
 use App\Models\TweetModel;
 use App\Models\MedicalCareModel;
 use App\Models\ClinicModel;
+use App\Models\LaboratoryFeatureModel;
 use App\Models\TestimonialModel;
 
 class MedicalCareController extends BaseController
@@ -52,7 +53,11 @@ class MedicalCareController extends BaseController
         $data['clinics'] = $clinic->get()->getResult();   
         // testimonial
         $testimonial = new TestimonialModel();
-        $data['testimonials'] = $testimonial->get()->getResult();                  
+        $data['testimonials'] = $testimonial->get()->getResult();
+        // laborartory feature
+        $laboratory_feature = new LaboratoryFeatureModel();
+        $data['laboratory_features'] = $laboratory_feature->get()->getResult();
+        $data['laboratory_feature_count'] = $laboratory_feature->countAllResults();                         
 
         return view('frontend/medical_care/index', $data);
     }

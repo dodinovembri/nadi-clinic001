@@ -34,7 +34,7 @@
 			<!-- home box -->
 			<ul class="home_box_container clearfix">
 				<?php foreach ($slider_features as $key => $value) { ?>
-					<li class="home_box light_blue animated_element <?php if ($key == 0) { ?> animation-fadeIn duration-500 <?php } ?> <?php if ($key == 1) { ?> animation-slideRight duration-800 delay-250 <?php } ?>  ">
+					<li class="home_box <?php if ($key == 0) { ?> light_blue animated_element animation-fadeIn duration-500 <?php } ?> <?php if ($key == 1) { ?> blue animated_element animation-slideRight duration-800 delay-250 <?php } ?>  ">
 						<h2><a href="#"><?= $value->title ?></a></h2>
 						<div class="news clearfix">
 							<p class="text"><?= $value->description ?></p><a class="more light icon_small_arrow margin_right_white" href="#" title="<?= $config_menu->read_more ?>"><?= $config_menu->read_more ?></a>

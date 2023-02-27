@@ -22,7 +22,7 @@
                 <a href="#"><?= strtoupper($config_menu->department) ?></a>
                 <ul>
                     <?php foreach ($departments as $key => $value) { ?>
-                        <li><a href="<?= base_url('department/' . $value->name) ?>"><?= $value->name ?></a></li>
+                        <li><a href="<?= base_url('department/' . $value->id) ?>"><?= $value->name ?></a></li>
                     <?php } ?>
                 </ul>
             </li>
@@ -40,7 +40,7 @@
                 <option value="<?= base_url('medical-care') ?>">- <?= ucwords($config_menu->medical_care) ?></option>
                 <option value="<?= base_url('timetable') ?>"><?= strtoupper($config_menu->timetable) ?></option>
                 <?php foreach ($departments as $key => $value) { ?>
-                    <option value="<?= base_url('department/' . $value->name) ?>">- <?= $value->name ?></a></option>
+                    <option value="<?= base_url('department/' . $value->id) ?>">- <?= $value->name ?></a></option>
                 <?php } ?>
                 <option value="<?= base_url('timetable') ?>"><?= strtoupper($config_menu->timetable) ?></option>
                 <option value="<?= base_url('gallery') ?>"><?= strtoupper($config_menu->gallery) ?></option>

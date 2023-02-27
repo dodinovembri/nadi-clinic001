@@ -3,7 +3,6 @@
 namespace App\Controllers\Extranet;
 
 use App\Models\ConfigModel;
-use App\Models\ConfigAboutModel;
 
 class ConfigController extends BaseController
 {
@@ -13,8 +12,6 @@ class ConfigController extends BaseController
     {
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
-        $config_about = new ConfigAboutModel();
-        $data['config_about'] = $config_about->get()->getFirstRow();
 
         return view('extranet/config/index', $data);
     }

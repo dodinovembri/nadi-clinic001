@@ -1,16 +1,12 @@
 <div class="footer_container">
     <div class="footer">
         <ul class="footer_banner_box_container clearfix">
-            <?php $duration = 500;
-            $delay = 0;
-            foreach ($footer_features as $key => $value) { ?>
-                <li class="footer_banner_box super_light_blue animated_element animation-fadeIn duration-<?= $duration ?> delay-<?= $delay ?>">
+            <?php foreach ($footer_features as $key => $value) { ?>
+                <li class="footer_banner_box <?php if($key == 0) { ?> super_light_blue animated_element animation-fadeIn duration-500 <?php  } ?> <?php if($key == 1) { ?> light_blue animated_element animation-slideRight duration-800 delay-250 <?php } ?> <?php if($key == 2) { ?> blue animated_element animation-slideRight200 duration-800 delay-500 <?php } ?>">
                     <h2><?= $value->title ?></h2>
                     <p><a class="icon_small_arrow right_white" href="#"><?= $value->subtitle ?></a></p>
                 </li>
-            <?php $duration = $duration + 300;
-                $delay = $delay + 250;
-            } ?>
+            <?php } ?>
         </ul>
         <div class="footer_box_container clearfix">
             <div class="footer_box">
