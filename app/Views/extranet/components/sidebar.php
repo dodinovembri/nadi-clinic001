@@ -17,6 +17,7 @@
             <li class="nav-item"><a href="<?= base_url('extranet/laboratory-feature') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Laboratory Features</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/testimonial') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Testimonials</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/tweet') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Tweets</span></a></li>
+            <li class="nav-item"><a href="<?= base_url('extranet/gallery') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Gallery</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/faq') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">FAQ</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/about') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">About</span></a></li>
         </ul>

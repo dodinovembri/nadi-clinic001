@@ -43,91 +43,53 @@
 								<ul class="clearfix tabs_box_navigation sf-menu">
 									<li class="tabs_box_navigation_selected submenu wide" aria-haspopup="true">
 										<input type="hidden" name="department" value="" />
-										<span>Select department</span>
+										<span><?= ucwords($config_menu->select_department) ?></span>
 										<ul>
-											<li>
-												<a href="#laryngological-clinic" title="Laryngological Clinic">
-													Laryngological Clinic
-												</a>
-											</li>
-											<li>
-												<a href="#primary-health-care" title="Primary Health Care">
-													Primary Health Care
-												</a>
-											</li>
-											<li>
-												<a href="#ophthalmology-clinic" title="Ophthalmology Clinic">
-													Ophthalmology Clinic
-												</a>
-											</li>
-											<li>
-												<a href="#pediatric-clinic" title="Pediatric Clinic">
-													Pediatric Clinic
-												</a>
-											</li>
-											<li>
-												<a href="#dental-clinic" title="Dental Clinic">
-													Dental Clinic
-												</a>
-											</li>
-											<li>
-												<a href="#outpatient-surgery" title="Outpatient Surgery">
-													Outpatient Surgery
-												</a>
-											</li>
-											<li>
-												<a href="#outpatient-rehabilitation" title="Outpatient Rehabilitation">
-													Outpatient Rehabilitation
-												</a>
-											</li>
-											<li>
-												<a href="#gynaecological-clinic" title="Gynaecological Clinic">
-													Gynaecological Clinic
-												</a>
-											</li>
-											<li>
-												<a href="#cardiac-clinic" title="Cardiac Clinic">
-													Cardiac Clinic
-												</a>
-											</li>
+											<?php foreach ($departments as $key => $value) { ?>
+												<li>
+													<a href="#<?= $value->id ?>" title="<?= $value->name ?>">
+														<?= $value->name ?>
+													</a>
+												</li>
+											<?php } ?>
 										</ul>
 									</li>
 								</ul>
 								<fieldset class="left">
-									<label>First Name</label>
+									<label><?= ucwords($config_menu->first_name) ?></label>
 									<div class="block">
 										<input class="text_input" name="first_name" type="text" value="" />
 									</div>
-									<label>Date of Birth (mm/dd/yyyy)</label>
+									<label><?= ucwords($config_menu->date_of_birth) ?></label>
 									<div class="block">
 										<input class="text_input" type="text" name="date_of_birth" value="" />
 									</div>
-									<label>Phone Number</label>
+									<label><?= ucwords($config_menu->phone_number) ?></label>
 									<div class="block">
 										<input class="text_input" name="phone_number" type="text" value="" />
 									</div>
 								</fieldset>
 								<fieldset class="right">
-									<label>Last Name</label>
+									<label><?= ucwords($config_menu->last_name) ?></label>
 									<div class="block">
 										<input class="text_input" type="text" name="last_name" value="" />
 									</div>
-									<label>Social Security Number</label>
+									<label><?= ucwords($config_menu->code_number) ?></label>
 									<div class="block">
-										<input class="text_input" type="text" name="social_security_number" value="" />
+										<input class="text_input" type="text" name="code_number" value="" />
 									</div>
-									<label>E-mail</label>
+									<label><?= ucwords($config_menu->email) ?></label>
 									<div class="block">
 										<input class="text_input" type="text" name="email" value="" />
 									</div>
 								</fieldset>
 								<fieldset style="clear:both;">
-									<label>Reason of Appointment</label>
+									<label><?= ucwords($config_menu->reason_of_appointment) ?></label>
 									<div class="block">
 										<textarea name="message"></textarea>
 									</div>
 									<input type="hidden" name="action" value="contact_form" />
-									<input type="submit" name="submit" value="Send" class="more blue" />
+									<input type="submit" name="submit" value="<?= ucwords($config_menu->send) ?>" class="more blue" />
 								</fieldset>
 							</form>
 						</div>

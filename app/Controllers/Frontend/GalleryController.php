@@ -5,6 +5,7 @@ namespace App\Controllers\Frontend;
 use App\Models\ConfigModel;
 use App\Models\ConfigMenuModel;
 use App\Models\DepartmentModel;
+use App\Models\DepartmentGalleryModel;
 use App\Models\FooterFeatureModel;
 use App\Models\BlogModel;
 use App\Models\TweetModel;
@@ -39,7 +40,10 @@ class GalleryController extends BaseController
         ')->getResult(); 
         // tweets
         $tweet = new TweetModel();
-        $data['tweets'] = $tweet->get()->getResult();                           
+        $data['tweets'] = $tweet->get()->getResult(); 
+        // department gallery
+        $department_gallery = new DepartmentGalleryModel();
+        $data['department_galleries'] = $department_gallery->get()->getResult();                                   
 
         return view('frontend/gallery/index', $data);
     }
