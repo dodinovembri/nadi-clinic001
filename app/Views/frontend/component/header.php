@@ -18,14 +18,7 @@
                     <li><a href="<?= base_url('medical-care') ?>"><?= ucwords($config_menu->medical_care) ?></a></li>
                 </ul>
             </li>
-            <li class="submenu wide">
-                <a href="#"><?= strtoupper($config_menu->department) ?></a>
-                <ul>
-                    <?php foreach ($departments as $key => $value) { ?>
-                        <li><a href="<?= base_url('department/' . $value->id) ?>"><?= $value->name ?></a></li>
-                    <?php } ?>
-                </ul>
-            </li>
+            <li><a href="<?= base_url('department') ?>"><?= strtoupper($config_menu->department) ?></a></li>
             <li><a href="<?= base_url('timetable') ?>"><?= strtoupper($config_menu->timetable) ?></a></li>
             <li><a href="<?= base_url('gallery') ?>"><?= strtoupper($config_menu->gallery) ?></a></li>
             <li><a href="<?= base_url('contact') ?>"><?= strtoupper($config_menu->contact) ?></a></li>

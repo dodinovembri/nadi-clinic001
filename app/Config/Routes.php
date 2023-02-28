@@ -34,8 +34,10 @@ $routes->get('blog', [\App\Controllers\Frontend\BlogController::class, 'index'])
 $routes->get('about', [\App\Controllers\Frontend\AboutController::class, 'index']);
 $routes->get('doctor', [\App\Controllers\Frontend\DoctorController::class, 'index']);
 $routes->get('medical-care', [\App\Controllers\Frontend\MedicalCareController::class, 'index']);
-$routes->get('department/show/(:any)', [\App\Controllers\Frontend\DepartmentController::class, 'index']);
+$routes->get('department', [\App\Controllers\Frontend\DepartmentController::class, 'index']);
+$routes->get('department/show/(:any)', [\App\Controllers\Frontend\DepartmentController::class, 'show']);
 $routes->get('timetable', [\App\Controllers\Frontend\TimetableController::class, 'index']);
+$routes->get('timetable/department/show/(:any)', [\App\Controllers\Frontend\TimetableController::class, 'show']);
 $routes->get('gallery', [\App\Controllers\Frontend\GalleryController::class, 'index']);
 $routes->get('contact', [\App\Controllers\Frontend\ContactController::class, 'index']);
 

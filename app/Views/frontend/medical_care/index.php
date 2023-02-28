@@ -185,8 +185,8 @@
 					<div class="announcement page_margin_top_section clearfix">
 						<ul class="columns no_width">
 							<li class="column_left">
-								<h1><?= ucfirst($config->make_appointment_text_title) ?></h1>
-								<p><?= ucfirst($config->make_appointment_text_subtitle) ?></p>
+								<h1><?= ucfirst($config_menu->make_an_appointment) ?></h1>
+								<p><?= ucfirst($config->make_appointment_description) ?></p>
 							</li>
 							<li class="column_right">
 								<div class="vertical_align">

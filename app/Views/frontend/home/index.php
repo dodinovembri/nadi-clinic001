@@ -149,7 +149,7 @@
 											<p><?= $value->description ?></p>
 										</div>
 										<div class="item_footer clearfix">
-											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('timetable/show/' .$value->id) ?>"><?= ucwords($config_menu->timetable) ?></a>
+											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('timetable/department/show/' .$value->id) ?>"><?= ucwords($config_menu->timetable) ?></a>
 											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('department/show/' .$value->id) ?>"><?= ucwords($config_menu->detail) ?></a>
 										</div>
 									</div>
