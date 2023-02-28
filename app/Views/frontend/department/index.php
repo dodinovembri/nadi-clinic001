@@ -40,7 +40,7 @@
 						<ul>
 							<?php foreach ($departments as $key => $value) { ?>
 								<li>
-									<a href="<?= base_url('timetable/department/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>">
+									<a href="<?= base_url('department/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>">
 										<?= ucwords($value->name) ?>
 									</a>
 								</li>
@@ -72,7 +72,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="<?= base_url('timetable/department/show/' . $value->id) ?>" title="<?= ucwords($config_menu->timetable) ?>">
+										<a href="<?= base_url('timetable/department/show/' . $department->id) ?>" title="<?= ucwords($config_menu->timetable) ?>">
 											<?= ucwords($config_menu->timetable) ?>
 										</a>
 									</li>

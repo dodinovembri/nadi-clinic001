@@ -29,15 +29,17 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->addPlaceholder('uuid', '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}');
 $routes->get('/', [\App\Controllers\Frontend\HomeController::class, 'index']);
 $routes->get('blog', [\App\Controllers\Frontend\BlogController::class, 'index']);
+$routes->get('blog/show/(:uuid)', [\App\Controllers\Frontend\BlogController::class, 'show']);
 $routes->get('about', [\App\Controllers\Frontend\AboutController::class, 'index']);
 $routes->get('doctor', [\App\Controllers\Frontend\DoctorController::class, 'index']);
 $routes->get('medical-care', [\App\Controllers\Frontend\MedicalCareController::class, 'index']);
 $routes->get('department', [\App\Controllers\Frontend\DepartmentController::class, 'index']);
-$routes->get('department/show/(:any)', [\App\Controllers\Frontend\DepartmentController::class, 'show']);
+$routes->get('department/show/(:uuid)', [\App\Controllers\Frontend\DepartmentController::class, 'show']);
 $routes->get('timetable', [\App\Controllers\Frontend\TimetableController::class, 'index']);
-$routes->get('timetable/department/show/(:any)', [\App\Controllers\Frontend\TimetableController::class, 'show']);
+$routes->get('timetable/department/show/(:uuid)', [\App\Controllers\Frontend\TimetableController::class, 'show']);
 $routes->get('gallery', [\App\Controllers\Frontend\GalleryController::class, 'index']);
 $routes->get('contact', [\App\Controllers\Frontend\ContactController::class, 'index']);
 

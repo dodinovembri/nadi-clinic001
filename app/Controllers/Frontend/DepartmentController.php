@@ -25,8 +25,8 @@ class DepartmentController extends BaseController
         // department
         $department = new DepartmentModel();
         $data['departments'] = $department->get()->getResult(); 
-        $department = $department->get()->getFirstRow();                          
-        $data['department'] = $department;    
+        $first_department = $department->get()->getFirstRow();                          
+        $data['department'] = $first_department;    
         // department service
         $department_service = new DepartmentServiceModel();
         $data['department_services'] = $department_service->where('department_id', $department->id)->get()->getResult();
@@ -69,8 +69,8 @@ class DepartmentController extends BaseController
         // department
         $department = new DepartmentModel();
         $data['departments'] = $department->get()->getResult(); 
-        $department = $department->where('id', $id)->get()->getFirstRow();                          
-        $data['department'] = $department;    
+        $first_department = $department->where('id', $id)->get()->getFirstRow();                          
+        $data['department'] = $first_department;    
         // department service
         $department_service = new DepartmentServiceModel();
         $data['department_services'] = $department_service->where('department_id', $department->id)->get()->getResult();
@@ -99,6 +99,6 @@ class DepartmentController extends BaseController
         $appointment = new AppointmentTypeModel();
         $data['appointment_types'] = $appointment->get()->getResult();                                                  
 
-        return view('frontend/department/show', $data);
+        return view('frontend/department/index', $data);
     }
 }

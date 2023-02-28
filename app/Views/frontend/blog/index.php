@@ -23,7 +23,7 @@
 						<h1 class="page_title"><?= ucwords($config_menu->blog) ?></h1>
 						<ul class="bread_crumb">
 							<li>
-								<a href="<?= base_url('/') ?>" title="Home">
+								<a href="<?= base_url('/') ?>" title="<?= ucwords($config_menu->home) ?>">
 									<?= ucwords($config_menu->home) ?>
 								</a>
 							</li>
@@ -108,7 +108,7 @@
 						</ul>
 					</div>
 					<!-- most commented -->
-					<div class="sidebar_box">
+					<!-- <div class="sidebar_box">
 						<div class="clearfix">
 							<div class="header_left">
 								<h3 class="box_header">
@@ -168,9 +168,9 @@
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 					<!-- most viewed -->
-					<div class="sidebar_box">
+					<!-- <div class="sidebar_box">
 						<div class="clearfix">
 							<div class="header_left">
 								<h3 class="box_header">
@@ -230,9 +230,9 @@
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 					<!-- photostream -->
-					<div class="sidebar_box">
+					<!-- <div class="sidebar_box">
 						<h3 class="box_header">
 							Photostream
 						</h3>
@@ -302,9 +302,9 @@
 								</ul>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 					<!-- archives -->
-					<div class="sidebar_box">
+					<!-- <div class="sidebar_box">
 						<h3 class="box_header">
 							Archives
 						</h3>
@@ -340,7 +340,7 @@
 								</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 					<!-- make an appointment -->
 					<div class="sidebar_box">
 						<h3 class="box_header">

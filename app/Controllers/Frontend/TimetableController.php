@@ -22,7 +22,9 @@ class TimetableController extends BaseController
         $data['config_menu'] = $config_menu->get()->getFirstRow();       
         // department
         $department = new DepartmentModel();
-        $data['departments'] = $department->get()->getResult();            
+        $data['departments'] = $department->get()->getResult();
+        $first_department = $department->get()->getFirstRow();                          
+        $data['department'] = $first_department;
         // footer feature
         $footer_feature = new FooterFeatureModel();
         $data['footer_features'] = $footer_feature->get()->getResult();
@@ -43,7 +45,7 @@ class TimetableController extends BaseController
         $data['tweets'] = $tweet->get()->getResult();  
         // department timetable
         $department_timetable = new DepartmentTimetableModel();
-        $data['department_timetables'] = $department_timetable->get()->getResult();                                         
+        $data['department_timetables'] = $department_timetable->where('department_id', $first_department->id)->get()->getResult();                                         
 
         return view('frontend/timetable/index', $data);
     }
@@ -58,7 +60,8 @@ class TimetableController extends BaseController
         $data['config_menu'] = $config_menu->get()->getFirstRow();       
         // department
         $department = new DepartmentModel();
-        $data['departments'] = $department->get()->getResult();            
+        $data['departments'] = $department->get()->getResult();
+        $data['department'] = $department->where('id', $id)->get()->getFirstRow();          
         // footer feature
         $footer_feature = new FooterFeatureModel();
         $data['footer_features'] = $footer_feature->get()->getResult();
@@ -79,8 +82,8 @@ class TimetableController extends BaseController
         $data['tweets'] = $tweet->get()->getResult();  
         // department timetable
         $department_timetable = new DepartmentTimetableModel();
-        $data['department_timetables'] = $department_timetable->get()->getResult();                                         
+        $data['department_timetables'] = $department_timetable->where('department_id', $id)->get()->getResult();                                         
 
-        return view('frontend/timetable/show', $data);
+        return view('frontend/timetable/index', $data);
     }    
 }
