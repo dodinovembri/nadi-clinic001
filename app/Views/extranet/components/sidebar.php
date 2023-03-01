@@ -11,15 +11,14 @@
         <ul class="childNav" data-parent="config">
             <li class="nav-item"><a href="<?= base_url('extranet/config') ?>"><i class="nav-icon i-Bell1"></i><span class="item-name">General Config</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/menu-config') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Label & Menu Config</span></a></li>
+            <li class="nav-item"><a href="<?= base_url('extranet/about') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">About Config</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/slider') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Sliders</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/slider-feature') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Slider Features</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/footer-feature') ?>"><i class="nav-icon i-ID-Card"></i><span class="item-name">Footer Features</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/laboratory-feature') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Laboratory Features</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/testimonial') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Testimonials</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/tweet') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Tweets</span></a></li>
-            <li class="nav-item"><a href="<?= base_url('extranet/gallery') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Gallery</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/faq') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">FAQ</span></a></li>
-            <li class="nav-item"><a href="<?= base_url('extranet/about') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">About</span></a></li>
         </ul>
         <ul class="childNav" data-parent="masterdata">
             <li class="nav-item"><a href="<?= base_url('extranet/user') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Users</span></a></li>

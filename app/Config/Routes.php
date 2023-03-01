@@ -30,6 +30,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->addPlaceholder('uuid', '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}');
+
+// frontend routes
 $routes->get('/', [\App\Controllers\Frontend\HomeController::class, 'index']);
 $routes->get('blog', [\App\Controllers\Frontend\BlogController::class, 'index']);
 $routes->get('blog/show/(:uuid)', [\App\Controllers\Frontend\BlogController::class, 'show']);
@@ -43,7 +45,7 @@ $routes->get('timetable/department/show/(:uuid)', [\App\Controllers\Frontend\Tim
 $routes->get('gallery', [\App\Controllers\Frontend\GalleryController::class, 'index']);
 $routes->get('contact', [\App\Controllers\Frontend\ContactController::class, 'index']);
 
-// Routes Extranet Website
+// extranet routes
 $routes->get('ext-login', [\App\Controllers\Extranet\Authcontroller::class, 'login']);
 $routes->post('ext-auth', [\App\Controllers\Extranet\Authcontroller::class, 'auth']);
 $routes->get('ext-logout', [\App\Controllers\Extranet\Authcontroller::class, 'logout']);
@@ -56,8 +58,8 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
     });	
 
 	$routes->group('menu-config', function ($routes) {
-		$routes->get('/', [\App\Controllers\Extranet\MenuConfigController::class, 'index']);
-		$routes->post('update/(:any)', [\App\Controllers\Extranet\MenuConfigController::class, 'update']);
+		$routes->get('/', [\App\Controllers\Extranet\ConfigMenuController::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\ConfigMenuController::class, 'update']);
     });	
 
 	$routes->group('slider', function ($routes) {
@@ -101,13 +103,13 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
     });	
 
 	$routes->group('testimonial', function ($routes) {
-		$routes->get('/', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'index']);
-		$routes->get('create', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'create']);
-		$routes->post('store', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'store']);
-		$routes->get('show/(:any)', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'show']);
-		$routes->get('edit/(:any)', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'edit']);
-		$routes->post('update/(:any)', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'update']);
-		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\TestimonialFeatureController::class, 'destroy']);
+		$routes->get('/', [\App\Controllers\Extranet\TestimonialController::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\TestimonialController::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\TestimonialController::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\TestimonialController::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\TestimonialController::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\TestimonialController::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\TestimonialController::class, 'destroy']);
     });		
 
 	$routes->group('tweet', function ($routes) {
