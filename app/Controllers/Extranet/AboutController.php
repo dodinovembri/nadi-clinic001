@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers\Extranet;
+
 use App\Models\ConfigModel;
 use App\Models\AboutModel;
 
@@ -18,107 +19,93 @@ class AboutController extends BaseController
         return view('extranet/about/index', $data);
     }
 
-    public function create()
-    {
-        // config
-        $config = new ConfigModel();
-        $data['config'] = $config->get()->getFirstRow();
-
-        return view('extranet/about/create', $data);
-    }
-
-    public function store()
-    {
-        $about = new AboutModel();
-
-        $image = $this->request->getFile('image');
-        $image_name = $image->getRandomName();
-        $image->move('assets/images/abouts/', $image_name);
-
-        $about->insert([
-            'created_at' => date('Y-m-d H:i:s'),
-            'creator_id' => session()->get('id'),
-            'name' => $this->request->getPost('name'),
-            'image' => $image_name,
-            'text1' => $this->request->getPost('text1'),
-            'text2' => $this->request->getPost('text2'),
-            'text3' => $this->request->getPost('text3'),
-            'text4' => $this->request->getPost('text4'),
-            'text5' => $this->request->getPost('text5'),
-            'text_button' => $this->request->getPost('text_button'),
-            'button_link' => $this->request->getPost('button_link'),
-            'status' => $this->request->getPost('status')
-        ]);
-
-        session()->setFlashdata('success', 'Success create new data');
-        return redirect()->to(base_url('extranet/about'));
-    }
-
-    public function show($id)
-    {
-        $about = new AboutModel();
-        $data['about'] = $about->where('id', $id)->get()->getFirstRow();
-
-        return view('extranet/about/show', $data);
-    }
-
-    public function edit($id)
-    {
-        $about = new AboutModel();
-        $data['about'] = $about->where('id', $id)->get()->getFirstRow();
-
-        return view('extranet/about/edit', $data);
-    }
-
     public function update($id)
     {
         $about = new AboutModel();
-        $image = $this->request->getFile('image');
-        if ($image != '') {
-            // image
-            $image_name = $image->getRandomName();
-            $image->move('assets/images/abouts/', $image_name);
+
+        $image1 = $this->request->getFile('image1');
+        if ($image1 != '') {
+            $image1_name = $image1->getRandomName();
+            $image1->move('assets/images/about/', $image1_name);
 
             $about->update($id, [
                 'modified_at' => date('Y-m-d H:i:s'),
                 'modifier_id' => session()->get('id'),
-                'name' => $this->request->getPost('name'),
-                'image' => $image_name,
-                'text1' => $this->request->getPost('text1'),
-                'text2' => $this->request->getPost('text2'),
-                'text3' => $this->request->getPost('text3'),
-                'text4' => $this->request->getPost('text4'),
-                'text5' => $this->request->getPost('text5'),
-                'text_button' => $this->request->getPost('text_button'),
-                'button_link' => $this->request->getPost('button_link'),
-                'status' => $this->request->getPost('status')
-            ]);
-        } else {
-            $about->update($id, [
-                'modified_at' => date('Y-m-d H:i:s'),
-                'modifier_id' => session()->get('id'),
-                'name' => $this->request->getPost('name'),
-                'text1' => $this->request->getPost('text1'),
-                'text2' => $this->request->getPost('text2'),
-                'text3' => $this->request->getPost('text3'),
-                'text4' => $this->request->getPost('text4'),
-                'text5' => $this->request->getPost('text5'),
-                'text_button' => $this->request->getPost('text_button'),
-                'button_link' => $this->request->getPost('button_link'),
-                'status' => $this->request->getPost('status')
+                'image1' => $image1_name
             ]);
         }
 
+        $image2 = $this->request->getFile('image2');
+        if ($image2 != '') {
+            $image2_name = $image2->getRandomName();
+            $image2->move('assets/images/about/', $image2_name);
+
+            $about->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'image2' => $image2_name
+            ]);
+        }
+
+        $image3 = $this->request->getFile('image3');
+        if ($image3 != '') {
+            $image3_name = $image3->getRandomName();
+            $image3->move('assets/images/about/', $image2_name);
+
+            $about->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'image3' => $image2_name
+            ]);
+        }
+
+        $image4 = $this->request->getFile('image4');
+        if ($image4 != '') {
+            $image4_name = $image4->getRandomName();
+            $image4->move('assets/images/about/', $image4_name);
+
+            $about->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'image4' => $image4_name
+            ]);
+        }
+
+        $image5 = $this->request->getFile('image5');
+        if ($image5 != '') {
+            $image5_name = $image5->getRandomName();
+            $image5->move('assets/images/about/', $image5_name);
+
+            $about->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'image5' => $image5_name
+            ]);
+        }
+
+        $image6 = $this->request->getFile('image6');
+        if ($image6 != '') {
+            $image6_name = $image6->getRandomName();
+            $image6->move('assets/images/about/', $image6_name);
+
+            $about->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'image6' => $image6_name
+            ]);
+        }
+
+        $about->update($id, [
+            'title'   => $this->request->getPost('title'),
+            'description' => $this->request->getPost('description'),
+            'motto' => $this->request->getPost('motto'),
+            'motto_by' => $this->request->getPost('motto_by'),
+            'our_feature' => $this->request->getPost('our_feature'),
+            'our_feature_by' => $this->request->getPost('our_feature_by'),
+            'status' => $this->request->getPost('status')
+        ]);
+
         session()->setFlashdata('success', 'Success update data');
-        return redirect()->to(base_url('extranet/about'));
-    }
-
-    public function destroy($id)
-    {
-        $about = new AboutModel();
-        $about->delete($id);
-
-        session()->setFlashdata('success', 'Success delete data');
         return redirect()->to(base_url('extranet/about'));
     }
 }

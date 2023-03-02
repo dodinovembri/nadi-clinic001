@@ -10,7 +10,7 @@
     <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
         <ul class="childNav" data-parent="config">
             <li class="nav-item"><a href="<?= base_url('extranet/config') ?>"><i class="nav-icon i-Bell1"></i><span class="item-name">General Config</span></a></li>
-            <li class="nav-item"><a href="<?= base_url('extranet/menu-config') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Label & Menu Config</span></a></li>
+            <li class="nav-item"><a href="<?= base_url('extranet/config-menu') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Label & Menu Config</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/about') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">About Config</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/slider') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Sliders</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/slider-feature') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Slider Features</span></a></li>

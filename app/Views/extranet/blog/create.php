@@ -35,28 +35,28 @@
                                 <form action="<?= base_url('extranet/blog/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>blog_category_id</label>
+                                            <label>Blog Category</label>
                                             <select class="form-control" name="status" required>
                                                 <option value="1">Active</option>
                                                 <option value="0">Inactive</option>
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>date</label>
-                                            <input class="form-control" type="date" name="name" placeholder="Enter blog name" required />
+                                            <label>Date</label>
+                                            <input class="form-control" type="date" name="name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>title</label>
-                                            <input class="form-control" type="text" name="title" placeholder="Enter text 1" />
+                                            <label>Title</label>
+                                            <input class="form-control" type="text" name="title" placeholder="Enter title" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 2" />
+                                            <label>Description</label>
+                                            <input class="form-control" type="text" name="description" placeholder="Enter description" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image</label>
                                             <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>520x240</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

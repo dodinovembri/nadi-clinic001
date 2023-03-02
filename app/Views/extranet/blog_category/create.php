@@ -23,7 +23,7 @@
                 <div class="breadcrumb">
                     <h1>Create New</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/blog_category') ?>">Slider</a></li>
+                        <li><a href="<?= base_url('extranet/blog-category') ?>">Slider</a></li>
                         <li>Create New</li>
                     </ul>
                 </div>
@@ -32,11 +32,11 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/blog_category/store') ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('extranet/blog-category/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Name</label>
-                                            <input class="form-control" type="text" name="name" placeholder="Enter blog_category name" required />
+                                            <input class="form-control" type="text" name="name" placeholder="Enter blog category name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
@@ -47,7 +47,7 @@
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
                                             <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/blog_category') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <a href="<?= base_url('extranet/blog-category') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
                                         </div>
                                     </div>
                                 </form>

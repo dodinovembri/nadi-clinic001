@@ -37,7 +37,7 @@
 										<div class="col-md-4 form-group mb-3">
 											<label>Logo</label>
 											<input class="form-control" type="file" name="logo" value="<?= $config->logo ?>" />
-											<sub>.jpg or .png file, size: 38x44 pixels</sub><br>
+											<sub>.jpg or .png file, size: <span style="color:red"><b>38x44</b></span> pixels</sub><br>
 											<img src="<?= base_url('assets/images/logo/'.$config->logo) ?>" style="margin-top:10px" height="60" alt="">
 											<span><?= $config->logo ?></span>
 										</div>
@@ -100,7 +100,7 @@
 										<div class="col-md-4 form-group mb-3">
 											<label>Favicon</label>
 											<input class="form-control" type="file" name="favicon" value="<?= $config->favicon ?>" />
-											<sub>.jpg or .png file, size: 16x16 pixels</sub><br>
+											<sub>.jpg or .png file, size: <span style="color:red"><b>16x16</b></span> pixels</sub><br>
 											<img src="<?= base_url('assets/images/favicon/'.$config->favicon) ?>" height="40" style="margin-top:10px" alt="" >
 											<span><?= $config->favicon ?></span>
 										</div>

@@ -35,16 +35,16 @@
                                 <form action="<?= base_url('extranet/tweet/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>date</label>
-                                            <input class="form-control" type="date" name="date" placeholder="Enter tweet name" required />
+                                            <label>Date</label>
+                                            <input class="form-control" type="date" name="date" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 1" />
+                                            <label>Description</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter description" required ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>link</label>
-                                            <input class="form-control" type="text" name="link" placeholder="Enter text 2" />
+                                            <label>Link</label>
+                                            <input class="form-control" type="text" name="link" placeholder="Enter link" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

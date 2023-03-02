@@ -35,26 +35,26 @@
                                 <form action="<?= base_url('extranet/user/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>firstname</label>
-                                            <input class="form-control" type="text" name="firstname" placeholder="Enter user name" required />
+                                            <label>First Name</label>
+                                            <input class="form-control" type="text" name="firstname" placeholder="Enter first name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>lastname</label>
-                                            <input class="form-control" type="text" name="lastname" placeholder="Enter text 1" />
+                                            <label>Last Name</label>
+                                            <input class="form-control" type="text" name="lastname" placeholder="Enter last name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>email</label>
-                                            <input class="form-control" type="text" name="email" placeholder="Enter text 2" />
+                                            <label>Email</label>
+                                            <input class="form-control" type="text" name="email" placeholder="Enter email" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>password</label>
-                                            <input class="form-control" type="text" name="password" placeholder="Enter text 3" />
+                                            <label>Password</label>
+                                            <input class="form-control" type="password" name="password" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Role Code</label>
                                             <select class="form-control" name="status" required>
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                                <option value="0">Administrator</option>
+                                                <option value="1">User</option>
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">

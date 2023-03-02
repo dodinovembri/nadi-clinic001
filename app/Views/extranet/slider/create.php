@@ -35,17 +35,17 @@
                                 <form action="<?= base_url('extranet/slider/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>title</label>
-                                            <input class="form-control" type="text" name="title" placeholder="Enter slider name" required />
+                                            <label>Title</label>
+                                            <input class="form-control" type="text" name="title" placeholder="Enter title" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>subtitle</label>
-                                            <input class="form-control" type="text" name="subtitle" placeholder="Enter text 1" />
+                                            <label>Subtitle</label>
+                                            <input class="form-control" type="text" name="subtitle" placeholder="Enter subtitle" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image</label>
                                             <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>1590x670</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

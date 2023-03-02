@@ -35,12 +35,12 @@
                                 <form action="<?= base_url('extranet/slider_feature/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>title</label>
-                                            <input class="form-control" type="text" name="title" placeholder="Enter slider_feature name" required />
+                                            <label>Title</label>
+                                            <input class="form-control" type="text" name="title" placeholder="Enter title" required />
                                         </div>                                        
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 1" />
+                                            <label>Description</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter description" required ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
@@ -51,7 +51,7 @@
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
                                             <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/slider_feature') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <a href="<?= base_url('extranet/slider-feature') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
                                         </div>
                                     </div>
                                 </form>

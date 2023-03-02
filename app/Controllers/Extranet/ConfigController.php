@@ -20,51 +20,53 @@ class ConfigController extends BaseController
     {
         $config = new ConfigModel();
 
-        $frontend_logo = $this->request->getFile('frontend_logo');
-        if ($frontend_logo != '') {
-            $frontend_logo_name = $frontend_logo->getRandomName();
-            $frontend_logo->move('assets/images/logo/', $frontend_logo_name);
+        $logo = $this->request->getFile('logo');
+        if ($logo != '') {
+            $logo_name = $logo->getRandomName();
+            $logo->move('assets/images/logo/', $logo_name);
 
             $config->update($id, [
                 'modified_at' => date('Y-m-d H:i:s'),
                 'modifier_id' => session()->get('id'),
-                'frontend_logo_name' => $frontend_logo_name
+                'logo' => $logo_name
             ]);
         }
 
-        $extranet_logo = $this->request->getFile('extranet_logo');
-        if ($extranet_logo != '') {
-            $extranet_logo_name = $extranet_logo->getRandomName();
-            $extranet_logo->move('assets/images/logo/', $extranet_logo_name);
+        $favicon = $this->request->getFile('favicon');
+        if ($favicon != '') {
+            $favicon_name = $favicon->getRandomName();
+            $favicon->move('assets/images/logo/', $favicon_name);
 
             $config->update($id, [
                 'modified_at' => date('Y-m-d H:i:s'),
                 'modifier_id' => session()->get('id'),
-                'extranet_logo_name' => $extranet_logo_name
+                'favicon' => $favicon_name
             ]);
         }
 
         $config->update($id, [
-            'title'   => $this->request->getPost('title'),
-            'keyword' => $this->request->getPost('keyword'),
-            'text1_status' => $this->request->getPost('text1_status'),
-            'text1_text' => $this->request->getPost('text1_text'),
-            'text2_status' => $this->request->getPost('text2_status'),
-            'text2_text' => $this->request->getPost('text2_text'),
-            'phone' => $this->request->getPost('phone'),
-            'header_top_status' => $this->request->getPost('header_top_status'),
-            'header_middle_status' => $this->request->getPost('header_middle_status'),
-            'guarantee_status' => $this->request->getPost('guarantee_status'),
-            'promotion_status' => $this->request->getPost('promotion_status'),
-            'product_new_arrival_status' => $this->request->getPost('product_new_arrival_status'),
-            'support_status' => $this->request->getPost('support_status'),
-            'blog_status' => $this->request->getPost('blog_status'),
-            'brand_status' => $this->request->getPost('brand_status'),
+            'logo_text'   => $this->request->getPost('logo_text'),
+            'monday_friday_opening_hours' => $this->request->getPost('monday_friday_opening_hours'),
+            'saturday_opening_hours' => $this->request->getPost('saturday_opening_hours'),
+            'sunday_opening_hours' => $this->request->getPost('sunday_opening_hours'),
+            'name' => $this->request->getPost('name'),
+            'short_description' => $this->request->getPost('short_description'),
             'address' => $this->request->getPost('address'),
-            'email' => $this->request->getPost('email'),
-            'working_day' => $this->request->getPost('working_day'),
-            'description' => $this->request->getPost('description'),
             'copyright' => $this->request->getPost('copyright'),
+            'url_map' => $this->request->getPost('url_map'),
+            'latitude' => $this->request->getPost('latitude'),
+            'longitude' => $this->request->getPost('longitude'),
+            'make_appointment_description' => $this->request->getPost('make_appointment_description'),
+            'keyword' => $this->request->getPost('keyword'),
+            'description' => $this->request->getPost('description'),
+            'facebook_url' => $this->request->getPost('facebook_url'),
+            'googleplus_url' => $this->request->getPost('googleplus_url'),
+            'mail_url' => $this->request->getPost('mail_url'),
+            'forrst_url' => $this->request->getPost('forrst_url'),
+            'twitter_url' => $this->request->getPost('twitter_url'),
+            'phone' => $this->request->getPost('phone'),
+            'email' => $this->request->getPost('email'),
+            'status' => $this->request->getPost('status')
         ]);
 
         session()->setFlashdata('success', 'Success update data');

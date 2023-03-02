@@ -53,11 +53,11 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?= $no ?></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td><?= $value->firstname ?> <?= $value->lastname ?></td>
+                                                    <td><?= $value->birthdate ?></td>
+                                                    <td><?= $value->phone_number ?></td>
+                                                    <td><?= $value->email ?></td>
+                                                    <td><?= $value->reason_appointment ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
                                                             echo "Active";

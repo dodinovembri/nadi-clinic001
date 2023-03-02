@@ -59,37 +59,37 @@
                                             <label>Image 1</label>
                                             <img src="<?= base_url('assets/images/about/'.$about->image1) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image1" />
-                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>480x300</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 2</label>
                                             <img src="<?= base_url('assets/images/about/'.$about->image2) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image2" />
-                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>480x300</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 3</label>
                                             <img src="<?= base_url('assets/images/about/'.$about->image3) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image3" />
-                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>480x300</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 4</label>
                                             <img src="<?= base_url('assets/images/about/'.$about->image4) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image4" />
-                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>480x300</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 5</label>
                                             <img src="<?= base_url('assets/images/about/'.$about->image5) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image5" />
-                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>480x300</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 6</label>
                                             <img src="<?= base_url('assets/images/about/'.$about->image6) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image6" />
-                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>480x300</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

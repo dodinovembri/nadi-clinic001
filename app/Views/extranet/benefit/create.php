@@ -37,11 +37,11 @@
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image</label>
                                             <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>75x75</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 1" />
+                                            <label>Description</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter description" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

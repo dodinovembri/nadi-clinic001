@@ -52,10 +52,10 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?= $no ?></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td><?= $value->date ?></td>
+                                                    <td><?= $value->title ?></td>
+                                                    <td><?= $value->description ?></td>
+                                                    <td><?= $value->image ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
                                                             echo "Active";

@@ -35,17 +35,17 @@
                                 <form action="<?= base_url('extranet/faq/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Image 1</label>
+                                            <label>Question</label>
+                                            <textarea class="form-control" type="text" rows="5" name="question" placeholder="Enter question" required > </textarea>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label>Answer</label>
+                                            <textarea class="form-control" type="text" rows="5" name="answer" placeholder="Enter answer" required ></textarea>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label>Image</label>
                                             <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>question</label>
-                                            <input class="form-control" type="text" name="question" placeholder="Enter faq name" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>answer</label>
-                                            <input class="form-control" type="text" name="answer" placeholder="Enter text 1" />
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>76x88</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
                                             <button class="btn btn-primary">Submit</button>

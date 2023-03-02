@@ -51,9 +51,9 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?= $no ?></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td><?= $value->image ?></td>
+                                                    <td><?= $value->question ?></td>
+                                                    <td><?= $value->answer ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
                                                             echo "Active";

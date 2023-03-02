@@ -35,71 +35,71 @@
                                 <form action="<?= base_url('extranet/team/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>department_id</label>
+                                            <label>Department</label>
                                             <select class="form-control" name="department_id" required>
                                                 <option value="1">Active</option>
                                                 <option value="0">Inactive</option>
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>name</label>
-                                            <input class="form-control" type="text" name="name" placeholder="Enter team name" required />
+                                            <label>Name</label>
+                                            <input class="form-control" type="text" name="required" placeholder="Enter team name" required />
                                         </div>
                                         
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>short_description</label>
-                                            <input class="form-control" type="text" name="short_description" placeholder="Enter text 1" />
+                                            <label>Short Description</label>
+                                            <textarea class="form-control" type="text" rows="5" name="short_description" placeholder="Enter short description" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>speciality</label>
-                                            <input class="form-control" type="text" name="speciality" placeholder="Enter text 2" />
+                                            <label>Training</label>
+                                            <textarea class="form-control" type="text" rows="5" name="training" placeholder="Enter training" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>degres</label>
-                                            <input class="form-control" type="text" name="degres" placeholder="Enter text 3" />
+                                            <label>Speciality</label>
+                                            <input class="form-control" type="text" name="speciality" placeholder="Enter speciality" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>training</label>
-                                            <input class="form-control" type="text" name="training" placeholder="Enter text 4" />
+                                            <label>Degrees</label>
+                                            <input class="form-control" type="text" name="degres" placeholder="Enter degrees" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>office</label>
-                                            <input class="form-control" type="text" name="office" placeholder="Enter text 5" />
+                                            <label>Office</label>
+                                            <input class="form-control" type="text" name="office" placeholder="Enter office" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>work_days</label>
-                                            <input class="form-control" type="text" name="work_days" placeholder="Enter text button" />
+                                            <label>Work Days</label>
+                                            <input class="form-control" type="text" name="work_days" placeholder="Enter work days" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 1</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <input class="form-control" type="file" name="image1" required />
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span></sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 2</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <input class="form-control" type="file" name="image2" required />
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span></sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 3</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <input class="form-control" type="file" name="image3" required />
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span></sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>facebook_url</label>
-                                            <input class="form-control" type="text" name="facebook_url" placeholder="Enter button link" />
+                                            <label>Facebook Url</label>
+                                            <input class="form-control" type="text" name="facebook_url" placeholder="Enter facebook url" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>googleplus_url</label>
-                                            <input class="form-control" type="text" name="googleplus_url" placeholder="Enter button link" />
+                                            <label>Googleplus Url</label>
+                                            <input class="form-control" type="text" name="googleplus_url" placeholder="Enter googleplus url" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>mail_url</label>
-                                            <input class="form-control" type="text" name="mail_url" placeholder="Enter button link" />
+                                            <label>Email Url</label>
+                                            <input class="form-control" type="text" name="mail_url" placeholder="Enter email url" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>forrst_url</label>
-                                            <input class="form-control" type="text" name="forrst_url" placeholder="Enter button link" />
+                                            <label>Forrst Url</label>
+                                            <input class="form-control" type="text" name="forrst_url" placeholder="Enter forrst url" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

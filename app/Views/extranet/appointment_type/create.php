@@ -23,7 +23,7 @@
                 <div class="breadcrumb">
                     <h1>Create New</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/appointment_type') ?>">Slider</a></li>
+                        <li><a href="<?= base_url('extranet/appointment-type') ?>">Slider</a></li>
                         <li>Create New</li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/appointment_type/store') ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('extranet/appointment-type/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Icon</label>
@@ -42,16 +42,16 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>name</label>
-                                            <input class="form-control" type="text" name="name" placeholder="Enter text 1" />
+                                            <label>Name</label>
+                                            <input class="form-control" type="text" name="name" placeholder="Enter name" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 2" />
+                                            <label>Description</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter text 2" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>link</label>
-                                            <input class="form-control" type="text" name="link" placeholder="Enter text 3" />
+                                            <label>Link</label>
+                                            <input class="form-control" type="text" name="link" placeholder="Enter link" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
@@ -62,7 +62,7 @@
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
                                             <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/appointment_type') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <a href="<?= base_url('extranet/appointment-type') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
                                         </div>
                                     </div>
                                 </form>

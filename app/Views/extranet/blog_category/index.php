@@ -49,7 +49,7 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?= $no ?></td>
-                                                    <td></td>
+                                                    <td><?= $value->name ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
                                                             echo "Active";

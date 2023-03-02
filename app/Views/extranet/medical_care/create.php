@@ -23,7 +23,7 @@
                 <div class="breadcrumb">
                     <h1>Create New</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/medical_care') ?>">Slider</a></li>
+                        <li><a href="<?= base_url('extranet/medical-care') ?>">Slider</a></li>
                         <li>Create New</li>
                     </ul>
                 </div>
@@ -32,16 +32,16 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/medical_care/store') ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('extranet/medical-care/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>icon</label>
+                                            <label>Image</label>
                                             <input class="form-control" type="file" name="icon" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>76x88</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 1" />
+                                            <label>Description</label>
+                                            <textarea class="form-control" type="text" name="description" placeholder="Enter description" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
                                             <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/medical_care') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <a href="<?= base_url('extranet/medical-care') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
                                         </div>
                                     </div>
                                 </form>

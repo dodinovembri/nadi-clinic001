@@ -37,19 +37,19 @@
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image</label>
                                             <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>name</label>
+                                            <label>Name</label>
                                             <input class="form-control" type="text" name="name" placeholder="Enter clinic name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>title</label>
-                                            <input class="form-control" type="text" name="title" placeholder="Enter text 1" />
+                                            <label>Title</label>
+                                            <input class="form-control" type="text" name="title" placeholder="Enter title" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>subtitle</label>
-                                            <input class="form-control" type="text" name="subtitle" placeholder="Enter text 2" />
+                                            <label>Subtitle</label>
+                                            <input class="form-control" type="text" name="subtitle" placeholder="Enter subtitle" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

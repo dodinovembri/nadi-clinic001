@@ -57,9 +57,9 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->post('update/(:any)', [\App\Controllers\Extranet\ConfigController::class, 'update']);
     });	
 
-	$routes->group('menu-config', function ($routes) {
+	$routes->group('config-menu', function ($routes) {
 		$routes->get('/', [\App\Controllers\Extranet\ConfigMenuController::class, 'index']);
-		$routes->post('update/(:any)', [\App\Controllers\Extranet\ConfigMenuController::class, 'update']);
+		$routes->post('update/(:uuid)', [\App\Controllers\Extranet\ConfigMenuController::class, 'update']);
     });	
 
 	$routes->group('slider', function ($routes) {

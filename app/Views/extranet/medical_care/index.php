@@ -50,8 +50,8 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?= $no ?></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td><?= $value->icon ?></td>
+                                                    <td><?= $value->description ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
                                                             echo "Active";

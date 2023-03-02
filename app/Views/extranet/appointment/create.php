@@ -35,36 +35,28 @@
                                 <form action="<?= base_url('extranet/appointment/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>firstname</label>
-                                            <input class="form-control" type="text" name="firstname" placeholder="Enter appointment name" required />
+                                            <label>First Name</label>
+                                            <input class="form-control" type="text" name="firstname" placeholder="Enter first name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>lastname</label>
-                                            <input class="form-control" type="text" name="lastname" placeholder="Enter text 1" />
+                                            <label>Last Name</label>
+                                            <input class="form-control" type="text" name="lastname" placeholder="Enter lastname" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>birthdate</label>
-                                            <input class="form-control" type="text" name="birthdate" placeholder="Enter text 2" />
+                                            <label>Date of Birth</label>
+                                            <input class="form-control" type="date" name="birthdate" placeholder="Enter birthdate" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>phone_number</label>
-                                            <input class="form-control" type="text" name="phone_number" placeholder="Enter text 3" />
+                                            <label>Phone Number</label>
+                                            <input class="form-control" type="text" name="phone_number" placeholder="Enter phone number" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>email</label>
-                                            <input class="form-control" type="text" name="email" placeholder="Enter text 4" />
+                                            <label>Email</label>
+                                            <input class="form-control" type="text" name="email" placeholder="Enter email" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>reason_appointment</label>
-                                            <input class="form-control" type="text" name="reason_appointment" placeholder="Enter text 5" />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Text Button</label>
-                                            <input class="form-control" type="text" name="text_button" placeholder="Enter text button" />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Button Link</label>
-                                            <input class="form-control" type="text" name="button_link" placeholder="Enter button link" />
+                                            <label>Appointment Reason</label>
+                                            <input class="form-control" type="text" name="reason_appointment" placeholder="Enter appointment reason" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

@@ -35,17 +35,17 @@
                                 <form action="<?= base_url('extranet/department/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>name</label>
+                                            <label>Name</label>
                                             <input class="form-control" type="text" name="name" placeholder="Enter department name" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image</label>
                                             <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>800x600</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 1" />
+                                            <label>Description</label>
+                                            <textarea class="form-control" rows="5" type="text" name="description" placeholder="Enter description" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
