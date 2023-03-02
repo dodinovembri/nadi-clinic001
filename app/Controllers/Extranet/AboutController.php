@@ -13,7 +13,7 @@ class AboutController extends BaseController
         $data['config'] = $config->get()->getFirstRow();
         // about
         $about = new AboutModel();
-        $data['abouts'] = $about->get()->getResult();
+        $data['about'] = $about->get()->getFirstRow();
 
         return view('extranet/about/index', $data);
     }

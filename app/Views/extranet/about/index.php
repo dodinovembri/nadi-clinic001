@@ -29,61 +29,67 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/about/update') ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('extranet/about/update/'. $about->id) ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Title</label>
-                                            <input class="form-control" type="text" name="title" placeholder="Enter faq name" required />
+                                            <input class="form-control" type="text" name="title" placeholder="Enter title" value="<?= $about->title ?>" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Description</label>
-                                            <input class="form-control" type="text" name="description" placeholder="Enter text 1" />
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter description" required ><?= $about->description ?></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Motto</label>
-                                            <input class="form-control" type="text" name="motto" placeholder="Enter text 1" />
+                                            <textarea class="form-control" type="text" rows="5" name="motto" placeholder="Enter motto" ><?= $about->motto ?></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Motto by</label>
-                                            <input class="form-control" type="text" name="motto_by" placeholder="Enter text 1" />
+                                            <input class="form-control" type="text" name="motto_by" placeholder="Enter motto creator" value="<?= $about->motto_by ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Our Feature</label>
-                                            <input class="form-control" type="text" name="our_feature" placeholder="Enter text 1" />
+                                            <textarea class="form-control" type="text" rows="5" name="our_feature" placeholder="Enter our feature" ><?= $about->our_feature ?></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Our Feature by</label>
-                                            <input class="form-control" type="text" name="our_feature_by" placeholder="Enter text 1" />
+                                            <input class="form-control" type="text" name="our_feature_by" placeholder="Enter our feature creator" value="<?= $about->our_feature_by ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 1</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <img src="<?= base_url('assets/images/about/'.$about->image1) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image1" />
+                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 2</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <img src="<?= base_url('assets/images/about/'.$about->image2) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image2" />
+                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 3</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <img src="<?= base_url('assets/images/about/'.$about->image3) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image3" />
+                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 4</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <img src="<?= base_url('assets/images/about/'.$about->image4) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image4" />
+                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 5</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <img src="<?= base_url('assets/images/about/'.$about->image5) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image5" />
+                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 6</label>
-                                            <input class="form-control" type="file" name="image" required />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <img src="<?= base_url('assets/images/about/'.$about->image6) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image6" />
+                                            <sub>.jpg or .png file, size: 480x300 pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

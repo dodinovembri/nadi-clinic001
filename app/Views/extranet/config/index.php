@@ -31,55 +31,56 @@
 						<form action="<?= base_url('extranet/config/update/' . $config->id) ?>" method="post" enctype="multipart/form-data">
 							<div class="card mb-4">
 								<div class="card-body">
-									<h5>Label & Menu Configuration or translation</h5>
+									<h5>Configuration</h5>
 									<div class="separator-breadcrumb border-top"></div>
 									<div class="row">
 										<div class="col-md-4 form-group mb-3">
-											<label>logo</label>
-											<input class="form-control" type="text" name="logo" value="<?= $config->logo ?>" />
+											<label>Logo</label>
+											<img src="<?= base_url('assets/images/logo/'.$config->logo) ?>" height="120" alt="">
+											<input class="form-control" type="file" name="logo" value="<?= $config->logo ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>logo_text</label>
-											<input class="form-control" type="text" name="logo_text" value="<?= $config->logo_text ?>" />
+											<label>Text Logo</label>
+											<input class="form-control" type="text" name="logo_text" value="<?= $config->logo_text ?>" placeholder="Enter text logo" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>monday_friday_opening_hours</label>
+											<label>Opening hours from Monday to Friday</label>
 											<input class="form-control" type="text" name="monday_friday_opening_hours" value="<?= $config->monday_friday_opening_hours ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>saturday_opening_hours</label>
+											<label>Opening hours on Saturday</label>
 											<input class="form-control" type="text" name="saturday_opening_hours" value="<?= $config->saturday_opening_hours ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>sunday_opening_hours</label>
+											<label>Opening hours on Sunday</label>
 											<input class="form-control" type="text" name="sunday_opening_hours" value="<?= $config->sunday_opening_hours ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>name</label>
+											<label>Name</label>
 											<input class="form-control" type="text" name="name" value="<?= $config->name ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>short_description</label>
-											<input class="form-control" type="text" name="short_description" value="<?= $config->short_description ?>" />
+											<label>Short Description</label>
+											<textarea class="form-control" type="text" rows="5" name="short_description"><?= $config->short_description ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>address</label>
-											<input class="form-control" type="text" name="address" value="<?= $config->address ?>" />
+											<label>Address</label>
+											<textarea class="form-control" type="text" rows="5" name="address" value="<?= $config->address ?>" ><?= $config->address ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>copyright</label>
-											<input class="form-control" type="text" name="copyright" value="<?= $config->copyright ?>" />
+											<label>Copyright</label>
+											<textarea class="form-control" type="text" rows="5" name="copyright"><?= $config->copyright ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>url_map</label>
+											<label>Map Url</label>
 											<input class="form-control" type="text" name="url_map" value="<?= $config->url_map ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>latitude</label>
+											<label>Latitude</label>
 											<input class="form-control" type="text" name="latitude" value="<?= $config->latitude ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>longitude</label>
+											<label>Longitude</label>
 											<input class="form-control" type="text" name="longitude" value="<?= $config->longitude ?>" />
 										</div>
 									</div>
@@ -87,7 +88,7 @@
 							</div>
 							<div class="card mb-4">
 								<div class="card-body">
-									<h5>Label & Menu Configuration or translation</h5>
+									<h5>Configuration</h5>
 									<div class="separator-breadcrumb border-top"></div>
 									<div class="row">
 										<div class="col-md-4 form-group mb-3">
