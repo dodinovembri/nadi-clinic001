@@ -36,8 +36,10 @@
 									<div class="row">
 										<div class="col-md-4 form-group mb-3">
 											<label>Logo</label>
-											<img src="<?= base_url('assets/images/logo/'.$config->logo) ?>" height="120" alt="">
 											<input class="form-control" type="file" name="logo" value="<?= $config->logo ?>" />
+											<sub>.jpg or .png file, size: 38x44 pixels</sub><br>
+											<img src="<?= base_url('assets/images/logo/'.$config->logo) ?>" style="margin-top:10px" height="60" alt="">
+											<span><?= $config->logo ?></span>
 										</div>
 										<div class="col-md-4 form-group mb-3">
 											<label>Text Logo</label>
@@ -73,7 +75,7 @@
 										</div>
 										<div class="col-md-4 form-group mb-3">
 											<label>Map Url</label>
-											<input class="form-control" type="text" name="url_map" value="<?= $config->url_map ?>" />
+											<textarea class="form-control" type="text" rows="5" name="url_map" ><?= $config->url_map ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
 											<label>Latitude</label>
@@ -92,47 +94,50 @@
 									<div class="separator-breadcrumb border-top"></div>
 									<div class="row">
 										<div class="col-md-4 form-group mb-3">
-											<label>make_appointment_description</label>
-											<input class="form-control" type="text" name="make_appointment_description" value="<?= $config->make_appointment_description ?>" />
+											<label>Description of Make an Appointment</label>
+											<textarea class="form-control" type="text" rows="5" name="make_appointment_description" ><?= $config->make_appointment_description ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>favicon</label>
-											<input class="form-control" type="text" name="favicon" value="<?= $config->favicon ?>" />
+											<label>Favicon</label>
+											<input class="form-control" type="file" name="favicon" value="<?= $config->favicon ?>" />
+											<sub>.jpg or .png file, size: 16x16 pixels</sub><br>
+											<img src="<?= base_url('assets/images/favicon/'.$config->favicon) ?>" height="40" style="margin-top:10px" alt="" >
+											<span><?= $config->favicon ?></span>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>keyword</label>
-											<input class="form-control" type="text" name="keyword" value="<?= $config->keyword ?>" />
+											<label>Keyword</label>
+											<textarea class="form-control" type="text" rows="5" name="keyword" ><?= $config->keyword ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>description</label>
-											<input class="form-control" type="text" name="description" value="<?= $config->description ?>" />
+											<label>Description</label>
+											<textarea class="form-control" type="text" rows="5" name="description" ><?= $config->description ?></textarea>
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>facebook_url</label>
+											<label>Facebook Url</label>
 											<input class="form-control" type="text" name="facebook_url" value="<?= $config->facebook_url ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>googleplus_url</label>
+											<label>Googleplus Url</label>
 											<input class="form-control" type="text" name="googleplus_url" value="<?= $config->googleplus_url ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>mail_url</label>
+											<label>Mail Url</label>
 											<input class="form-control" type="text" name="mail_url" value="<?= $config->mail_url ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>forrst_url</label>
+											<label>Forrst Url</label>
 											<input class="form-control" type="text" name="forrst_url" value="<?= $config->forrst_url ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>twitter_url</label>
+											<label>Twitter Url</label>
 											<input class="form-control" type="text" name="twitter_url" value="<?= $config->twitter_url ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>phone</label>
+											<label>Phone</label>
 											<input class="form-control" type="text" name="phone" value="<?= $config->phone ?>" />
 										</div>
 										<div class="col-md-4 form-group mb-3">
-											<label>email</label>
+											<label>Email Address</label>
 											<input class="form-control" type="text" name="email" value="<?= $config->email ?>" />
 										</div>
 									</div>
