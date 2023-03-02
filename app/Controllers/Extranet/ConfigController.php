@@ -35,7 +35,7 @@ class ConfigController extends BaseController
         $favicon = $this->request->getFile('favicon');
         if ($favicon != '') {
             $favicon_name = $favicon->getRandomName();
-            $favicon->move('assets/images/logo/', $favicon_name);
+            $favicon->move('assets/images/favicon/', $favicon_name);
 
             $config->update($id, [
                 'modified_at' => date('Y-m-d H:i:s'),
