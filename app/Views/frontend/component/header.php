@@ -2,7 +2,7 @@
     <div class="header clearfix">
         <div class="header_left">
             <a href="<?= base_url('/') ?>">
-                <img src="<?= base_url('assets/images/' . $config->logo) ?>" alt="logo" />
+                <img src="<?= base_url('assets/images/logo/' . $config->logo) ?>" alt="logo" />
                 <span class="logo"><?= $config->logo_text ?></span>
             </a>
         </div>
