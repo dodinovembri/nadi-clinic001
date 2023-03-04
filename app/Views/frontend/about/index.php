@@ -17,6 +17,8 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
+			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+			</a>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
@@ -144,7 +146,7 @@
 									<li><a class="social_icon forrst" href="<?= $value->forrst_url ?>" target="_blank">&nbsp;</a></li>
 								</ul>
 								<ul class="controls">
-									<li><a href="<?= base_url('team/show/'. $value->id) ?>" class="open_details"></a></li>
+									<li><a href="<?= base_url('team/show/' . $value->id) ?>" class="open_details"></a></li>
 									<li><a href="<?= base_url('assets/images/team/' . $value->image1) ?>" rel="team" class="fancybox open_lightbox"></a></li>
 								</ul>
 							</li>

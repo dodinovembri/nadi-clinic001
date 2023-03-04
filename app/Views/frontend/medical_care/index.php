@@ -17,6 +17,8 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
+			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+			</a>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
@@ -150,7 +152,7 @@
 										<?= ucfirst($value->description) ?>
 									</div>
 								</li>
-							<?php if ($key+1 == $each) break;
+							<?php if ($key + 1 == $each) break;
 							} ?>
 						</ul>
 						<ul class="column">
@@ -164,12 +166,12 @@
 										<?= ucfirst($value->description) ?>
 									</div>
 								</li>
-							<?php if ($key+1 == $each*2) break;
+							<?php if ($key + 1 == $each * 2) break;
 							} ?>
 						</ul>
 						<ul class="column">
 							<?php foreach ($laboratory_features as $key => $value) {
-								if ($key < $each*2) continue; ?>
+								if ($key < $each * 2) continue; ?>
 								<li class="item_content clearfix">
 									<a class="features_image" href="#" title="">
 										<img src="<?= base_url('assets/images/laboratory_feature/' . $value->icon) ?>" alt="" class="animated_element animation-scale" />
@@ -178,7 +180,7 @@
 										<?= ucfirst($value->description) ?>
 									</div>
 								</li>
-							<?php if ($key+1 == $each*3) break;
+							<?php if ($key + 1 == $each * 3) break;
 							} ?>
 						</ul>
 					</div>

@@ -23,6 +23,8 @@
 			<?php } ?>
 		</ul>
 		<div class="page relative noborder">
+			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+			</a>
 			<div class="slider_content_box clearfix">
 				<?php foreach ($sliders as $key => $value) { ?>
 					<div class="slider_content" <?php if ($key == 0) { ?> style="display: block;" <?php } ?>>
@@ -93,10 +95,12 @@
 										</div>
 									</div>
 								</li>
-							<?php if($key == 1) break; } ?>
+							<?php if ($key == 1) break;
+							} ?>
 						</ul>
 						<ul class="blog column_right">
-							<?php foreach ($blogs as $key => $value) { if ($key <= 1) continue; ?>								
+							<?php foreach ($blogs as $key => $value) {
+								if ($key <= 1) continue; ?>
 								<li class="post">
 									<ul class="comment_box clearfix">
 										<li class="date">
@@ -125,7 +129,8 @@
 										</div>
 									</div>
 								</li>
-							<?php if($key == 3) break; } ?>
+							<?php if ($key == 3) break;
+							} ?>
 						</ul>
 					</div>
 					<div class="show_all clearfix">
@@ -149,8 +154,8 @@
 											<p><?= $value->description ?></p>
 										</div>
 										<div class="item_footer clearfix">
-											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('timetable/department/show/' .$value->id) ?>"><?= ucwords($config_menu->timetable) ?></a>
-											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('department/show/' .$value->id) ?>"><?= ucwords($config_menu->detail) ?></a>
+											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('timetable/department/show/' . $value->id) ?>"><?= ucwords($config_menu->timetable) ?></a>
+											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('department/show/' . $value->id) ?>"><?= ucwords($config_menu->detail) ?></a>
 										</div>
 									</div>
 								</li>
@@ -172,12 +177,12 @@
 				</div>
 			</div>
 		</div>
-		<?= $this->include('frontend/component/footer') ?>						
+		<?= $this->include('frontend/component/footer') ?>
 	</div>
 
 	<!--js-->
 	<?= $this->include('frontend/component/script') ?>
-	
+
 	<div class="layout_picker">
 		<div class="layout_picker_icon">&nbsp;</div>
 		<div class="layout_picker_content">

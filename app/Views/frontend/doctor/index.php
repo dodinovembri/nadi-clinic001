@@ -17,6 +17,8 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
+			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+			</a>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
@@ -53,7 +55,7 @@
 						</li>
 						<?php foreach ($departments as $key => $value) { ?>
 							<li>
-								<a href="<?= base_url('doctor/department/show/'. $value->id) ?>">
+								<a href="<?= base_url('doctor/department/show/' . $value->id) ?>">
 									<?= ucwords($value->name) ?>
 								</a>
 							</li>
