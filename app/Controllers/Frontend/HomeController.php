@@ -18,7 +18,7 @@ class Homecontroller extends BaseController
     {
         // configuration
         $config = new ConfigModel();
-        $data['config'] = $config->get()->getFirstRow();
+        $data['config'] = $config->where('domain_live_url', base_url())->get()->getFirstRow();
         // configuration menu
         $config_menu = new ConfigMenuModel();
         $data['config_menu'] = $config_menu->get()->getFirstRow();
@@ -54,13 +54,5 @@ class Homecontroller extends BaseController
         $data['tweets'] = $tweet->get()->getResult();
 
         return view('frontend/home/index', $data);
-    }
-
-    public function build($prefix)
-    {
-        $db = \Config\Database::connect();
-        $db->query("CREATE TABLE clinic001_.$prefix.about AS SELECT * FROM clinic001.about");
-
-        return redirect()->to(base_url('extranet'));
     }
 }
