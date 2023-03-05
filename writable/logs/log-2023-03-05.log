@@ -604,3 +604,305 @@ in SYSTEMPATH\Database\BaseConnection.php on line 645.
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:26:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-b1c9-11ed-80f6-c465162ee099.about AS SELECT * FROM clinic001.about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:26:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-b1c9-11ed-80f6-c465162ee099.about AS SELECT * FROM clinic001.about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.66793fb6-b1c9-11ed-80f6-c465162ee099.about AS SELECT * FROM clinic001.about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:27:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-b1c9-11ed-80f6-c465162ee099._.about AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:27:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-b1c9-11ed-80f6-c465162ee099._.about AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.66793fb6-b1c9-11ed-80f6-c465162ee099._.about AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:27:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-b1c9-11ed-80f6-c465162ee099._.about AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:27:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-b1c9-11ed-80f6-c465162ee099._.about AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.66793fb6-b1c9-11ed-80f6-c465162ee099._.about AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:28:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._.about AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:28:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._.about AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.dodi._.about AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:28:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._.about AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:28:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._.about AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.dodi._.about AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:28:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._about AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:28:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._about AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.dodi._about AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:28:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._about AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE cl...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE cl...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE cl...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE cl...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:28:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '._about AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE clinic001_.dodi._about AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:29:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''clinic001_'.dodi.'_about' AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE 'c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE 'c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE 'c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE 'c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:29:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''clinic001_'.dodi.'_about' AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE \'clinic001_\'.dodi.\'_about\' AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:30:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''clinic001_'.dodi.'_about' AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE 'c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE 'c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE 'c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE 'c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:30:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''clinic001_'.dodi.'_about' AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE \'clinic001_\'.dodi.\'_about\' AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:31:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`_about` AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:31:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`_about` AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `clinic001_`.dodi.`_about` AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:31:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`_about` AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:31:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`_about` AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `clinic001_`dodi`_about` AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:31:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`_about` AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:31:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`_about` AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `clinic001_`dodi`_about` AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:31:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`_about` AS SELECT * FROM clinic001_about' at line 1 in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:31:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`_about` AS SELECT * FROM clinic001_about' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `clinic001_`dodi`_about` AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-05 05:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-05 05:31:31 --> mysqli_sql_exception: Table 'clinic001_dodi._about' already exists in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:31:31 --> Table 'clinic001_dodi._about' already exists
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `clinic001_dodi._about` AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-05 05:31:33 --> mysqli_sql_exception: Table 'clinic001_dodi._about' already exists in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-1...', 'dodi')
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-05 05:31:33 --> Table 'clinic001_dodi._about' already exists
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BuildController.php(10): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `clinic001_dodi._about` AS SELECT * FROM clinic001_about')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BuildController->index('66793fb6-b1c9-11ed-80f6-c465162ee099', 'dodi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BuildController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-05 05:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -4,10 +4,10 @@ namespace App\Controllers\Frontend;
 
 class BuildController extends BaseController
 {
-    public function index($prefix)
+    public function index($app_id, $prefix)
     {
         $db = \Config\Database::connect();
-        $db->query("CREATE TABLE clinic001_.$prefix.about AS SELECT * FROM clinic001.about");
+        $db->query("CREATE TABLE `clinic001_$prefix"."_about` AS SELECT * FROM `clinic001_about`");
 
         return redirect()->to(base_url('extranet'));
     }
