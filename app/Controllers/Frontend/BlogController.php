@@ -32,11 +32,11 @@ class BlogController extends BaseController
         $db = \Config\Database::connect();
         $data['blogs'] = $db->query('
             SELECT 
-                blogs.*,
-                blog_categories.name as category_name
-            FROM blogs JOIN blog_categories
-            ON blogs.blog_category_id = blog_categories.id
-            WHERE blogs.status != 0
+                clinic001_blogs.*,
+                clinic001_blog_categories.name as category_name
+            FROM clinic001_blogs JOIN clinic001_blog_categories
+            ON clinic001_blogs.blog_category_id = clinic001_blog_categories.id
+            WHERE clinic001_blogs.status != 0
         ')->getResult();
         // tweets
         $tweet = new TweetModel();
@@ -68,12 +68,12 @@ class BlogController extends BaseController
         $db = \Config\Database::connect();
         $data['blog'] = $db->query("
             SELECT 
-                blogs.*,
-                blog_categories.name as category_name
-            FROM blogs JOIN blog_categories
-            ON blogs.blog_category_id = blog_categories.id
-            WHERE blogs.status != 0
-            AND blogs.id = '$id'
+                clinic001_blogs.*,
+                clinic001_blog_categories.name as category_name
+            FROM clinic001_blogs JOIN clinic001_blog_categories
+            ON clinic001_blogs.blog_category_id = clinic001_blog_categories.id
+            WHERE clinic001_blogs.status != 0
+            AND clinic001_blogs.id = '$id'
         ")->getFirstRow();
         // tweets
         $tweet = new TweetModel();

@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class SliderModel extends Model
 {
-    protected $table = 'sliders';
+    protected $table = 'clinic001_sliders';
     protected $primaryKey = 'id';
     protected $allowedFields = ['status', 'sort', 'created_at', 'modified_at', 'creator_id', 'modifier_id', 'image', 'title', 'subtitle'];
 }

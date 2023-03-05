@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class TweetModel extends Model
 {
-    protected $table = 'tweets';
+    protected $table = 'clinic001_tweets';
     protected $primaryKey = 'id';
     protected $allowedFields = ['status', 'sort', 'created_at', 'modified_at', 'creator_id', 'modifier_id', 'date', 'description', 'link'];
 }

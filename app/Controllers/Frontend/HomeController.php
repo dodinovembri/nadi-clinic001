@@ -21,38 +21,46 @@ class Homecontroller extends BaseController
         $data['config'] = $config->get()->getFirstRow();
         // configuration menu
         $config_menu = new ConfigMenuModel();
-        $data['config_menu'] = $config_menu->get()->getFirstRow();        
+        $data['config_menu'] = $config_menu->get()->getFirstRow();
         // department
         $department = new DepartmentModel();
         $data['departments'] = $department->get()->getResult();
         // slider
         $slider = new SliderModel();
-        $data['sliders'] = $slider->get()->getResult();   
+        $data['sliders'] = $slider->get()->getResult();
         // slider feature
         $slider_feature = new SliderFeatureModel();
-        $data['slider_features'] = $slider_feature->get()->getResult();   
+        $data['slider_features'] = $slider_feature->get()->getResult();
         // footer feature
         $footer_feature = new FooterFeatureModel();
-        $data['footer_features'] = $footer_feature->get()->getResult();  
+        $data['footer_features'] = $footer_feature->get()->getResult();
         // apppointment type
         $appointment = new AppointmentTypeModel();
-        $data['appointment_types'] = $appointment->get()->getResult();  
+        $data['appointment_types'] = $appointment->get()->getResult();
         // blog
         $blog = new BlogModel();
-        $data['blogs'] = $blog->get()->getResult();  
+        $data['blogs'] = $blog->get()->getResult();
         $db = \Config\Database::connect();
         $data['blogs'] = $db->query('
             SELECT 
-                blogs.*,
-                blog_categories.name as category_name
-            FROM blogs JOIN blog_categories
-            ON blogs.blog_category_id = blog_categories.id
-            WHERE blogs.status != 0
-        ')->getResult(); 
+                clinic001_blogs.*,
+                clinic001_blog_categories.name as category_name
+            FROM clinic001_blogs JOIN clinic001_blog_categories
+            ON clinic001_blogs.blog_category_id = clinic001_blog_categories.id
+            WHERE clinic001_blogs.status != 0
+        ')->getResult();
         // tweets
         $tweet = new TweetModel();
-        $data['tweets'] = $tweet->get()->getResult();                                  
+        $data['tweets'] = $tweet->get()->getResult();
 
         return view('frontend/home/index', $data);
+    }
+
+    public function build($prefix)
+    {
+        $db = \Config\Database::connect();
+        $db->query("CREATE TABLE clinic001_.$prefix.about AS SELECT * FROM clinic001.about");
+
+        return redirect()->to(base_url('extranet'));
     }
 }

@@ -33,6 +33,7 @@ $routes->addPlaceholder('uuid', '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}
 
 // frontend routes
 $routes->get('/', [\App\Controllers\Frontend\HomeController::class, 'index']);
+$routes->get('build/(:uuid)/(:any)', [\App\Controllers\Frontend\BuildController::class, 'index']);
 $routes->get('blog', [\App\Controllers\Frontend\BlogController::class, 'index']);
 $routes->get('blog/show/(:uuid)', [\App\Controllers\Frontend\BlogController::class, 'show']);
 $routes->get('about', [\App\Controllers\Frontend\AboutController::class, 'index']);

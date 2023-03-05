@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class BenefitModel extends Model
 {
-    protected $table = 'benefits';
+    protected $table = 'clinic001_benefits';
     protected $primaryKey = 'id';
     protected $allowedFields = ['status', 'sort', 'created_at', 'modified_at', 'creator_id', 'modifier_id', 'image', 'description'];
 }
