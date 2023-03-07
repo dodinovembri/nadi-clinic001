@@ -19,6 +19,7 @@
                     <div class="col-md-12">
                         <div class="p-4">
                             <div class="auth-logo text-center mb-4"><img src="<?= base_url('assets/images/logo/'. $config->logo) ?>" alt=""></div>
+                            <?= $this->include('extranet/components/flashmessage') ?>
                             <h1 class="mb-3 text-18">Sign In</h1>
                             <form action="<?= base_url('ext-auth') ?>" method="post">
                                 <div class="form-group">

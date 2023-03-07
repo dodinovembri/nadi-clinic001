@@ -47,6 +47,7 @@ class Authcontroller extends BaseController
 
     public function auth()
     {
+        $db = \Config\Database::connect();
         $session = session();
         $model = new UserModel();
         $email = $this->request->getVar('email');
@@ -56,12 +57,15 @@ class Authcontroller extends BaseController
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
             if($verify_pass){
+                $client_config = $db->table("clinic001_client_config");
+                $data_client_config = $client_config->where('domain_live_url', base_url())->get()->getFirstRow();
                 $ses_data = [
                     'id'       => $data['id'],
                     'firstname'     => $data['firstname'],
                     'lastname'     => $data['lastname'],
                     'email'    => $data['email'],
                     'role_code' => $data['role_code'],
+                    'trial_access_name' => $data_client_config->trial_access_name,
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);

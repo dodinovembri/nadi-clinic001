@@ -1,0 +1,355 @@
+ERROR - 2023-03-07 16:45:01 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:45:02 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 16:45:45 --> Attempt to read property "is_production" on null
+in APPPATH\Controllers\Frontend\HomeController.php on line 26.
+ 1 APPPATH\Controllers\Frontend\HomeController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "is_production" on null', 'APPPATH\\Controllers\\Frontend\\HomeController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 16:46:25 --> Attempt to read property "is_production" on null
+in APPPATH\Controllers\Frontend\HomeController.php on line 26.
+ 1 APPPATH\Controllers\Frontend\HomeController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "is_production" on null', 'APPPATH\\Controllers\\Frontend\\HomeController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:46:50 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:46:50 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:16 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:16 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_client_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:22 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:22 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:24 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:24 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:25 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:25 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:26 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:26 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:27 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:27 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:47:37 --> mysqli_sql_exception: Unknown column 'domain' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:47:37 --> Unknown column 'domain' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain` = :domain:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 16:48:04 --> Undefined variable $config
+in APPPATH\Views\frontend\home\index.php on line 5.
+ 1 APPPATH\Views\frontend\home\index.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Views\\frontend\\home\\index.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(71): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 16:48:06 --> Undefined variable $config
+in APPPATH\Views\frontend\home\index.php on line 5.
+ 1 APPPATH\Views\frontend\home\index.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'APPPATH\\Views\\frontend\\home\\index.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\HomeController.php(71): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:48:31 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:48:31 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:49:44 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:49:44 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:49:45 --> mysqli_sql_exception: Unknown column 'domain_live_url' in 'where clause' in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-07 16:49:45 --> Unknown column 'domain_live_url' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_default_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 16:56:15 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_blogs' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BlogController.php(33): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#9 {main}
+CRITICAL - 2023-03-07 16:56:15 --> Table 'nadi_clinic001.clinic001_blogs' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Controllers\Frontend\BlogController.php(33): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                clinic001_blogs.*,
+                clinic001_blog_categories.name as category_name
+            FROM clinic001_blogs JOIN clinic001_blog_categories
+            ON clinic001_blogs.blog_category_id = clinic001_blog_categories.id
+            WHERE clinic001_blogs.status != 0
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -74,7 +74,7 @@
 											<div class="arrow_date"></div>
 										</li>
 										<!-- <li class="comments_number">
-											<a href="<?= base_url('blog/show/' . $value->id) ?>" title="5 comments">5</a>
+											<a href="" title="5 comments">5</a>
 										</li> -->
 									</ul>
 									<div class="post_content">
@@ -108,7 +108,7 @@
 											<div class="arrow_date"></div>
 										</li>
 										<!-- <li class="comments_number">
-											<a href="<?= base_url('blog/show/' . $value->id) ?>" title="5 comments">5</a>
+											<a href="" title="5 comments">5</a>
 										</li> -->
 									</ul>
 									<div class="post_content">
