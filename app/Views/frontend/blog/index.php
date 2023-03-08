@@ -17,15 +17,17 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
-			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
-			</a>
+			<?php if ($is_production == 0 || $trial_name == null) { ?>
+				<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+				</a>
+			<?php } ?>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
 						<h1 class="page_title"><?= ucwords($config_menu->blog) ?></h1>
 						<ul class="bread_crumb">
 							<li>
-								<a href="<?= base_url('/') ?>" title="<?= ucwords($config_menu->home) ?>">
+								<a href="<?= base_url('/' . $trial_name) ?>" title="<?= ucwords($config_menu->home) ?>">
 									<?= ucwords($config_menu->home) ?>
 								</a>
 							</li>
@@ -59,18 +61,18 @@
 									</li> -->
 								</ul>
 								<div class="post_content">
-									<a class="post_image" href="<?= base_url('blog/show/' . $value->id) ?>" title="<?= $value->title ?>">
+									<a class="post_image" href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>" title="<?= $value->title ?>">
 										<img src="<?= base_url('assets/images/blog/' . $value->image) ?>" alt="" />
 									</a>
 									<h2>
-										<a href="<?= base_url('blog/show/' . $value->id) ?>" title="<?= $value->title ?>">
+										<a href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>" title="<?= $value->title ?>">
 											<?= $value->title ?>
 										</a>
 									</h2>
 									<p>
 										<?= substr($value->description, 0, 400) ?>...
 									</p>
-									<a title="<?= $config_menu->read_more ?>" href="<?= base_url('blog/show/' . $value->id) ?>" class="more">
+									<a title="<?= $config_menu->read_more ?>" href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>" class="more">
 										<?= ucwords($config_menu->read_more) ?> &rarr;
 									</a>
 									<div class="post_footer clearfix">
@@ -105,7 +107,7 @@
 					<div class="sidebar_box first">
 						<ul class="categories clearfix page_margin_top">
 							<?php foreach ($blog_categories as $key => $value) { ?>
-								<li><a href="<?= base_url('blog_category/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>"><?= ucwords($value->name) ?></a></li>
+								<li><a href="<?= base_url($trial_name . '/blog_category/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>"><?= ucwords($value->name) ?></a></li>
 							<?php } ?>
 						</ul>
 					</div>

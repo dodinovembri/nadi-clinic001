@@ -17,14 +17,16 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
-			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
-			</a>
+			<?php if ($is_production == 0 || $trial_name == null) { ?>
+				<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+				</a>
+			<?php } ?>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
 						<h1 class="page_title"><?= ucwords($config_menu->about) ?></h1>
 						<ul class="bread_crumb">
-							<li><a href="<?= base_url('/') ?>" title="<?= ucwords($config_menu->home) ?>"><?= ucwords($config_menu->home) ?></a>
+							<li><a href="<?= base_url('/' . $trial_name) ?>" title="<?= ucwords($config_menu->home) ?>"><?= ucwords($config_menu->home) ?></a>
 							</li>
 							<li class="separator icon_small_arrow right_gray">&nbsp;</li>
 							<li><?= ucwords($config_menu->about) ?></li>
@@ -146,7 +148,7 @@
 									<li><a class="social_icon forrst" href="<?= $value->forrst_url ?>" target="_blank">&nbsp;</a></li>
 								</ul>
 								<ul class="controls">
-									<li><a href="<?= base_url('team/show/' . $value->id) ?>" class="open_details"></a></li>
+									<li><a href="<?= base_url($trial_name . '/team/show/' . $value->id) ?>" class="open_details"></a></li>
 									<li><a href="<?= base_url('assets/images/team/' . $value->image1) ?>" rel="team" class="fancybox open_lightbox"></a></li>
 								</ul>
 							</li>

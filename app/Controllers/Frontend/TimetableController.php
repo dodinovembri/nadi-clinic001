@@ -4,7 +4,7 @@ namespace App\Controllers\Frontend;
 
 class TimetableController extends BaseController
 {
-    public function index()
+    public function index($trial_name = null)
     {
         // connect db
         $db = \Config\Database::connect();
@@ -13,9 +13,14 @@ class TimetableController extends BaseController
         $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
         if ($client_config_data->is_production == 1) {
             $trial_access_name = $client_config_data->trial_access_name;
-        }else{
-            $uri = new \CodeIgniter\HTTP\URI(current_url());
-            $trial_access_name = $uri->getSegment(2);
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
         }
         // config
         $config = $db->table("clinic001_" . $trial_access_name . "_config");
@@ -48,12 +53,15 @@ class TimetableController extends BaseController
         $data['department'] = $first_department;     
         // department timetable
         $department_timetable = $db->table("clinic001_" . $trial_access_name . "_department_timetables");
-        $data['department_timetables'] = $department_timetable->where('department_id', $first_department->id)->get()->getResult();                                         
+        $data['department_timetables'] = $department_timetable->where('department_id', $first_department->id)->get()->getResult();
+        // trial name
+        $data['trial_name'] = $trial_name;   
+        $data['is_production'] = $is_production;     
 
         return view('frontend/timetable/index', $data);
     }
 
-    public function show($id)
+    public function show($trial_name = null, $id)
     {
         // connect db
         $db = \Config\Database::connect();
@@ -62,9 +70,14 @@ class TimetableController extends BaseController
         $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
         if ($client_config_data->is_production == 1) {
             $trial_access_name = $client_config_data->trial_access_name;
-        }else{
-            $uri = new \CodeIgniter\HTTP\URI(current_url());
-            $trial_access_name = $uri->getSegment(2);
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
         }
         // config
         $config = $db->table("clinic001_" . $trial_access_name . "_config");
@@ -94,8 +107,11 @@ class TimetableController extends BaseController
         $data['tweets'] = $tweet->get()->getResult();
         // department timetable
         $department_timetable = $db->table("clinic001_" . $trial_access_name . "_department_timetables");
-        $data['department_timetables'] = $department_timetable->where('department_id', $id)->get()->getResult();                                         
+        $data['department_timetables'] = $department_timetable->where('department_id', $id)->get()->getResult();
         $data['department'] = $department->where('id', $id)->get()->getFirstRow(); 
+        // trial name
+        $data['trial_name'] = $trial_name;
+        $data['is_production'] = $is_production;
         
         return view('frontend/timetable/index', $data);
     }    

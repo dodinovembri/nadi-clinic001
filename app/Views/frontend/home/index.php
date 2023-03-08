@@ -23,8 +23,10 @@
 			<?php } ?>
 		</ul>
 		<div class="page relative noborder">
-			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
-			</a>
+			<?php if ($is_production == 0 || $trial_name == null) { ?>
+				<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+				</a>
+			<?php } ?>
 			<div class="slider_content_box clearfix">
 				<?php foreach ($sliders as $key => $value) { ?>
 					<div class="slider_content" <?php if ($key == 0) { ?> style="display: block;" <?php } ?>>
@@ -78,11 +80,11 @@
 										</li> -->
 									</ul>
 									<div class="post_content">
-										<a class="post_image" href="<?= base_url('blog/show/' . $value->id) ?>">
+										<a class="post_image" href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>">
 											<img src="<?= base_url('assets/images/blog/' . $value->image) ?>" alt="" />
 										</a>
 										<h2>
-											<a href="<?= base_url('blog/show/' . $value->id) ?>"><?= $value->title ?></a>
+											<a href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>"><?= $value->title ?></a>
 										</h2>
 										<p>
 											<?= substr($value->description, 0, 200) ?>...
@@ -112,11 +114,11 @@
 										</li> -->
 									</ul>
 									<div class="post_content">
-										<a class="post_image" href="<?= base_url('blog/show/' . $value->id) ?>">
+										<a class="post_image" href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>">
 											<img src="<?= base_url('assets/images/blog/' . $value->image) ?>" alt="" />
 										</a>
 										<h2>
-											<a href="<?= base_url('blog/show/' . $value->id) ?>"><?= $value->title ?></a>
+											<a href="<?= base_url($trial_name . '/blog/show/' . $value->id) ?>"><?= $value->title ?></a>
 										</h2>
 										<p>
 											<?= substr($value->description, 0, 200) ?>...
@@ -154,8 +156,8 @@
 											<p><?= $value->description ?></p>
 										</div>
 										<div class="item_footer clearfix">
-											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('timetable/department/show/' . $value->id) ?>"><?= ucwords($config_menu->timetable) ?></a>
-											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url('department/show/' . $value->id) ?>"><?= ucwords($config_menu->detail) ?></a>
+											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url($trial_name . '/timetable/department/show/' . $value->id) ?>"><?= ucwords($config_menu->timetable) ?></a>
+											<a class="more blue icon_small_arrow margin_right_white" href="<?= base_url($trial_name . '/department/show/' . $value->id) ?>"><?= ucwords($config_menu->detail) ?></a>
 										</div>
 									</div>
 								</li>

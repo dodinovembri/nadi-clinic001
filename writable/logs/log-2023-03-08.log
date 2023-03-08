@@ -277,3 +277,510 @@ in SYSTEMPATH\Database\BaseConnection.php on line 645.
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 13:26:44 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('dodi')
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 13:26:44 --> Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_dodi_config`', [], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('dodi')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 13:27:33 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001__config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 13:27:33 --> Table 'nadi_clinic001.clinic001__config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001__config`', [], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 13:54:20 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001__config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 13:54:20 --> Table 'nadi_clinic001.clinic001__config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001__config`', [], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 14:02:13 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('dodi')
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 14:02:13 --> Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_dodi_config`', [], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('dodi')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 14:03:07 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('dodi')
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 14:03:07 --> Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_dodi_config`', [], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('dodi')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 14:03:13 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_blog_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('blog')
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 14:03:13 --> Table 'nadi_clinic001.clinic001_blog_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_blog_config`', [], false)
+ 2 APPPATH\Controllers\Frontend\HomeController.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\Homecontroller->index('blog')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 14:03:25 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Frontend\BlogController.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index('dodi')
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 14:03:25 --> Table 'nadi_clinic001.clinic001_dodi_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_dodi_config`', [], false)
+ 2 APPPATH\Controllers\Frontend\BlogController.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index('dodi')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 14:32:50 --> Undefined variable $trial_name
+in APPPATH\Views\frontend\component\header.php on line 10.
+ 1 APPPATH\Views\frontend\component\header.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $trial_name', 'APPPATH\\Views\\frontend\\component\\header.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\component\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/component/header', null, true)
+ 5 APPPATH\Views\frontend\blog\index.php(18): CodeIgniter\View\View->include('frontend/component/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 9 APPPATH\Controllers\Frontend\BlogController.php(53): view('frontend/blog/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index('dodi')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 14:33:41 --> Undefined variable $trial_name
+in APPPATH\Views\frontend\component\header.php on line 10.
+ 1 APPPATH\Views\frontend\component\header.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $trial_name', 'APPPATH\\Views\\frontend\\component\\header.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\component\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/component/header', null, true)
+ 5 APPPATH\Views\frontend\blog\index.php(18): CodeIgniter\View\View->include('frontend/component/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 9 APPPATH\Controllers\Frontend\BlogController.php(53): view('frontend/blog/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index('dodi')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:18:22 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:18:25 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:18:34 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\DepartmentController.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\DepartmentController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\DepartmentController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\DepartmentController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\DepartmentController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:18:36 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\TimetableController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\TimetableController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\TimetableController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\TimetableController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\TimetableController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 15:22:54 --> syntax error, unexpected token "if", expecting ")"
+in APPPATH\Config\Routes.php on line 287.
+ 1 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 15:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 15:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 15:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 15:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 15:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-03-08 15:24:37 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 15:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-03-08 15:26:47 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:29:08 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 15:29:08 --> Undefined property: stdClass::$admin_login
+in APPPATH\Views\frontend\component\header.php on line 19.
+ 1 APPPATH\Views\frontend\component\header.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$admin_login', 'APPPATH\\Views\\frontend\\component\\header.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\component\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/component/header', null, true)
+ 5 APPPATH\Views\frontend\blog\index.php(18): CodeIgniter\View\View->include('frontend/component/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\blog\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontend/blog/index', [], true)
+ 9 APPPATH\Controllers\Frontend\BlogController.php(55): view('frontend/blog/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Frontend\BlogController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\BlogController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:29:18 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 15:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 15:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 15:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-08 15:41:03 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_client_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Extranet\Authcontroller.php(61): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Extranet\Authcontroller->auth()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Authcontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 15:41:03 --> Table 'nadi_clinic001.clinic001_client_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_client_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Extranet\Authcontroller.php(61): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Extranet\Authcontroller->auth()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Authcontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 15:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-03-08 15:48:17 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 58.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:48:27 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\DepartmentController.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\DepartmentController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\DepartmentController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\DepartmentController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\DepartmentController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 15:48:31 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\TimetableController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\TimetableController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\TimetableController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\TimetableController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\TimetableController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 16:02:23 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-03-08 16:02:31 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 16:02:32 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\DepartmentController.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\DepartmentController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\DepartmentController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\DepartmentController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\DepartmentController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 16:02:34 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\TimetableController.php on line 64.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\TimetableController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\TimetableController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\TimetableController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\TimetableController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-03-08 16:07:14 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 16:12:30 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-03-08 16:13:25 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\DepartmentController.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\DepartmentController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\DepartmentController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\DepartmentController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\DepartmentController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-08 16:18:45 --> mysqli_sql_exception: Table 'nadi_clinic001.clinic001_client_config' doesn't exist in C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-2-0\htdocs\nadi-clinic001\app\Controllers\Extranet\Authcontroller.php(61): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(934): App\Controllers\Extranet\Authcontroller->auth()
+#6 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Authcontroller))
+#7 C:\xampp8-2-0\htdocs\nadi-clinic001\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-2-0\htdocs\nadi-clinic001\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-2-0\htdocs\nadi-clinic001\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-2-0\\h...')
+#10 {main}
+CRITICAL - 2023-03-08 16:18:45 --> Table 'nadi_clinic001.clinic001_client_config' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clinic001_client_config`
+WHERE `domain_live_url` = :domain_live_url:', [...], false)
+ 2 APPPATH\Controllers\Extranet\Authcontroller.php(61): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Extranet\Authcontroller->auth()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Authcontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-03-08 16:21:30 --> [DEPRECATED] Optional parameter $trial_name declared before required parameter $id is implicitly treated as a required parameter in APPPATH\Controllers\Frontend\BlogController.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('SYSTEMPATH\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\BlogController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\BlogController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\BlogController')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Frontend\\BlogController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-08 16:29:48 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Extranet\Authcontroller.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Extranet\Authcontroller->auth()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Authcontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-08 16:31:12 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Extranet\Authcontroller.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Extranet\Authcontroller->auth()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Authcontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-03-08 16:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-08 16:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

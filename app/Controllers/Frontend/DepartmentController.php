@@ -4,7 +4,7 @@ namespace App\Controllers\Frontend;
 
 class DepartmentController extends BaseController
 {
-    public function index()
+    public function index($trial_name = null)
     {
         // connect db
         $db = \Config\Database::connect();
@@ -13,9 +13,14 @@ class DepartmentController extends BaseController
         $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
         if ($client_config_data->is_production == 1) {
             $trial_access_name = $client_config_data->trial_access_name;
-        }else{
-            $uri = new \CodeIgniter\HTTP\URI(current_url());
-            $trial_access_name = $uri->getSegment(2);
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
         }
         // config
         $config = $db->table("clinic001_" . $trial_access_name . "_config");
@@ -54,12 +59,15 @@ class DepartmentController extends BaseController
         $data['department_doctors'] = $department_doctor->where('department_id', $first_department->id)->get()->getResult();
         // apppointment type
         $appointment = $db->table("clinic001_" . $trial_access_name . "_appointment_types");
-        $data['appointment_types'] = $appointment->get()->getResult();                                                  
+        $data['appointment_types'] = $appointment->get()->getResult();   
+        // trial name
+        $data['trial_name'] = $trial_name;  
+        $data['is_production'] = $is_production;                                                     
 
         return view('frontend/department/index', $data);
     }
 
-    public function show($id)
+    public function show($trial_name = null, $id)
     {
         // connect db
         $db = \Config\Database::connect();
@@ -68,9 +76,14 @@ class DepartmentController extends BaseController
         $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
         if ($client_config_data->is_production == 1) {
             $trial_access_name = $client_config_data->trial_access_name;
-        }else{
-            $uri = new \CodeIgniter\HTTP\URI(current_url());
-            $trial_access_name = $uri->getSegment(2);
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
         }
         // config
         $config = $db->table("clinic001_" . $trial_access_name . "_config");
@@ -109,7 +122,10 @@ class DepartmentController extends BaseController
         $data['department_doctors'] = $department_doctor->where('department_id', $current_department->id)->get()->getResult();
         // apppointment type
         $appointment = $db->table("clinic001_" . $trial_access_name . "_appointment_types");
-        $data['appointment_types'] = $appointment->get()->getResult();                                               
+        $data['appointment_types'] = $appointment->get()->getResult(); 
+        // trial name
+        $data['trial_name'] = $trial_name;   
+        $data['is_production'] = $is_production;                                                   
 
         return view('frontend/department/index', $data);
     }

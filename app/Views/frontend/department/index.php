@@ -17,14 +17,16 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
-			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
-			</a>
+			<?php if ($is_production == 0 || $trial_name == null) { ?>
+				<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+				</a>
+			<?php } ?>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
 						<h1 class="page_title"><?= ucwords($config_menu->department) ?></h1>
 						<ul class="bread_crumb">
-							<li><a href="<?= base_url('/') ?>" title="<?= ucwords($config_menu->home) ?>"><?= ucwords($config_menu->home) ?></a></li>
+							<li><a href="<?= base_url('/' . $trial_name) ?>" title="<?= ucwords($config_menu->home) ?>"><?= ucwords($config_menu->home) ?></a></li>
 							<li class="separator icon_small_arrow right_gray">&nbsp;</li>
 							<li><?= ucwords($config_menu->department) ?></li>
 						</ul>
@@ -42,7 +44,7 @@
 						<ul>
 							<?php foreach ($departments as $key => $value) { ?>
 								<li>
-									<a href="<?= base_url('department/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>">
+									<a href="<?= base_url($trial_name . '/department/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>">
 										<?= ucwords($value->name) ?>
 									</a>
 								</li>
@@ -74,7 +76,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="<?= base_url('timetable/department/show/' . $department->id) ?>" title="<?= ucwords($config_menu->timetable) ?>">
+										<a href="<?= base_url($trial_name . '/timetable/department/show/' . $department->id) ?>" title="<?= ucwords($config_menu->timetable) ?>">
 											<?= ucwords($config_menu->timetable) ?>
 										</a>
 									</li>

@@ -17,15 +17,17 @@
 	<div class="site_container">
 		<?= $this->include('frontend/component/header') ?>
 		<div class="page relative">
-			<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
-			</a>
+			<?php if ($is_production == 0 || $trial_name == null) { ?>
+				<a title="SELECT THIS TEMPLATE" href="https://nadi-app.com/get-started/<?= $config->app_id ?>" class="more blue medium home_box_container clearfix" style="position:fixed; background-color: red; margin-top: -8px; z-index: 1;">SELECT THIS TEMPLATE
+				</a>
+			<?php } ?>
 			<div class="page_layout page_margin_top clearfix">
 				<div class="page_header clearfix">
 					<div class="page_header_left">
 						<h1 class="page_title"><?= ucwords($config_menu->blog) ?></h1>
 						<ul class="bread_crumb">
 							<li>
-								<a href="<?= base_url('/') ?>" title="<?= ucwords($config_menu->home) ?>">
+								<a href="<?= base_url('/' . $trial_name) ?>" title="<?= ucwords($config_menu->home) ?>">
 									<?= ucwords($config_menu->home) ?>
 								</a>
 							</li>
@@ -33,7 +35,7 @@
 								&nbsp;
 							</li>
 							<li>
-								<a href="<?= base_url('blog') ?>" title="<?= ucwords($config_menu->blog) ?>">
+								<a href="<?= base_url($trial_name . '/blog') ?>" title="<?= ucwords($config_menu->blog) ?>">
 									<?= ucwords($config_menu->blog) ?>
 								</a>
 							</li>
@@ -234,7 +236,7 @@
 					<div class="sidebar_box first">
 						<ul class="categories clearfix page_margin_top">
 							<?php foreach ($blog_categories as $key => $value) { ?>
-								<li><a href="<?= base_url('blog_category/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>"><?= ucwords($value->name) ?></a></li>
+								<li><a href="<?= base_url($trial_name . '/blog_category/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>"><?= ucwords($value->name) ?></a></li>
 							<?php } ?>
 						</ul>
 					</div>

@@ -2,7 +2,7 @@
     <div class="footer">
         <ul class="footer_banner_box_container clearfix">
             <?php foreach ($footer_features as $key => $value) { ?>
-                <li class="footer_banner_box <?php if($key == 0) { ?> super_light_blue animated_element animation-fadeIn duration-500 <?php  } ?> <?php if($key == 1) { ?> light_blue animated_element animation-slideRight duration-800 delay-250 <?php } ?> <?php if($key == 2) { ?> blue animated_element animation-slideRight200 duration-800 delay-500 <?php } ?>">
+                <li class="footer_banner_box <?php if ($key == 0) { ?> super_light_blue animated_element animation-fadeIn duration-500 <?php  } ?> <?php if ($key == 1) { ?> light_blue animated_element animation-slideRight duration-800 delay-250 <?php } ?> <?php if ($key == 2) { ?> blue animated_element animation-slideRight200 duration-800 delay-500 <?php } ?>">
                     <h2><?= $value->title ?></h2>
                     <p><a class="icon_small_arrow right_white" href="#"><?= $value->subtitle ?></a></p>
                 </li>
@@ -41,7 +41,7 @@
                     <ul class="scrolling_list footer_recent_posts">
                         <?php foreach ($blogs as $key => $value) { ?>
                             <li class="icon_small_arrow right_white">
-                                <a href="<?php base_url('blog/show/' . $value->id) ?>">
+                                <a href="<?php base_url($trial_name . '/blog/show/' . $value->id) ?>">
                                     <?= $value->title ?>
                                 </a>
                                 <abbr title="<?= $value->date ?>" class="timeago"><?= $value->date ?></abbr>
