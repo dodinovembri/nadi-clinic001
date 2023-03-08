@@ -26,9 +26,9 @@ class AboutController extends BaseController
         // department
         $department = $db->table("clinic001_" . $trial_access_name . "_departments");
         $data['departments'] = $department->get()->getResult();
+        // footer feature
         $footer_feature = $db->table("clinic001_" . $trial_access_name . "_footer_features");
         $data['footer_features'] = $footer_feature->get()->getResult();
-        // blog
         // blog & blog categories
         $clinic001_blogs = "clinic001_" . $trial_access_name . "_blogs";
         $clinic001_blog_categories = "clinic001_" . $trial_access_name . "_blog_categories";        

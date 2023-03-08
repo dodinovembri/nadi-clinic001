@@ -20,7 +20,7 @@ class Homecontroller extends BaseController
         // config
         $config = $db->table("clinic001_" . $trial_access_name . "_config");
         $data['config']   = $config->get()->getFirstRow();
-        // configuration menu
+        // config menu
         $config_menu = $db->table("clinic001_" . $trial_access_name . "_config_menus");
         $data['config_menu'] = $config_menu->get()->getFirstRow();
         // department
