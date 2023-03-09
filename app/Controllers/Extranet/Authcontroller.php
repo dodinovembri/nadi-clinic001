@@ -2,9 +2,7 @@
 
 namespace App\Controllers\Extranet;
 
-use App\Models\ConfigModel;
-
-class Authcontroller extends BaseController
+class AuthController extends BaseController
 {
     public function login($trial_name = null)
     {
