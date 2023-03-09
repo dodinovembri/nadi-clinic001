@@ -7,22 +7,56 @@ use App\Models\AboutModel;
 
 class AboutController extends BaseController
 {
-    public function index()
+    public function index($trial_name = null)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         // config
-        $config = new ConfigModel();
-        $data['config'] = $config->get()->getFirstRow();
+        $config = $db->table("clinic001_" . $trial_access_name . "_config");
+        $data['config']   = $config->get()->getFirstRow();
         // about
-        $about = new AboutModel();
-        $data['about'] = $about->get()->getFirstRow();
+        $about = $db->table("clinic001_" . $trial_access_name . "_about");
+        $data['about'] = $about->get()->getFirstRow();   
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;           
 
         return view('extranet/about/index', $data);
     }
 
-    public function update($id)
+    public function update($trial_name = null, $id)
     {
-        $about = new AboutModel();
-
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
+        $about = $db->table("clinic001_" . $trial_access_name . "_about");
         $image1 = $this->request->getFile('image1');
         if ($image1 != '') {
             $image1_name = $image1->getRandomName();

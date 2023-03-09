@@ -2,34 +2,41 @@
 
 namespace App\Controllers\Extranet;
 
-use App\Models\ConfigModel;
-
 class ConfigController extends BaseController
 {
-    protected $helpers = ['form'];
-
     public function index()
     {
-        $config = new ConfigModel();
+        // connect db
+        $db = \Config\Database::connect();
+        $trial_access_name = session()->get('trial_access_name');
+        // trial name
+        $data['trial_name'] = $trial_access_name;
+        // config
+        $config = $db->table("clinic001_" . $trial_access_name . "_config");
         $data['config'] = $config->get()->getFirstRow();
 
         return view('extranet/config/index', $data);
     }
 
-    public function update($id)
+    public function update($trial_name = null, $id)
     {
-        $config = new ConfigModel();
+        // connect db
+        $db = \Config\Database::connect();
+        $trial_access_name = session()->get('trial_access_name');
+        // config
+        $config = $db->table("clinic001_" . $trial_access_name . "_config");
 
         $logo = $this->request->getFile('logo');
         if ($logo != '') {
             $logo_name = $logo->getRandomName();
             $logo->move('assets/images/logo/', $logo_name);
 
-            $config->update($id, [
+            $data = [
                 'modified_at' => date('Y-m-d H:i:s'),
                 'modifier_id' => session()->get('id'),
                 'logo' => $logo_name
-            ]);
+            ];
+            $config->where('id', $id)->update($data);
         }
 
         $favicon = $this->request->getFile('favicon');
@@ -37,14 +44,15 @@ class ConfigController extends BaseController
             $favicon_name = $favicon->getRandomName();
             $favicon->move('assets/images/favicon/', $favicon_name);
 
-            $config->update($id, [
+            $data = [
                 'modified_at' => date('Y-m-d H:i:s'),
                 'modifier_id' => session()->get('id'),
                 'favicon' => $favicon_name
-            ]);
+            ];
+            $config->where('id', $id)->update($data);
         }
 
-        $config->update($id, [
+        $data = [
             'logo_text'   => $this->request->getPost('logo_text'),
             'monday_friday_opening_hours' => $this->request->getPost('monday_friday_opening_hours'),
             'saturday_opening_hours' => $this->request->getPost('saturday_opening_hours'),
@@ -67,9 +75,13 @@ class ConfigController extends BaseController
             'phone' => $this->request->getPost('phone'),
             'email' => $this->request->getPost('email'),
             'status' => $this->request->getPost('status')
-        ]);
+        ];
+        $config->where('id', $id)->update($data);
 
         session()->setFlashdata('success', 'Success update data');
-        return redirect()->to(base_url('extranet/config'));
+        if ($trial_access_name == "default") {
+            $trial_access_name = null;
+        }        
+        return redirect()->to(base_url($trial_access_name . '/extranet/config'));
     }
 }

@@ -6,8 +6,24 @@ use App\Models\DepartmentModel;
 
 class DepartmentController extends BaseController
 {
-    public function index()
+    public function index($trial_name = null)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         // config
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
@@ -18,8 +34,24 @@ class DepartmentController extends BaseController
         return view('extranet/department/index', $data);
     }
 
-    public function create()
+    public function create($trial_name = null)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         // config
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
@@ -27,8 +59,24 @@ class DepartmentController extends BaseController
         return view('extranet/department/create', $data);
     }
 
-    public function store()
+    public function store($trial_name = null)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         $department = new DepartmentModel();
 
         $image = $this->request->getFile('image');
@@ -54,24 +102,72 @@ class DepartmentController extends BaseController
         return redirect()->to(base_url('extranet/department'));
     }
 
-    public function show($id)
+    public function show($trial_name = null, $id)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         $department = new DepartmentModel();
         $data['department'] = $department->where('id', $id)->get()->getFirstRow();
 
         return view('extranet/department/show', $data);
     }
 
-    public function edit($id)
+    public function edit($trial_name = null, $id)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         $department = new DepartmentModel();
         $data['department'] = $department->where('id', $id)->get()->getFirstRow();
 
         return view('extranet/department/edit', $data);
     }
 
-    public function update($id)
+    public function update($trial_name = null, $id)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         $department = new DepartmentModel();
         $image = $this->request->getFile('image');
         if ($image != '') {
@@ -113,8 +209,24 @@ class DepartmentController extends BaseController
         return redirect()->to(base_url('extranet/department'));
     }
 
-    public function destroy($id)
+    public function destroy($trial_name = null, $id)
     {
+        // connect db
+        $db = \Config\Database::connect();
+        // client config
+        $client_config = $db->table('clinic001_default_client_config');
+        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client_config_data->is_production == 1) {
+            $trial_access_name = $client_config_data->trial_access_name;
+            $is_production = 1;
+        } else {
+            if ($trial_name != null) {
+                $trial_access_name = $trial_name;
+            } else {
+                $trial_access_name = "default";
+            }
+            $is_production = 0;
+        }
         $department = new DepartmentModel();
         $department->delete($id);
 

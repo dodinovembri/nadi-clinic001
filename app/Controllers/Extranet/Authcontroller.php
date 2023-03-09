@@ -67,6 +67,8 @@ class AuthController extends BaseController
                     'lastname' => $data->lastname,
                     'email' => $data->email,
                     'role_code' => $data->role_code,
+                    'is_production' => $is_production,
+                    'trial_access_name' => $trial_access_name,
                     'logged_in' => TRUE
                 ];
 
