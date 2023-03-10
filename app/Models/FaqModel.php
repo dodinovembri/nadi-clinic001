@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class FaqModel extends Model
 {
-    protected $table = 'clinic001_default_faqs';
+    protected $table = 'clinic001_faq';
     protected $primaryKey = 'id';
     protected $allowedFields = ['status', 'sort', 'created_at', 'modified_at', 'creator_id', 'modifier_id', 'question', 'image', 'answer'];
 }

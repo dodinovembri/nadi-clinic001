@@ -23,7 +23,7 @@
                 <div class="breadcrumb">
                     <h1>Slider Detail</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/slider_feature') ?>">Slider</a></li>
+                        <li><a href="<?= base_url($trial_name . '/extranet/slider_feature') ?>">Slider</a></li>
                         <li>Slider Detail</li>
                     </ul>
                 </div>
@@ -74,7 +74,7 @@
                                         <input class="form-control" type="text" value="<?= $slider_feature->status == 1 ? 'Active' : 'Inactive' ?>" disabled />
                                     </div>
                                     <div class="col-md-12" style="margin-top: 20px;">
-                                        <a href="<?= base_url('extranet/slider_feature') ?>"><button class="btn btn-primary">Back to List</button></a>
+                                        <a href="<?= base_url($trial_name . '/extranet/slider_feature') ?>"><button class="btn btn-primary">Back to List</button></a>
                                     </div>
                                 </div>
                             </div>

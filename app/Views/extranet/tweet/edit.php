@@ -23,7 +23,7 @@
                 <div class="breadcrumb">
                     <h1>Edit Slider</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/tweet') ?>">Slider</a></li>
+                        <li><a href="<?= base_url($trial_name . '/extranet/tweet') ?>">Slider</a></li>
                         <li>Edit Slider</li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/tweet/update/' . $tweet->id) ?>" method="post">
+                                <form action="<?= base_url($trial_name . '/extranet/tweet/update/' . $tweet->id) ?>" method="post">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Name</label>
@@ -86,7 +86,7 @@
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
                                             <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/tweet') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <a href="<?= base_url($trial_name . '/extranet/tweet') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
                                         </div>
                                     </div>
                                 </form>

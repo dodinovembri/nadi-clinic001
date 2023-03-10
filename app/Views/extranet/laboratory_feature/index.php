@@ -27,7 +27,7 @@
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
-                <a href="<?= base_url('extranet/laboratory-feature/create') ?>"><button class="btn btn-primary ripple" type="button">Create New</button><br><br></a>
+                <a href="<?= base_url($trial_name . '/extranet/laboratory-feature/create') ?>"><button class="btn btn-primary ripple" type="button">Create New</button><br><br></a>
                 <div class="row mb-4">
                     <div class="col-md-12 mb-4">
                         <?= $this->include('extranet/components/flashmessage') ?>
@@ -60,10 +60,10 @@
                                                         } ?>
                                                     </td>
                                                     <td>
-                                                        <a class="text-success mr-2" href="<?= base_url('extranet/laboratory_feature/show/' . $value->id) ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url($trial_name . '/extranet/laboratory_feature/show/' . $value->id) ?>">
                                                             <i class="nav-icon i-Eye font-weight-bold"></i>
                                                         </a>
-                                                        <a class="text-success mr-2" href="<?= base_url('extranet/laboratory_feature/edit/' . $value->id) ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url($trial_name . '/extranet/laboratory_feature/edit/' . $value->id) ?>">
                                                             <i class="nav-icon i-Pen-2 font-weight-bold"></i>
                                                         </a>
                                                         <a class="text-danger mr-2" href="#">
@@ -83,7 +83,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                                                <a href="<?= base_url('extranet/laboratory_feature/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
+                                                                <a href="<?= base_url($trial_name . '/extranet/laboratory_feature/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
                                                             </div>
                                                         </div>
                                                     </div>

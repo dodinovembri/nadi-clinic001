@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Extranet;
 
+use App\Models\ClientModel;
 use App\Models\ConfigModel;
 use App\Models\AboutModel;
 
@@ -9,31 +10,31 @@ class AboutController extends BaseController
 {
     public function index($trial_name = null)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
+        // client
+        $client_model = new ClientModel();
+        $client = $client_model->where("domain_live_url", base_url())->get()->getFirstRow();
+        if ($client->is_production == 1) {
             $is_production = 1;
+            $client_id = $client->id;
         } else {
             if ($trial_name != null) {
                 $trial_access_name = $trial_name;
             } else {
                 $trial_access_name = "default";
             }
+            $client = $client_model->where("domain_live_url", base_url())->where('trial_access_name', $trial_access_name)->get()->getFirstRow();
+            $client_id = $client->id;
             $is_production = 0;
         }
+        // define trial or prod
+        $data['trial_name'] = $trial_name;
+        $data['is_production'] = $is_production;        
         // config
-        $config = $db->table("clinic001_" . $trial_access_name . "_config");
-        $data['config']   = $config->get()->getFirstRow();
+        $config_model = new ConfigModel();
+        $data['config']   = $config_model->where('client_id', $client_id)->get()->getFirstRow();
         // about
-        $about = $db->table("clinic001_" . $trial_access_name . "_about");
-        $data['about'] = $about->get()->getFirstRow();   
-        // trial name
-        $data['trial_name'] = $trial_name; 
-        $data['is_production'] = $is_production;           
+        $about_model = new AboutModel();
+        $data['about']   = $about_model->where('client_id', $client_id)->get()->getFirstRow();
 
         return view('extranet/about/index', $data);
     }

@@ -24,6 +24,9 @@ class UserController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         // config
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
@@ -52,6 +55,9 @@ class UserController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         // config
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
@@ -120,6 +126,9 @@ class UserController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         $user = new UserModel();
         $data['user'] = $user->where('id', $id)->get()->getFirstRow();
 
@@ -144,6 +153,9 @@ class UserController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         $user = new UserModel();
         $data['user'] = $user->where('id', $id)->get()->getFirstRow();
 

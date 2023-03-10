@@ -28,7 +28,7 @@
 				<?= $this->include('extranet/components/flashmessage') ?>
 				<div class="row">
 					<div class="col-md-12">
-						<form action="<?= base_url('extranet/config-menu/update/' . $config_menu->id) ?>" method="post" enctype="multipart/form-data">
+						<form action="<?= base_url($trial_name . '/extranet/config-menu/update/' . $config_menu->id) ?>" method="post" enctype="multipart/form-data">
 							<div class="card mb-4">
 								<div class="card-body">
 									<h5>Label & Menu Configuration or translation</h5>

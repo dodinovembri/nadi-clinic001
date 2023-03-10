@@ -24,6 +24,9 @@ class BlogController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         // config
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
@@ -52,6 +55,9 @@ class BlogController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         // config
         $config = new ConfigModel();
         $data['config'] = $config->get()->getFirstRow();
@@ -120,6 +126,9 @@ class BlogController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         $blog = new BlogModel();
         $data['blog'] = $blog->where('id', $id)->get()->getFirstRow();
 
@@ -144,6 +153,9 @@ class BlogController extends BaseController
             }
             $is_production = 0;
         }
+        // trial name
+        $data['trial_name'] = $trial_name; 
+        $data['is_production'] = $is_production;         
         $blog = new BlogModel();
         $data['blog'] = $blog->where('id', $id)->get()->getFirstRow();
 
