@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="keywords" content="<?= $config->keyword ?>" />
-	<meta name="description" content="<?= $config->description ?>" />  
-      
-    <title>Footer Feature | <?= $config->name ?></title>
+    <meta name="keywords" content="<?= $config->keyword ?>" />
+    <meta name="description" content="<?= $config->description ?>" />
+
+    <title>Fitur Footer | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,13 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Slider</h1>
-                    <ul>
-                        <li><a href="#">Slider</a></li>
-                    </ul>
+                    <h1>Fitur Footer</h1>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
-                <a href="<?= base_url($trial_name . '/extranet/footer-feature/create') ?>"><button class="btn btn-primary ripple" type="button">Create New</button><br><br></a>
+                <a href="<?= base_url('extranet/footer-feature/create') ?>"><button class="btn btn-primary ripple" type="button">Tambah Baru</button><br><br></a>
                 <div class="row mb-4">
                     <div class="col-md-12 mb-4">
                         <?= $this->include('extranet/components/flashmessage') ?>
@@ -37,11 +34,11 @@
                                     <table class="display table table-striped table-bordered" id="zero_configuration_table" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>No</th>
-                                                <th>Title</th>
-                                                <th>Subtitle</th>
-                                                <th>Status</th>
-                                                <th>Actions</th>
+                                                <th style="width:10px">No</th>
+                                                <th>Judul</th>
+                                                <th>Sub Judul</th>
+                                                <th style="width:25px">Status</th>
+                                                <th style="width:80px">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -54,16 +51,16 @@
                                                     <td><?= $value->subtitle ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
-                                                            echo "Active";
+                                                            echo "Aktif";
                                                         } elseif ($value->status == 0) {
-                                                            echo "Inactive";
+                                                            echo "Nonaktif";
                                                         } ?>
                                                     </td>
                                                     <td>
-                                                        <a class="text-success mr-2" href="<?= base_url($trial_name . '/extranet/footer_feature/show/' . $value->id) ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url('extranet/footer-feature/show/' . $value->id) ?>">
                                                             <i class="nav-icon i-Eye font-weight-bold"></i>
                                                         </a>
-                                                        <a class="text-success mr-2" href="<?= base_url($trial_name . '/extranet/footer_feature/edit/' . $value->id) ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url('extranet/footer-feature/edit/' . $value->id) ?>">
                                                             <i class="nav-icon i-Pen-2 font-weight-bold"></i>
                                                         </a>
                                                         <a class="text-danger mr-2" href="#">
@@ -75,15 +72,15 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="deleteModalLabel">Delete Data</h5>
+                                                                <h5 class="modal-title" id="deleteModalLabel">Hapus Data</h5>
                                                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <p>Are you sure want to delete this data?</p>
+                                                                <p>Anda yakin ingin menghapus data ini?</p>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                                                <a href="<?= base_url($trial_name . '/extranet/footer_feature/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
+                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                                <a href="<?= base_url('extranet/footer-feature/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Hapus</button></a>
                                                             </div>
                                                         </div>
                                                     </div>

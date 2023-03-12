@@ -16,7 +16,7 @@
                     <li><a href="<?= base_url($trial_name . '/about') ?>"><?= ucwords($config_menu->about) ?></a></li>
                     <li><a href="<?= base_url($trial_name . '/doctor') ?>"><?= ucwords($config_menu->our_doctor) ?></a></li>
                     <li><a href="<?= base_url($trial_name . '/medical-care') ?>"><?= ucwords($config_menu->medical_care) ?></a></li>
-                    <li><a href="<?= base_url($trial_name . '/ext-login') ?>"><?= ucwords($config_menu->signin) ?></a></li>
+                    <li><a href="<?= base_url('ext-login') ?>"><?= ucwords($config_menu->signin) ?></a></li>
                 </ul>
             </li>
             <li><a href="<?= base_url($trial_name . '/department') ?>"><?= strtoupper($config_menu->department) ?></a></li>

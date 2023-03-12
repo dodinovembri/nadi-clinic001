@@ -8,7 +8,7 @@
 	<meta name="keywords" content="<?= $config->keyword ?>" />
 	<meta name="description" content="<?= $config->description ?>" />  
       
-    <title>Slider | <?= $config->name ?></title>
+    <title>Slide Gambar | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Slider Detail</h1>
+                    <h1>Detil Slide Gambar</h1>
                     <ul>
-                        <li><a href="<?= base_url($trial_name . '/extranet/slider') ?>">Slider</a></li>
-                        <li>Slider Detail</li>
+                        <li><a href="<?= base_url('extranet/slider') ?>">Slide Gambar</a></li>
+                        <li>Detil Slide Gambar</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -34,47 +34,23 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Slider Name</label>
-                                        <input class="form-control" type="text" value="<?= $slider->name ?>" disabled />
+                                        <label>Judul</label>
+                                        <input class="form-control" type="text" value="<?= $slider->title ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Image</label>
-                                        <img src="<?= base_url('assets/images/product_categories/' . $slider->image) ?>" height="120" alt="Slider Image">
+                                        <label>Sub Judul</label>
+                                        <input class="form-control" type="text" value="<?= $slider->subtitle ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text 1</label>
-                                        <input class="form-control" type="text" value="<?= $slider->text1 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 2</label>
-                                        <input class="form-control" type="text" value="<?= $slider->text2 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 3</label>
-                                        <input class="form-control" type="text" value="<?= $slider->text3 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 4</label>
-                                        <input class="form-control" type="text" value="<?= $slider->text4 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 5</label>
-                                        <input class="form-control" type="text" value="<?= $slider->text5 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text BUtton</label>
-                                        <input class="form-control" type="text" value="<?= $slider->text_button ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Button Link</label>
-                                        <input class="form-control" type="text" value="<?= $slider->button_link ?>" disabled />
+                                        <label>Gambar</label>
+                                        <img src="<?= base_url('assets/images/slider/' . $slider->image) ?>" height="120" alt="Slide Gambar">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
                                         <label>Status</label>
-                                        <input class="form-control" type="text" value="<?= $slider->status == 1 ? 'Active' : 'Inactive' ?>" disabled />
+                                        <input class="form-control" type="text" value="<?= $slider->status == 1 ? 'Aktif' : 'Nonaktif' ?>" disabled />
                                     </div>
                                     <div class="col-md-12" style="margin-top: 20px;">
-                                        <a href="<?= base_url($trial_name . '/extranet/slider') ?>"><button class="btn btn-primary">Back to List</button></a>
+                                        <a href="<?= base_url('extranet/slider') ?>"><button class="btn btn-primary">Kembali</button></a>
                                     </div>
                                 </div>
                             </div>

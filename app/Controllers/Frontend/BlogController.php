@@ -2,122 +2,151 @@
 
 namespace App\Controllers\Frontend;
 
+use App\Models\BlogCategoryModel;
+use App\Models\ClientModel;
+use App\Models\ConfigModel;
+use App\Models\ConfigMenuModel;
+use App\Models\DepartmentModel;
+use App\Models\FooterFeatureModel;
+use App\Models\TweetModel;
+
 class BlogController extends BaseController
 {
     public function index($trial_name = null)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
+        // client
+        $client_model = new ClientModel();
+        $client = $client_model->where("domain_live_url", base_url())->where('status', 1)->get()->getFirstRow();
+        if ($client->is_production == 1) {
             $is_production = 1;
+            $client_id = $client->id;
         } else {
+            $is_production = 0;
             if ($trial_name != null) {
                 $trial_access_name = $trial_name;
             } else {
-                $trial_access_name = "default";
+                $trial_access_name = null;
             }
-            $is_production = 0;
+            $client = $client_model->where("domain_live_url", base_url())->where('trial_access_name', $trial_access_name)->where('status', 1)->get()->getFirstRow();
+            if ($client) {
+                $client_id = $client->id;
+            }else{
+                return redirect()->to(base_url('/'));
+            }
         }
+        // define trial or prod
+        $data['trial_name'] = $trial_name;
+        $data['is_production'] = $is_production;  
         // config
-        $config = $db->table("clinic001_" . $trial_access_name . "_config");
-        $data['config']   = $config->get()->getFirstRow();
+        $config = new ConfigModel();
+        $data['config'] = $config->where('client_id', $client_id)->where('status', 1)->get()->getFirstRow();
         // config menu
-        $config_menu = $db->table("clinic001_" . $trial_access_name . "_config_menus");
-        $data['config_menu'] = $config_menu->get()->getFirstRow();
+        $config_menu = new ConfigMenuModel();
+        $data['config_menu'] = $config_menu->where('client_id', $client_id)->where('status', 1)->get()->getFirstRow();
         // department
-        $department = $db->table("clinic001_" . $trial_access_name . "_departments");
-        $data['departments'] = $department->get()->getResult();
+        $department = new DepartmentModel();
+        $data['departments'] = $department->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // footer feature
-        $footer_feature = $db->table("clinic001_" . $trial_access_name . "_footer_features");
-        $data['footer_features'] = $footer_feature->get()->getResult();
+        $footer_feature = new FooterFeatureModel();
+        $data['footer_features'] = $footer_feature->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // blog & blog categories
-        $clinic001_blogs = "clinic001_" . $trial_access_name . "_blogs";
-        $clinic001_blog_categories = "clinic001_" . $trial_access_name . "_blog_categories";
+        $db = \Config\Database::connect();
         $data['blogs'] = $db->query("
             SELECT 
-                $clinic001_blogs.*,
-                $clinic001_blog_categories.name as category_name
-            FROM $clinic001_blogs JOIN $clinic001_blog_categories
-            ON $clinic001_blogs.blog_category_id = $clinic001_blog_categories.id
-            WHERE $clinic001_blogs.status != 0
+                clinic001_blog.*,
+                clinic001_blog_category.name as category_name
+            FROM clinic001_blog JOIN clinic001_blog_category
+            ON clinic001_blog.blog_category_id = clinic001_blog_category.id
+            WHERE clinic001_blog.client_id = '$client_id'
+            AND clinic001_blog_category.client_id = '$client_id'
+            AND clinic001_blog.status != 0
+            AND clinic001_blog_category.status != 0
         ")->getResult();
         // tweets
-        $tweet = $db->table("clinic001_" . $trial_access_name . "_tweets");
-        $data['tweets'] = $tweet->get()->getResult();
+        $tweet = new TweetModel();
+        $data['tweets'] = $tweet->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // blog category
-        $blog_category = $db->table("clinic001_" . $trial_access_name . "_blog_categories");
-        $data['blog_categories'] = $blog_category->get()->getResult();
-        // trial name
-        $data['trial_name'] = $trial_name;  
-        $data['is_production'] = $is_production;      
+        $blog_category = new BlogCategoryModel();
+        $data['blog_categories'] = $blog_category->where('client_id', $client_id)->where('status', 1)->get()->getResult();
 
         return view('frontend/blog/index', $data);
     }
 
-    public function show($trial_name = null, $id)
+    public function show($trial_name, $id)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
+        // client
+        $client_model = new ClientModel();
+        $client = $client_model->where("domain_live_url", base_url())->where('status', 1)->get()->getFirstRow();
+        if ($client->is_production == 1) {
             $is_production = 1;
+            $client_id = $client->id;
         } else {
+            $is_production = 0;
             if ($trial_name != null) {
                 $trial_access_name = $trial_name;
             } else {
-                $trial_access_name = "default";
+                $trial_access_name = null;
             }
-            $is_production = 0;
+            $client = $client_model->where("domain_live_url", base_url())->where('trial_access_name', $trial_access_name)->where('status', 1)->get()->getFirstRow();
+            if ($client) {
+                $client_id = $client->id;
+            }else{
+                return redirect()->to(base_url('/'));
+            }
         }
+        // define trial or prod
+        $data['trial_name'] = $trial_name;
+        $data['is_production'] = $is_production;  
         // config
-        $config = $db->table("clinic001_" . $trial_access_name . "_config");
-        $data['config']   = $config->get()->getFirstRow();
+        $config = new ConfigModel();
+        $data['config'] = $config->where('client_id', $client_id)->where('status', 1)->get()->getFirstRow();
         // config menu
-        $config_menu = $db->table("clinic001_" . $trial_access_name . "_config_menus");
-        $data['config_menu'] = $config_menu->get()->getFirstRow();
+        $config_menu = new ConfigMenuModel();
+        $data['config_menu'] = $config_menu->where('client_id', $client_id)->where('status', 1)->get()->getFirstRow();
         // department
-        $department = $db->table("clinic001_" . $trial_access_name . "_departments");
-        $data['departments'] = $department->get()->getResult();
+        $department = new DepartmentModel();
+        $data['departments'] = $department->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // footer feature
-        $footer_feature = $db->table("clinic001_" . $trial_access_name . "_footer_features");
-        $data['footer_features'] = $footer_feature->get()->getResult();
+        $footer_feature = new FooterFeatureModel();
+        $data['footer_features'] = $footer_feature->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // blog & blog categories
-        $clinic001_blogs = "clinic001_" . $trial_access_name . "_blogs";
-        $clinic001_blog_categories = "clinic001_" . $trial_access_name . "_blog_categories";
+        $db = \Config\Database::connect();
         $data['blogs'] = $db->query("
             SELECT 
-                $clinic001_blogs.*,
-                $clinic001_blog_categories.name as category_name
-            FROM $clinic001_blogs JOIN $clinic001_blog_categories
-            ON $clinic001_blogs.blog_category_id = $clinic001_blog_categories.id
-            WHERE $clinic001_blogs.status != 0
+                clinic001_blog.*,
+                clinic001_blog_category.name as category_name
+            FROM clinic001_blog JOIN clinic001_blog_category
+            ON clinic001_blog.blog_category_id = clinic001_blog_category.id
+            WHERE clinic001_blog.client_id = '$client_id'
+            AND clinic001_blog_category.client_id = '$client_id'
+            AND clinic001_blog.status != 0
+            AND clinic001_blog_category.status != 0
         ")->getResult();
+        // tweets
+        $tweet = new TweetModel();
+        $data['tweets'] = $tweet->where('client_id', $client_id)->where('status', 1)->get()->getResult();
+        // blog category
+        $blog_category = new BlogCategoryModel();
+        $data['blog_categories'] = $blog_category->where('client_id', $client_id)->where('status', 1)->get()->getResult();
+        // blog
         $data['blog'] = $db->query("
             SELECT 
-                $clinic001_blogs.*,
-                $clinic001_blog_categories.name as category_name
-            FROM $clinic001_blogs JOIN $clinic001_blog_categories
-            ON $clinic001_blogs.blog_category_id = $clinic001_blog_categories.id
-            WHERE $clinic001_blogs.status != 0
-            AND $clinic001_blogs.id = '$id'
+                clinic001_blog.*,
+                clinic001_blog_category.name as category_name
+            FROM clinic001_blog JOIN clinic001_blog_category
+            ON clinic001_blog.blog_category_id = clinic001_blog_category.id
+            WHERE clinic001_blog.id = '$id'
+            AND clinic001_blog.client_id = '$client_id'
+            AND clinic001_blog_category.client_id = '$client_id'
+            AND clinic001_blog.status != 0
+            AND clinic001_blog_category.status != 0
         ")->getFirstRow();
-        // tweets
-        $tweet = $db->table("clinic001_" . $trial_access_name . "_tweets");
-        $data['tweets'] = $tweet->get()->getResult();
-        // blog category
-        $blog_category = $db->table("clinic001_" . $trial_access_name . "_blog_categories");
-        $data['blog_categories'] = $blog_category->get()->getResult();
-        // trial name
-        $data['trial_name'] = $trial_name;   
-        $data['is_production'] = $is_production;     
 
         return view('frontend/blog/show', $data);
     }
+
+    public function show1params($id)
+    {
+        return $this->show($trial_name = null, $id);
+    }  
 }

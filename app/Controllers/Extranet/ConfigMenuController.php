@@ -1,60 +1,26 @@
 <?php
 
 namespace App\Controllers\Extranet;
+
 use App\Models\ConfigModel;
 use App\Models\ConfigMenuModel;
 
 class ConfigMenuController extends BaseController
 {
-    public function index($trial_name = null)
+    public function index()
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
-        // trial name
-        $data['trial_name'] = $trial_name; 
-        $data['is_production'] = $is_production;         
         // config
         $config = new ConfigModel();
-        $data['config'] = $config->get()->getFirstRow();
+        $data['config'] = $config->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
         // menu config
         $config_menu = new ConfigMenuModel();
-        $data['config_menu'] = $config_menu->get()->getFirstRow();
+        $data['config_menu'] = $config_menu->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
 
         return view('extranet/config_menu/index', $data);
     }
 
-    public function update($trial_name = null, $id)
+    public function update($id)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
         $config_menu = new ConfigMenuModel();
 
         $config_menu->update($id, [
@@ -70,7 +36,6 @@ class ConfigMenuController extends BaseController
             'contact' => $this->request->getPost('contact'),
             'latest_news' => $this->request->getPost('latest_news'),
             'make_an_appointment' => $this->request->getPost('make_an_appointment'),
-            'medicenter_clinic' => $this->request->getPost('medicenter_clinic'),
             'latest_post' => $this->request->getPost('latest_post'),
             'latest_tweet' => $this->request->getPost('latest_tweet'),
             'our_motto' => $this->request->getPost('our_motto'),
@@ -117,8 +82,7 @@ class ConfigMenuController extends BaseController
             'did_you_know' => $this->request->getPost('did_you_know'),
             'all_department' => $this->request->getPost('all_department'),
             'select_department' => $this->request->getPost('select_department'),
-            'first_name' => $this->request->getPost('first_name'),
-            'last_name' => $this->request->getPost('last_name'),
+            'name' => $this->request->getPost('name'),
             'date_of_birth' => $this->request->getPost('date_of_birth'),
             'code_number' => $this->request->getPost('code_number'),
             'phone_number' => $this->request->getPost('phone_number'),
@@ -131,10 +95,10 @@ class ConfigMenuController extends BaseController
             'training' => $this->request->getPost('training'),
             'office' => $this->request->getPost('office'),
             'work_day' => $this->request->getPost('work_day'),
-            'status' => $this->request->getPost('status')
+            'signin' => $this->request->getPost('signin')
         ]);
 
-        session()->setFlashdata('success', 'Success update data');
+        session()->setFlashdata('success', 'Data berhasil diubah');
         return redirect()->to(base_url('extranet/config-menu'));
     }
 }

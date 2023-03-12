@@ -8,7 +8,7 @@
 	<meta name="keywords" content="<?= $config->keyword ?>" />
 	<meta name="description" content="<?= $config->description ?>" />  
       
-    <title>Slider | <?= $config->name ?></title>
+    <title>Slide Gambar | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Create New</h1>
+                    <h1>Tambah Baru</h1>
                     <ul>
-                        <li><a href="<?= base_url($trial_name . '/extranet/slider') ?>">Slider</a></li>
-                        <li>Create New</li>
+                        <li><a href="<?= base_url('extranet/slider') ?>">Slide Gambar</a></li>
+                        <li>Tambah Baru</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -32,31 +32,31 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url($trial_name . '/extranet/slider/store') ?>" method="post" enctype="multipart/form-data">
+                                <form action="<?= base_url('extranet/slider/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Title</label>
-                                            <input class="form-control" type="text" name="title" placeholder="Enter title" required />
+                                            <label>Judul</label>
+                                            <input class="form-control" type="text" name="title" placeholder="Masukkan judul" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Subtitle</label>
-                                            <input class="form-control" type="text" name="subtitle" placeholder="Enter subtitle" required />
+                                            <label>Sub Judul</label>
+                                            <input class="form-control" type="text" name="subtitle" placeholder="Masukkan sub juful" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Image</label>
+                                            <label>Gambar</label>
                                             <input class="form-control" type="file" name="image" required />
                                             <sub>.jpg or .png file, size: <span style="color:red"><b>1590x670</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
                                             <select class="form-control" name="status" required>
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Nonaktif</option>
                                             </select>
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
-                                            <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url($trial_name . '/extranet/slider') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <button class="btn btn-primary">Simpan</button>
+                                            <a href="<?= base_url('extranet/slider') ?>"><button type="button" class="btn btn-warning">Batal</button></a>
                                         </div>
                                     </div>
                                 </form>

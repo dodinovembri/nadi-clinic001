@@ -2,91 +2,51 @@
 
 namespace App\Controllers\Extranet;
 
+use App\Models\UserModel;
+
 class AuthController extends BaseController
 {
     public function login($trial_name = null)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
-        // config
-        $config = $db->table("clinic001_" . $trial_access_name . "_config");
-        $data['config']   = $config->get()->getFirstRow();
-        // trial name
-        $data['trial_name'] = $trial_name;
-        $data['is_production'] = $is_production;
-
-        return view('extranet/auth/login', $data);
+        return view('extranet/auth/login');
     }
 
-    public function auth($trial_name = null)
+    public function auth()
     {
-        // connect db
-        $db = \Config\Database::connect();
-        $session = session();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
         // get post variable
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         // user
-        $user = $db->table("clinic001_" . $trial_access_name . "_users");
-        $data = $user->where('email', $email)->where('role_code', 0)->get()->getFirstRow();
-        if ($data) {
-            $pass = $data->password;
+        $user = new UserModel();
+        $user_data = $user->where('email', $email)->where('role_code', 0)->where('status', 1)->get()->getFirstRow();
+        if ($user_data) {
+            $pass = $user_data->password;
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
-                    'id' => $data->id,
-                    'firstname' => $data->firstname,
-                    'lastname' => $data->lastname,
-                    'email' => $data->email,
-                    'role_code' => $data->role_code,
-                    'is_production' => $is_production,
-                    'trial_access_name' => $trial_access_name,
+                    'id' => $user_data->id,
+                    'name' => $user_data->name,
+                    'email' => $user_data->email,
+                    'user_image' => $user_data->image,
+                    'role_code' => $user_data->role_code,
+                    'client_id' => $user_data->client_id,
                     'logged_in' => TRUE
                 ];
-
-                $session->set($ses_data);
-                return redirect()->to(base_url($trial_name . '/extranet'));
+                session()->set($ses_data);
+                return redirect()->to(base_url('extranet'));
             } else {
-                $session->setFlashdata('msg', 'Wrong Password');
-                return redirect()->to(base_url($trial_name . '/ext-login'));
+                session()->setFlashdata('info', 'Wrong Password');
+                return redirect()->to(base_url('ext-login'));
             }
         } else {
-            $session->setFlashdata('msg', 'Email not Found');
-            return redirect()->to(base_url($trial_name . '/ext-login'));
+            session()->setFlashdata('info', 'Email not Found');
+            return redirect()->to(base_url('ext-login'));
         }
     }
 
-    public function logout($trial_name = null)
+    public function logout()
     {
         session()->destroy();
-        return redirect()->to(base_url($trial_name . '/ext-login'));
+        return redirect()->to(base_url('ext-login'));
     }
 }

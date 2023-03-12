@@ -8,5 +8,5 @@ class BlogModel extends Model
 {
     protected $table = 'clinic001_blog';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['status', 'sort', 'created_at', 'modified_at', 'creator_id', 'modifier_id', 'blog_category_id', 'date', 'title', 'description', 'image'];
+    protected $allowedFields = ['status', 'created_at', 'modified_at', 'client_id', 'blog_category_id', 'date', 'title', 'description', 'image', 'creator_name'];
 }
