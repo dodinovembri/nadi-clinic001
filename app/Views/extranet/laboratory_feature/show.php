@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="keywords" content="<?= $config->keyword ?>" />
-	<meta name="description" content="<?= $config->description ?>" />  
-      
-    <title>Laboratory Feature | <?= $config->name ?></title>
+    <meta name="keywords" content="<?= $config->keyword ?>" />
+    <meta name="description" content="<?= $config->description ?>" />
+
+    <title>Fitur Laboratorium | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Slider Detail</h1>
+                    <h1>Detil Fitur Laboratorium</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/laboratory_feature') ?>">Slider</a></li>
-                        <li>Slider Detail</li>
+                        <li><a href="<?= base_url('extranet/laboratory-feature') ?>">Fitur Laboratorium</a></li>
+                        <li>Detil Fitur Laboratorium</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -34,47 +34,19 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Slider Name</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->name ?>" disabled />
+                                        <label>Icon Gambar</label>
+                                        <img src="<?= base_url('assets/images/laboratory_feature/' . $laboratory_feature->icon) ?>" height="120" alt="Icon Gambar">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Image</label>
-                                        <img src="<?= base_url('assets/images/product_categories/' . $laboratory_feature->image) ?>" height="120" alt="Slider Image">
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 1</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->text1 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 2</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->text2 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 3</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->text3 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 4</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->text4 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text 5</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->text5 ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Text BUtton</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->text_button ?>" disabled />
-                                    </div>
-                                    <div class="col-md-6 form-group mb-3">
-                                        <label>Button Link</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->button_link ?>" disabled />
+                                        <label>Deskripsi</label>
+                                        <textarea class="form-control" type="text" rows="5"><?= $laboratory_feature->description ?></textarea>
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
                                         <label>Status</label>
-                                        <input class="form-control" type="text" value="<?= $laboratory_feature->status == 1 ? 'Active' : 'Inactive' ?>" disabled />
+                                        <input class="form-control" type="text" value="<?= $laboratory_feature->status == 1 ? 'Aktif' : 'Nonaktif' ?>" disabled />
                                     </div>
                                     <div class="col-md-12" style="margin-top: 20px;">
-                                        <a href="<?= base_url('extranet/laboratory_feature') ?>"><button class="btn btn-primary">Back to List</button></a>
+                                        <a href="<?= base_url('extranet/laboratory-feature') ?>"><button class="btn btn-primary">Kembali</button></a>
                                     </div>
                                 </div>
                             </div>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="keywords" content="<?= $config->keyword ?>" />
-	<meta name="description" content="<?= $config->description ?>" />  
-      
+    <meta name="keywords" content="<?= $config->keyword ?>" />
+    <meta name="description" content="<?= $config->description ?>" />
+
     <title>Fitur Laboratorium | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
@@ -35,7 +35,7 @@
                                         <thead>
                                             <tr>
                                                 <th style="width:10px">No</th>
-                                                <th>Icon</th>
+                                                <th>Icon Gambar</th>
                                                 <th>Deskripsi</th>
                                                 <th style="width:25px">Status</th>
                                                 <th style="width:80px">Aksi</th>
@@ -47,13 +47,15 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?= $no ?></td>
-                                                    <td><?= $value->icon ?></td>
+                                                    <td>
+                                                        <img src="<?= base_url('assets/images/laboratory_feature/' . $value->icon) ?>" height="50" alt="">
+                                                    </td>
                                                     <td><?= $value->description ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
-                                                            echo "Active";
+                                                            echo "Aktif";
                                                         } elseif ($value->status == 0) {
-                                                            echo "Inactive";
+                                                            echo "Nonaktif";
                                                         } ?>
                                                     </td>
                                                     <td>

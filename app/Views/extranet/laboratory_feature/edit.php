@@ -8,7 +8,7 @@
 	<meta name="keywords" content="<?= $config->keyword ?>" />
 	<meta name="description" content="<?= $config->description ?>" />  
       
-    <title>Laboratory Feature | <?= $config->name ?></title>
+    <title>Fitur Laboratorium | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Edit Slider</h1>
+                    <h1>Edit Fitur Laboratorium</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/laboratory_feature') ?>">Slider</a></li>
-                        <li>Edit Slider</li>
+                        <li><a href="<?= base_url('extranet/laboratory-feature') ?>">Fitur Laboratorium</a></li>
+                        <li>Edit Fitur Laboratorium</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -32,61 +32,33 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/laboratory_feature/update/' . $laboratory_feature->id) ?>" method="post">
+                                <form action="<?= base_url('extranet/laboratory-feature/update/' . $laboratory_feature->id) ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Name</label>
-                                            <input class="form-control" type="text" name="name" value="<?= $laboratory_feature->name ?>" placeholder="Enter name" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Image</label>
-                                            <img src="<?= base_url('assets/images/laboratory_features/' . $laboratory_feature->image) ?>" height="120" alt="">
+                                            <label>Icon Gambar</label>
+                                            <img src="<?= base_url('assets/images/laboratory_feature/' . $laboratory_feature->icon) ?>" height="120" alt="">
                                             <input class="form-control" type="file" name="image" />
-                                            <sub>.jpg or .png file, size: 1920x500</sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>57x66</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Text 1</label>
-                                            <input class="form-control" type="text" name="text1" value="<?= $laboratory_feature->text1 ?>" placeholder="Enter code" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Text 2</label>
-                                            <input class="form-control" type="text" name="text2" value="<?= $laboratory_feature->text2 ?>" placeholder="Enter code" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Text 3</label>
-                                            <input class="form-control" type="text" name="text3" value="<?= $laboratory_feature->text3 ?>" placeholder="Enter code" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Text 4</label>
-                                            <input class="form-control" type="text" name="text4" value="<?= $laboratory_feature->text4 ?>" placeholder="Enter code" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Text 5</label>
-                                            <input class="form-control" type="text" name="text5" value="<?= $laboratory_feature->text5 ?>" placeholder="Enter code" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Text Button</label>
-                                            <input class="form-control" type="text" name="text_button" value="<?= $laboratory_feature->text_button ?>" placeholder="Enter code" required />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label>Button Link</label>
-                                            <input class="form-control" type="text" name="button_link" value="<?= $laboratory_feature->button_link ?>" placeholder="Enter code" required />
+                                            <label>Deskripsi</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Masukkan deskripsi" ><?= $laboratory_feature->description ?></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
                                             <select class="form-control" name="status">
                                                 <?php if ($laboratory_feature->status == 0) { ?>
-                                                    <option value="0">Inactive</option>
-                                                    <option value="1">Active</option>
+                                                    <option value="0">Nonaktif</option>
+                                                    <option value="1">Aktif</option>
                                                 <?php } elseif ($laboratory_feature->status == 1) { ?>
-                                                    <option value="1">Active</option>
-                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Aktif</option>
+                                                    <option value="0">Nonaktif</option>
                                                 <?php } ?>
                                             </select>
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
-                                            <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/laboratory_feature') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <button class="btn btn-primary">Simpan</button>
+                                            <a href="<?= base_url('extranet/laboratory-feature') ?>"><button type="button" class="btn btn-warning">Batal</button></a>
                                         </div>
                                     </div>
                                 </form>
