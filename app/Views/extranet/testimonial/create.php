@@ -8,7 +8,7 @@
 	<meta name="keywords" content="<?= $config->keyword ?>" />
 	<meta name="description" content="<?= $config->description ?>" />  
       
-    <title>Testimonial | <?= $config->name ?></title>
+    <title>Testimoni | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Create New</h1>
+                    <h1>Tambah Baru</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/testimonial') ?>">Slider</a></li>
-                        <li>Create New</li>
+                        <li><a href="<?= base_url('extranet/testimonial') ?>">Testimoni</a></li>
+                        <li>Tambah Baru</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -35,23 +35,23 @@
                                 <form action="<?= base_url('extranet/testimonial/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Description</label>
-                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter description" required ></textarea>
+                                            <label>Deskripsi</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Masukkan deskripsi" required ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Tester</label>
-                                            <input class="form-control" type="text" name="tester" placeholder="Enter tester name" />
+                                            <label>Nama Tester</label>
+                                            <input class="form-control" type="text" name="tester" placeholder="Masukkan nama tester" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
                                             <select class="form-control" name="status" required>
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Nonaktif</option>
                                             </select>
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
-                                            <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/testimonial') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <button class="btn btn-primary">Simpan</button>
+                                            <a href="<?= base_url('extranet/testimonial') ?>"><button type="button" class="btn btn-warning">Batal</button></a>
                                         </div>
                                     </div>
                                 </form>

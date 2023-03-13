@@ -89,19 +89,12 @@ class DepartmentController extends BaseController
 
         $department->update($id, [
             'modified_at' => date('Y-m-d H:i:s'),
-            'modifier_id' => session()->get('id'),
             'name' => $this->request->getPost('name'),
-            'text1' => $this->request->getPost('text1'),
-            'text2' => $this->request->getPost('text2'),
-            'text3' => $this->request->getPost('text3'),
-            'text4' => $this->request->getPost('text4'),
-            'text5' => $this->request->getPost('text5'),
-            'text_button' => $this->request->getPost('text_button'),
-            'button_link' => $this->request->getPost('button_link'),
+            'description' => $this->request->getPost('description'),
             'status' => $this->request->getPost('status')
         ]);
 
-        session()->setFlashdata('success', 'Success update data');
+        session()->setFlashdata('success', 'Data berhasil diubah');
         return redirect()->to(base_url('extranet/department'));
     }
 
@@ -110,7 +103,7 @@ class DepartmentController extends BaseController
         $department = new DepartmentModel();
         $department->delete($id);
 
-        session()->setFlashdata('success', 'Success delete data');
+        session()->setFlashdata('success', 'Data berhasil dihapus');
         return redirect()->to(base_url('extranet/department'));
     }
 }

@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Create New</h1>
+                    <h1>Tambah Baru</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/tweet') ?>">Slider</a></li>
-                        <li>Create New</li>
+                        <li><a href="<?= base_url('extranet/tweet') ?>">Tweet</a></li>
+                        <li>Tambah Baru</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>

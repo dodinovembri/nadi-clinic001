@@ -31,178 +31,71 @@ class AppointmentController extends BaseController
     {                  
         $appointment = new AppointmentModel();
 
-        $image = $this->request->getFile('image');
-        $image_name = $image->getRandomName();
-        $image->move('assets/images/appointments/', $image_name);
-
         $appointment->insert([
             'created_at' => date('Y-m-d H:i:s'),
-            'creator_id' => session()->get('id'),
+            'client_id' => session()->get('client_id'),
+            'department_id' => $this->request->getPost('department_id'),
             'name' => $this->request->getPost('name'),
-            'image' => $image_name,
-            'text1' => $this->request->getPost('text1'),
-            'text2' => $this->request->getPost('text2'),
-            'text3' => $this->request->getPost('text3'),
-            'text4' => $this->request->getPost('text4'),
-            'text5' => $this->request->getPost('text5'),
-            'text_button' => $this->request->getPost('text_button'),
-            'button_link' => $this->request->getPost('button_link'),
+            'date_of_birth' => $this->request->getPost('date_of_birth'),
+            'phone_number' => $this->request->getPost('phone_number'),
+            'email' => $this->request->getPost('email'),
+            'appointment_reason' => $this->request->getPost('appointment_reason'),
             'status' => $this->request->getPost('status')
         ]);
 
-        session()->setFlashdata('success', 'Success create new data');
+        session()->setFlashdata('success', 'Data berhasil ditambahkan');
         return redirect()->to(base_url('extranet/appointment'));
     }
 
-    public function show($trial_name = null, $id)
+    public function show($id)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
-                  
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }        
+        // config
+        $config = new ConfigModel();
+        $data['config']   = $config->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
+        // appointment 
         $appointment = new AppointmentModel();
-        $data['appointment'] = $appointment->where('id', $id)->get()->getFirstRow();
+        $data['appointment'] = $appointment->where('id', $id)->where('client_id', session()->get('client_id'))->get()->getFirstRow();
 
         return view('extranet/appointment/show', $data);
     }
 
-    public function edit($trial_name = null, $id)
+    public function edit($id)
     {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
-                  
+        // config
+        $config = new ConfigModel();
+        $data['config']   = $config->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
+        // appointment     
         $appointment = new AppointmentModel();
-        $data['appointment'] = $appointment->where('id', $id)->get()->getFirstRow();
+        $data['appointment'] = $appointment->where('id', $id)->where('client_id', session()->get('client_id'))->get()->getFirstRow();
 
         return view('extranet/appointment/edit', $data);
     }
 
-    public function update($trial_name = null, $id)
-    {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
-                  
+    public function update($id)
+    {      
         $appointment = new AppointmentModel();
-        $image = $this->request->getFile('image');
-        if ($image != '') {
-            // image
-            $image_name = $image->getRandomName();
-            $image->move('assets/images/appointments/', $image_name);
 
-            $appointment->update($id, [
-                'modified_at' => date('Y-m-d H:i:s'),
-                'modifier_id' => session()->get('id'),
-                'name' => $this->request->getPost('name'),
-                'image' => $image_name,
-                'text1' => $this->request->getPost('text1'),
-                'text2' => $this->request->getPost('text2'),
-                'text3' => $this->request->getPost('text3'),
-                'text4' => $this->request->getPost('text4'),
-                'text5' => $this->request->getPost('text5'),
-                'text_button' => $this->request->getPost('text_button'),
-                'button_link' => $this->request->getPost('button_link'),
-                'status' => $this->request->getPost('status')
-            ]);
-        } else {
-            $appointment->update($id, [
-                'modified_at' => date('Y-m-d H:i:s'),
-                'modifier_id' => session()->get('id'),
-                'name' => $this->request->getPost('name'),
-                'text1' => $this->request->getPost('text1'),
-                'text2' => $this->request->getPost('text2'),
-                'text3' => $this->request->getPost('text3'),
-                'text4' => $this->request->getPost('text4'),
-                'text5' => $this->request->getPost('text5'),
-                'text_button' => $this->request->getPost('text_button'),
-                'button_link' => $this->request->getPost('button_link'),
-                'status' => $this->request->getPost('status')
-            ]);
-        }
+        $appointment->update($id, [
+            'modified_at' => date('Y-m-d H:i:s'),
+            'department_id' => $this->request->getPost('department_id'),
+            'name' => $this->request->getPost('name'),
+            'date_of_birth' => $this->request->getPost('date_of_birth'),
+            'phone_number' => $this->request->getPost('phone_number'),
+            'email' => $this->request->getPost('email'),
+            'appointment_reason' => $this->request->getPost('appointment_reason'),
+            'status' => $this->request->getPost('status')
+        ]);
 
-        session()->setFlashdata('success', 'Success update data');
+        session()->setFlashdata('success', 'Data berhasil diubah');
         return redirect()->to(base_url('extranet/appointment'));
     }
 
-    public function destroy($trial_name = null,$id)
-    {
-        // connect db
-        $db = \Config\Database::connect();
-        // client config
-        $client_config = $db->table('clinic001_default_client_config');
-        $client_config_data = $client_config->where("domain_live_url", base_url())->get()->getFirstRow();
-        if ($client_config_data->is_production == 1) {
-            $trial_access_name = $client_config_data->trial_access_name;
-            $is_production = 1;
-        } else {
-            if ($trial_name != null) {
-                $trial_access_name = $trial_name;
-            } else {
-                $trial_access_name = "default";
-            }
-            $is_production = 0;
-        }
-                  
+    public function destroy($id)
+    {    
         $appointment = new AppointmentModel();
         $appointment->delete($id);
 
-        session()->setFlashdata('success', 'Success delete data');
+        session()->setFlashdata('success', 'Data berhasil dihapus');
         return redirect()->to(base_url('extranet/appointment'));
     }
 }
