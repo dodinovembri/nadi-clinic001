@@ -8,7 +8,7 @@
 	<meta name="keywords" content="<?= $config->keyword ?>" />
 	<meta name="description" content="<?= $config->description ?>" />  
       
-    <title>Team | <?= $config->name ?></title>
+    <title>Tim | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Create New</h1>
+                    <h1>Tambah Baru</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/team') ?>">Slider</a></li>
-                        <li>Create New</li>
+                        <li><a href="<?= base_url('extranet/team') ?>">Tim</a></li>
+                        <li>Tambah Baru</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -35,7 +35,7 @@
                                 <form action="<?= base_url('extranet/team/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Department</label>
+                                            <label>Departemen</label>
                                             <select class="form-control" name="department_id" required>
                                                 <option value="1">Active</option>
                                                 <option value="0">Inactive</option>

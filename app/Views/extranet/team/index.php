@@ -8,7 +8,7 @@
 	<meta name="keywords" content="<?= $config->keyword ?>" />
 	<meta name="description" content="<?= $config->description ?>" />  
       
-    <title>Team | <?= $config->name ?></title>
+    <title>Tim | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,13 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Slider</h1>
-                    <ul>
-                        <li><a href="#">Slider</a></li>
-                    </ul>
+                    <h1>Tim</h1>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
-                <a href="<?= base_url('extranet/team/create') ?>"><button class="btn btn-primary ripple" type="button">Create New</button><br><br></a>
+                <a href="<?= base_url('extranet/team/create') ?>"><button class="btn btn-primary ripple" type="button">Tambah Baru</button><br><br></a>
                 <div class="row mb-4">
                     <div class="col-md-12 mb-4">
                         <?= $this->include('extranet/components/flashmessage') ?>
@@ -37,12 +34,12 @@
                                     <table class="display table table-striped table-bordered" id="zero_configuration_table" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>No</th>
-                                                <th>Name</th>
-                                                <th>Speciality</th>
-                                                <th>Degree</th>
-                                                <th>Status</th>
-                                                <th>Actions</th>
+                                                <th style="width:10px">No</th>
+                                                <th>Nama</th>
+                                                <th>Spesialisasi</th>
+                                                <th>Tamatan</th>
+                                                <th style="width:25px">Status</th>
+                                                <th style="width:80px">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -56,9 +53,9 @@
                                                     <td><?= $value->degres ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) {
-                                                            echo "Active";
+                                                            echo "Aktif";
                                                         } elseif ($value->status == 0) {
-                                                            echo "Inactive";
+                                                            echo "Nonaktif";
                                                         } ?>
                                                     </td>
                                                     <td>
@@ -77,15 +74,15 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="deleteModalLabel">Delete Data</h5>
+                                                                <h5 class="modal-title" id="deleteModalLabel">Hapus Data</h5>
                                                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <p>Are you sure want to delete this data?</p>
+                                                                <p>Anda yakin ingin menghapus data ini?</p>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                                                <a href="<?= base_url('extranet/team/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
+                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                                                <a href="<?= base_url('extranet/team/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Hapus</button></a>
                                                             </div>
                                                         </div>
                                                     </div>

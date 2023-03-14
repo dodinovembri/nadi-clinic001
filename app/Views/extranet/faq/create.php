@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Create New</h1>
+                    <h1>Tambah Baru</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/faq') ?>">Slider</a></li>
-                        <li>Create New</li>
+                        <li><a href="<?= base_url('extranet/faq') ?>">Faq</a></li>
+                        <li>Tambah Baru</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -35,21 +35,28 @@
                                 <form action="<?= base_url('extranet/faq/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Question</label>
+                                            <label>Pertanyaan</label>
                                             <textarea class="form-control" type="text" rows="5" name="question" placeholder="Enter question" required > </textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Answer</label>
+                                            <label>Jawaban</label>
                                             <textarea class="form-control" type="text" rows="5" name="answer" placeholder="Enter answer" required ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Image</label>
+                                            <label>Gambar</label>
                                             <input class="form-control" type="file" name="image" required />
                                             <sub>.jpg or .png file, size: <span style="color:red"><b>76x88</b></span> pixels</sub>
                                         </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label>Status</label>
+                                            <select class="form-control" name="status" required>
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Nonaktif</option>
+                                            </select>
+                                        </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
-                                            <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/faq') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <button class="btn btn-primary">Simpan</button>
+                                            <a href="<?= base_url('extranet/faq') ?>"><button type="button" class="btn btn-warning">Batal</button></a>
                                         </div>
                                     </div>
                                 </form>

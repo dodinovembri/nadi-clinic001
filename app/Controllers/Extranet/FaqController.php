@@ -34,7 +34,7 @@ class FaqController extends BaseController
 
         $image = $this->request->getFile('image');
         $image_name = $image->getRandomName();
-        $image->move('assets/images/faqs/', $image_name);
+        $image->move('assets/images/faq/', $image_name);
 
         $faq->insert([
             'created_at' => date('Y-m-d H:i:s'),

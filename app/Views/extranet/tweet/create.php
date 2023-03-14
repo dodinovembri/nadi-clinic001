@@ -35,27 +35,27 @@
                                 <form action="<?= base_url('extranet/tweet/store') ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Date</label>
+                                            <label>Tanggal</label>
                                             <input class="form-control" type="date" name="date" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Description</label>
-                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Enter description" required ></textarea>
+                                            <label>Deskripsi</label>
+                                            <textarea class="form-control" type="text" rows="5" name="description" placeholder="Masukkan deskripsi" required ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Link</label>
-                                            <input class="form-control" type="text" name="link" placeholder="Enter link" required />
+                                            <input class="form-control" type="text" name="link" placeholder="Masukkan link" required />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>
                                             <select class="form-control" name="status" required>
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Nonaktif</option>
                                             </select>
                                         </div>
                                         <div class="col-md-12" style="margin-top: 20px;">
-                                            <button class="btn btn-primary">Submit</button>
-                                            <a href="<?= base_url('extranet/tweet') ?>"><button type="button" class="btn btn-warning">Cancel</button></a>
+                                            <button class="btn btn-primary">Simpan</button>
+                                            <a href="<?= base_url('extranet/tweet') ?>"><button type="button" class="btn btn-warning">Batal</button></a>
                                         </div>
                                     </div>
                                 </form>
