@@ -64,7 +64,7 @@ pre
 	font-family: 'Courier new';
     font-size: 14px;
     line-height: 170%;
-	background: url('../../images/code_background.png') repeat;
+	background: url('../../images/icon/code_background.png') repeat;
 	text-shadow: 0 1px 0 #FFF;
 	zoom:1;
 	filter: dropshadow(color=#ffffff, offx=0, offy=1); 
@@ -566,69 +566,69 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul
 }
 .icon_small_arrow.left_black
 {
-	background-image: url('../../images/icon_arrow_left_black.png');
+	background-image: url('../../images/icon/icon_arrow_left_black.png');
 }
 .icon_small_arrow.right_black
 {
-	background-image: url('../../images/icon_arrow_right_black.png');
+	background-image: url('../../images/icon/icon_arrow_right_black.png');
 }
 .icon_small_arrow.margin_right_black
 {
-	background-image: url('../../images/icon_arrow_margin_right_black.png');
+	background-image: url('../../images/icon/icon_arrow_margin_right_black.png');
 }
 .icon_small_arrow.left_white
 {
-	background-image: url('../../images/icon_arrow_left_white.png');
+	background-image: url('../../images/icon/icon_arrow_left_white.png');
 }
 .icon_small_arrow.margin_right_white
 {
-	background-image: url('../../images/icon_arrow_margin_right_white.png');
+	background-image: url('../../images/icon/icon_arrow_margin_right_white.png');
 }
 .icon_small_arrow.right_white
 {
-	background-image: url('../../images/icon_arrow_right_white.png');
+	background-image: url('../../images/icon/icon_arrow_right_white.png');
 }
 .icon_small_arrow.top_white
 {
-	background-image: url('../../images/icon_arrow_top_white.png');
+	background-image: url('../../images/icon/icon_arrow_top_white.png');
 }
 .icon_small_arrow.top_black
 {
-	background-image: url('../../images/icon_arrow_top_black.png');
+	background-image: url('../../images/icon/icon_arrow_top_black.png');
 }
 .icon_small_arrow.right_gray
 {
-	background-image: url('../../images/icon_arrow_right_gray.png');
+	background-image: url('../../images/icon/icon_arrow_right_gray.png');
 }
 .icon_small_arrow.square
 {
-	background-image: url('../../images/icon_arrow_square.png');
+	background-image: url('../../images/icon/icon_arrow_square.png');
 }
 .icon_small_arrow.mark
 {
-	background-image: url('../../images/icon_arrow_mark.png');
+	background-image: url('../../images/icon/icon_arrow_mark.png');
 }
 .icon_small_arrow.tick
 {
-	background-image: url('../../images/icon_tick.png');
+	background-image: url('../../images/icon/icon_tick.png');
 }
 /* --- icon clock --- */
 .icon_clock_green
 {
-	background-image: url('../../images/icon_clock_green.png');
+	background-image: url('../../images/icon/icon_clock_green.png');
 }
 .icon_clock_black
 {
-	background-image: url('../../images/icon_clock_black.png');
+	background-image: url('../../images/icon/icon_clock_black.png');
 }
 /* --- icon card --- */
 .icon_card_green
 {
-	background-image: url('../../images/icon_card_green.png');
+	background-image: url('../../images/icon/icon_card_green.png');
 }
 .icon_card_white
 {
-	background-image: url('../../images/icon_card_white.png');
+	background-image: url('../../images/icon/icon_card_white.png');
 }
 /* --- social icon --- */
 .social_icon
@@ -653,179 +653,179 @@ a.social_icon:hover
 }
 .social_icon.blogger
 {
-	background-image: url('../../images/social_body/blogger.png');
+	background-image: url('../../images/icon/social_body/blogger.png');
 }
 .social_icon.deviantart
 {
-	background-image: url('../../images/social_body/deviantart.png');
+	background-image: url('../../images/icon/social_body/deviantart.png');
 }
 .social_icon.dribble
 {
-	background-image: url('../../images/social_body/dribble.png');
+	background-image: url('../../images/icon/social_body/dribble.png');
 }
 .social_icon.envato
 {
-	background-image: url('../../images/social_body/envato.png');
+	background-image: url('../../images/icon/social_body/envato.png');
 }
 .social_icon.facebook
 {
-	background-image: url('../../images/social_body/facebook.png');
+	background-image: url('../../images/icon/social_body/facebook.png');
 }
 .social_icon.flickr
 {
-	background-image: url('../../images/social_body/flickr.png');
+	background-image: url('../../images/icon/social_body/flickr.png');
 }
 .social_icon.form
 {
-	background-image: url('../../images/social_body/form.png');
+	background-image: url('../../images/icon/social_body/form.png');
 }
 .social_icon.forrst
 {
-	background-image: url('../../images/social_body/forrst.png');
+	background-image: url('../../images/icon/social_body/forrst.png');
 }
 .social_icon.googleplus
 {
-	background-image: url('../../images/social_body/googleplus.png');
+	background-image: url('../../images/icon/social_body/googleplus.png');
 }
 .social_icon.linkedin
 {
-	background-image: url('../../images/social_body/linkedin.png');
+	background-image: url('../../images/icon/social_body/linkedin.png');
 }
 .social_icon.mail
 {
-	background-image: url('../../images/social_body/mail.png');
+	background-image: url('../../images/icon/social_body/mail.png');
 }
 .social_icon.myspace
 {
-	background-image: url('../../images/social_body/myspace.png');
+	background-image: url('../../images/icon/social_body/myspace.png');
 }
 .social_icon.phone
 {
-	background-image: url('../../images/social_body/phone.png');
+	background-image: url('../../images/icon/social_body/phone.png');
 }
 .social_icon.picasa
 {
-	background-image: url('../../images/social_body/picasa.png');
+	background-image: url('../../images/icon/social_body/picasa.png');
 }
 .social_icon.skype
 {
-	background-image: url('../../images/social_body/skype.png');
+	background-image: url('../../images/icon/social_body/skype.png');
 }
 .social_icon.soundcloud
 {
-	background-image: url('../../images/social_body/soundcloud.png');
+	background-image: url('../../images/icon/social_body/soundcloud.png');
 }
 .social_icon.stumbleupon
 {
-	background-image: url('../../images/social_body/stumbleupon.png');
+	background-image: url('../../images/icon/social_body/stumbleupon.png');
 }
 .social_icon.tumblr
 {
-	background-image: url('../../images/social_body/tumblr.png');
+	background-image: url('../../images/icon/social_body/tumblr.png');
 }
 .social_icon.twitter
 {
-	background-image: url('../../images/social_body/twitter.png');
+	background-image: url('../../images/icon/social_body/twitter.png');
 }
 .social_icon.vimeo
 {
-	background-image: url('../../images/social_body/vimeo.png');
+	background-image: url('../../images/icon/social_body/vimeo.png');
 }
 .social_icon.xing
 {
-	background-image: url('../../images/social_body/xing.png');
+	background-image: url('../../images/icon/social_body/xing.png');
 }
 .social_icon.youtube
 {
-	background-image: url('../../images/social_body/youtube.png');
+	background-image: url('../../images/icon/social_body/youtube.png');
 }
 .footer .social_icon.blogger
 {
-	background-image: url('../../images/social_footer/blogger.png');
+	background-image: url('../../images/icon/social_footer/blogger.png');
 }
 .footer .social_icon.deviantart
 {
-	background-image: url('../../images/social_footer/deviantart.png');
+	background-image: url('../../images/icon/social_footer/deviantart.png');
 }
 .footer .social_icon.dribble
 {
-	background-image: url('../../images/social_footer/dribble.png');
+	background-image: url('../../images/icon/social_footer/dribble.png');
 }
 .footer .social_icon.envato
 {
-	background-image: url('../../images/social_footer/envato.png');
+	background-image: url('../../images/icon/social_footer/envato.png');
 }
 .footer .social_icon.facebook
 {
-	background-image: url('../../images/social_footer/facebook.png');
+	background-image: url('../../images/icon/social_footer/facebook.png');
 }
 .footer .social_icon.form
 {
-	background-image: url('../../images/social_footer/form.png');
+	background-image: url('../../images/icon/social_footer/form.png');
 }
 .footer .social_icon.flickr
 {
-	background-image: url('../../images/social_footer/flickr.png');
+	background-image: url('../../images/icon/social_footer/flickr.png');
 }
 .footer .social_icon.forrst
 {
-	background-image: url('../../images/social_footer/forrst.png');
+	background-image: url('../../images/icon/social_footer/forrst.png');
 }
 .footer .social_icon.googleplus
 {
-	background-image: url('../../images/social_footer/googleplus.png');
+	background-image: url('../../images/icon/social_footer/googleplus.png');
 }
 .footer .social_icon.linkedin
 {
-	background-image: url('../../images/social_footer/linkedin.png');
+	background-image: url('../../images/icon/social_footer/linkedin.png');
 }
 .footer .social_icon.mail
 {
-	background-image: url('../../images/social_footer/mail.png');
+	background-image: url('../../images/icon/social_footer/mail.png');
 }
 .footer .social_icon.myspace
 {
-	background-image: url('../../images/social_footer/myspace.png');
+	background-image: url('../../images/icon/social_footer/myspace.png');
 }
 .footer .social_icon.phone
 {
-	background-image: url('../../images/social_footer/phone.png');
+	background-image: url('../../images/icon/social_footer/phone.png');
 }
 .footer .social_icon.picasa
 {
-	background-image: url('../../images/social_footer/picasa.png');
+	background-image: url('../../images/icon/social_footer/picasa.png');
 }
 .footer .social_icon.skype
 {
-	background-image: url('../../images/social_footer/skype.png');
+	background-image: url('../../images/icon/social_footer/skype.png');
 }
 .footer .social_icon.soundcloud
 {
-	background-image: url('../../images/social_footer/soundcloud.png');
+	background-image: url('../../images/icon/social_footer/soundcloud.png');
 }
 .footer .social_icon.stumbleupon
 {
-	background-image: url('../../images/social_footer/stumbleupon.png');
+	background-image: url('../../images/icon/social_footer/stumbleupon.png');
 }
 .footer .social_icon.tumblr
 {
-	background-image: url('../../images/social_footer/tumblr.png');
+	background-image: url('../../images/icon/social_footer/tumblr.png');
 }
 .footer .social_icon.twitter
 {
-	background-image: url('../../images/social_footer/twitter.png');
+	background-image: url('../../images/icon/social_footer/twitter.png');
 }
 .footer .social_icon.vimeo
 {
-	background-image: url('../../images/social_footer/vimeo.png');
+	background-image: url('../../images/icon/social_footer/vimeo.png');
 }
 .footer .social_icon.xing
 {
-	background-image: url('../../images/social_footer/xing.png');
+	background-image: url('../../images/icon/social_footer/xing.png');
 }
 .footer .social_icon.youtube
 {
-	background-image: url('../../images/social_footer/youtube.png');
+	background-image: url('../../images/icon/social_footer/youtube.png');
 }
 /* --- social_icons --- */
 .social_icons
@@ -863,15 +863,15 @@ a.social_icon:hover
 }
 .notification_box.nb_success
 {
-	background: url('../../images/notification_success.png') no-repeat 20px center #5FAA4B;
+	background: url('../../images/icon/notification_success.png') no-repeat 20px center #5FAA4B;
 }
 .notification_box.nb_error
 {
-	background: url('../../images/notification_error.png') no-repeat 20px center #EB6D58;
+	background: url('../../images/icon/notification_error.png') no-repeat 20px center #EB6D58;
 }
 .notification_box.nb_info
 {
-	background: url('../../images/notification_info.png') no-repeat 20px center #42B3E5;
+	background: url('../../images/icon/notification_info.png') no-repeat 20px center #42B3E5;
 }
 .closing_in
 {
@@ -1073,7 +1073,7 @@ a.social_icon:hover
 }
 .home_box .more.light:hover
 {
-	background-image: url('../../images/icon_arrow_margin_right_black.png');
+	background-image: url('../../images/icon/icon_arrow_margin_right_black.png');
 }
 /* --- items list --- */
 .items_list
@@ -1350,11 +1350,11 @@ a.social_icon:hover
 	float: right;
 	width: 5px;
 	height: 5px;
-	background: url('../../images/arrow_date.png');
+	background: url('../../images/icon/arrow_date.png');
 }
 .comment_box .arrow_comments
 {
-	background: url('../../images/arrow_comments.png');
+	background: url('../../images/icon/arrow_comments.png');
 }
 .columns .comment_box .date .value,
 .columns .comment_box .date .arrow_date
@@ -1417,7 +1417,7 @@ a.social_icon:hover
 	width: 520px;
 	height: auto;
 	min-height: 15px;
-	background: url('../../images/preloader.gif') no-repeat center center;
+	background: url('../../images/icon/preloader.gif') no-repeat center center;
 }
 .post_content .gallery_box
 {
@@ -1765,7 +1765,7 @@ a.social_icon:hover
 .accordion .ui-accordion-header h3
 {
 	color: #666;
-	background: url('../../images/accordion_plus.png') no-repeat right center;
+	background: url('../../images/icon/accordion_plus.png') no-repeat right center;
 	padding-right: 13px;
 }
 .accordion .ui-accordion-header
@@ -1788,7 +1788,7 @@ a.social_icon:hover
 }
 .accordion .ui-accordion-header.ui-state-active h3
 {
-	background: url('../../images/accordion_minus.png') no-repeat right center;
+	background: url('../../images/icon/accordion_minus.png') no-repeat right center;
 	color: #FFF;
 }
 .accordion .ui-accordion-content
@@ -1950,14 +1950,14 @@ a.social_icon:hover
 	width: 256px;
 	height: auto;
     padding: 13px 12px;
-	background: url("../../images/dropdown_plus.png") no-repeat scroll 255px center #3156A3;
+	background: url("../../images/icon/dropdown_plus.png") no-repeat scroll 255px center #3156A3;
     color: #FFFFFF;
 	cursor: pointer;
 }
 .tabs_box_navigation.sf-menu .tabs_box_navigation_selected:hover
 {
 	background-color: #42B3E5;
-	background-image: url("../../images/accordion_minus.png"); 
+	background-image: url("../../images/icon/accordion_minus.png"); 
 }
 .tabs_box_navigation.sf-menu li:hover ul, .tabs_box_navigation.sf-menu li.sfHover ul
 {
@@ -2147,7 +2147,7 @@ a.social_icon:hover
 }
 .timetable tbody tr
 {
-	background: url('../../images/dotted_line.png') left top repeat-x;
+	background: url('../../images/icon/dotted_line.png') left top repeat-x;
 }
 .timetable th,
 .timetable td:first-child
@@ -2207,7 +2207,7 @@ a.social_icon:hover
 /* --- tip/tooltip/qtip --- */
 .tip
 {
-	background: url('../../images/icon_tip.png') #3156A3 no-repeat 15px center;
+	background: url('../../images/icon/icon_tip.png') #3156A3 no-repeat 15px center;
 	color: #FFF;
 	padding: 10px 10px 10px 35px;
 	float: right;
@@ -2246,7 +2246,7 @@ a.social_icon:hover
 	-o-transition-property: opacity, visibility;
 	-ms-transition-property: opacity, visibility;
 	transition-property: opacity, visibility;
-	background: url('../../images/tooltip_arrow.png') no-repeat 15px bottom;
+	background: url('../../images/icon/tooltip_arrow.png') no-repeat 15px bottom;
 }
 .tooltip .tooltip_content
 {
@@ -2325,24 +2325,24 @@ a.social_icon:hover
 }
 .controls .open_details
 {
-	background-image: url('../../images/media_icon_details.png');
+	background-image: url('../../images/icon/media_icon_details.png');
 	margin-left: 0;
 }
 .controls .open_lightbox
 {
-	background-image: url('../../images/media_icon_image.png');
+	background-image: url('../../images/icon/media_icon_image.png');
 }
 .controls .open_video_lightbox
 {
-	background-image: url('../../images/media_icon_video.png');
+	background-image: url('../../images/icon/media_icon_video.png');
 }
 .controls .open_iframe_lightbox
 {
-	background-image: url('../../images/media_icon_url.png');
+	background-image: url('../../images/icon/media_icon_url.png');
 }
 .controls .close
 {
-	background-image: url('../../images/close_icon.png');
+	background-image: url('../../images/icon/close_icon.png');
 }
 .slider_navigation .more
 {
@@ -2417,7 +2417,7 @@ a.social_icon:hover
 	display: block;
 	width: 225px;
 	height: 150px;
-	background: url('../../images/preloader.gif') no-repeat center center;
+	background: url('../../images/icon/preloader.gif') no-repeat center center;
 }
 .gallery_2_columns .gallery_box img
 {
@@ -2549,7 +2549,7 @@ ul.gallery_item_details_list
 	display: block;
 	width: 480px;
 	height: auto;
-	background: url('../../images/preloader.gif') no-repeat center center;
+	background: url('../../images/icon/preloader.gif') no-repeat center center;
 }
 .gallery_item_details_list .gallery_box .slider_navigation,
 .post_content .gallery_box .slider_navigation
@@ -2743,7 +2743,7 @@ ul.gallery_item_details_list
 }
 .footer_banner_box .more.light:hover
 {
-	background-image: url('../../images/icon_arrow_margin_right_white.png');
+	background-image: url('../../images/icon/icon_arrow_margin_right_white.png');
 }
 /* --- footer box --- */
 .footer_box_container

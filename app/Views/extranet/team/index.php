@@ -37,7 +37,7 @@
                                                 <th style="width:10px">No</th>
                                                 <th>Nama</th>
                                                 <th>Spesialisasi</th>
-                                                <th>Tamatan</th>
+                                                <th>Pendidikan</th>
                                                 <th style="width:25px">Status</th>
                                                 <th style="width:80px">Aksi</th>
                                             </tr>

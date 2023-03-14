@@ -4,6 +4,7 @@ namespace App\Controllers\Extranet;
 
 use App\Models\ConfigModel;
 use App\Models\TeamModel;
+use App\Models\DepartmentModel;
 
 class TeamController extends BaseController
 {
@@ -14,7 +15,7 @@ class TeamController extends BaseController
         $data['config'] = $config->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
         // team
         $team = new TeamModel();
-        $data['teams'] = $team->where('client_id', session()->get('client_id'))->get()->getResult();
+        $data['teams'] = $team->where('client_id', session()->get('client_id'))->get()->getResult();     
 
         return view('extranet/team/index', $data);
     }
@@ -24,6 +25,9 @@ class TeamController extends BaseController
         // config
         $config = new ConfigModel();
         $data['config'] = $config->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
+        // department
+        $department = new DepartmentModel();
+        $data['departments'] = $department->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getResult();
 
         return view('extranet/team/create', $data);
     }
