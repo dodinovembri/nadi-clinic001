@@ -45,63 +45,63 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Nama</label>
-                                            <input class="form-control" type="text" name="required" placeholder="Enter team name" required />
+                                            <input class="form-control" type="text" name="name" placeholder="Masukkan nama" required />
                                         </div>
                                         
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Deskripsi Singkat</label>
-                                            <textarea class="form-control" type="text" rows="5" name="short_description" placeholder="Enter short description" ></textarea>
+                                            <textarea class="form-control" type="text" rows="5" name="short_description" placeholder="Masukkan deskripsi singkat" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Pelatihan</label>
-                                            <textarea class="form-control" type="text" rows="5" name="training" placeholder="Enter training" ></textarea>
+                                            <textarea class="form-control" type="text" rows="5" name="training" placeholder="Masukkan pelatihan" ></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Speciality</label>
-                                            <input class="form-control" type="text" name="speciality" placeholder="Enter speciality" />
+                                            <label>Spesialisasi</label>
+                                            <input class="form-control" type="text" name="speciality" placeholder="Masukkan spesialisasi" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Degrees</label>
-                                            <input class="form-control" type="text" name="degres" placeholder="Enter degrees" />
+                                            <label>Pendidikan</label>
+                                            <input class="form-control" type="text" name="degres" placeholder="Masukkan pendidikan" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Office</label>
-                                            <input class="form-control" type="text" name="office" placeholder="Enter office" />
+                                            <label>Kantor</label>
+                                            <input class="form-control" type="text" name="office" placeholder="Masukkan kantor" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Work Days</label>
-                                            <input class="form-control" type="text" name="work_days" placeholder="Enter work days" />
+                                            <label>Hari Kerja</label>
+                                            <input class="form-control" type="text" name="work_days" placeholder="Masukkan hari kerja" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Image 1</label>
+                                            <label>Gambar 1</label>
                                             <input class="form-control" type="file" name="image1" required />
-                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span></sub>
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Image 2</label>
-                                            <input class="form-control" type="file" name="image2" required />
-                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span></sub>
+                                            <label>Gambar 2</label>
+                                            <input class="form-control" type="file" name="image2" />
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Image 3</label>
-                                            <input class="form-control" type="file" name="image3" required />
-                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span></sub>
+                                            <label>Gambar 3</label>
+                                            <input class="form-control" type="file" name="image3" />
+                                            <sub>.jpg or .png file, size: <span style="color:red"><b>225x150</b></span> pixels</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Facebook Url</label>
-                                            <input class="form-control" type="text" name="facebook_url" placeholder="Enter facebook url" />
+                                            <label>Url Facebook</label>
+                                            <input class="form-control" type="text" name="facebook_url" placeholder="Masukkan url facebook" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Googleplus Url</label>
-                                            <input class="form-control" type="text" name="googleplus_url" placeholder="Enter googleplus url" />
+                                            <label>Url Googleplus</label>
+                                            <input class="form-control" type="text" name="googleplus_url" placeholder="Masukkan url googleplus" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Email Url</label>
-                                            <input class="form-control" type="text" name="mail_url" placeholder="Enter email url" />
+                                            <label>Url Email</label>
+                                            <input class="form-control" type="text" name="mail_url" placeholder="Masukkan url email" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label>Forrst Url</label>
-                                            <input class="form-control" type="text" name="forrst_url" placeholder="Enter forrst url" />
+                                            <label>Url Forrst</label>
+                                            <input class="form-control" type="text" name="forrst_url" placeholder="Masukkan url forrst" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Status</label>

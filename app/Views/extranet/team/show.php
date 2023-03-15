@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="keywords" content="<?= $config->keyword ?>" />
-	<meta name="description" content="<?= $config->description ?>" />  
-      
-    <title>Team | <?= $config->name ?></title>
+    <meta name="keywords" content="<?= $config->keyword ?>" />
+    <meta name="description" content="<?= $config->description ?>" />
+
+    <title>Tim | <?= $config->name ?></title>
     <?= $this->include('extranet/components/style') ?>
 </head>
 
@@ -21,10 +21,10 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Slider Detail</h1>
+                    <h1>Detil Tim</h1>
                     <ul>
-                        <li><a href="<?= base_url('extranet/team') ?>">Slider</a></li>
-                        <li>Slider Detail</li>
+                        <li><a href="<?= base_url('extranet/team') ?>">Tim</a></li>
+                        <li>Detil Tim</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -34,47 +34,71 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Slider Name</label>
+                                        <label>Departemen</label>
+                                        <input class="form-control" type="text" value="<?= $team->department_id ?>" disabled />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label>Nama</label>
                                         <input class="form-control" type="text" value="<?= $team->name ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Image</label>
-                                        <img src="<?= base_url('assets/images/product_categories/' . $team->image) ?>" height="120" alt="Slider Image">
+                                        <label>Deskripsi Singkat</label>
+                                        <textarea class="form-control" type="text" rows="5" disabled><?= $team->short_description ?></textarea>
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text 1</label>
-                                        <input class="form-control" type="text" value="<?= $team->text1 ?>" disabled />
+                                        <label>Pelatihan</label>
+                                        <textarea class="form-control" type="text" rows="5" disabled><?= $team->training ?></textarea>
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text 2</label>
-                                        <input class="form-control" type="text" value="<?= $team->text2 ?>" disabled />
+                                        <label>Spesialisasi</label>
+                                        <input class="form-control" type="text" value="<?= $team->speciality ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text 3</label>
-                                        <input class="form-control" type="text" value="<?= $team->text3 ?>" disabled />
+                                        <label>Pendidikan</label>
+                                        <input class="form-control" type="text" value="<?= $team->degres ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text 4</label>
-                                        <input class="form-control" type="text" value="<?= $team->text4 ?>" disabled />
+                                        <label>Kantor</label>
+                                        <input class="form-control" type="text" value="<?= $team->office ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text 5</label>
-                                        <input class="form-control" type="text" value="<?= $team->text5 ?>" disabled />
+                                        <label>Hari Kerja</label>
+                                        <input class="form-control" type="text" value="<?= $team->work_days ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Text BUtton</label>
-                                        <input class="form-control" type="text" value="<?= $team->text_button ?>" disabled />
+                                        <label>Gambar 1</label>
+                                        <img src="<?= base_url('assets/images/team/' . $team->image1) ?>" height="120" alt="Gambar 1">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
-                                        <label>Button Link</label>
-                                        <input class="form-control" type="text" value="<?= $team->button_link ?>" disabled />
+                                        <label>Gambar 2</label>
+                                        <img src="<?= base_url('assets/images/team/' . $team->image2) ?>" height="120" alt="Gambar 2">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label>Gambar 3</label>
+                                        <img src="<?= base_url('assets/images/team/' . $team->image3) ?>" height="120" alt="Gambar 3">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label>Url Facebook</label>
+                                        <input class="form-control" type="text" value="<?= $team->facebook_url ?>" disabled />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label>Url Googleplus</label>
+                                        <input class="form-control" type="text" value="<?= $team->googleplus_url ?>" disabled />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label>Url Email</label>
+                                        <input class="form-control" type="text" value="<?= $team->mail_url ?>" disabled />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label>Url Forrst</label>
+                                        <input class="form-control" type="text" value="<?= $team->forrst_url ?>" disabled />
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
                                         <label>Status</label>
-                                        <input class="form-control" type="text" value="<?= $team->status == 1 ? 'Active' : 'Inactive' ?>" disabled />
+                                        <input class="form-control" type="text" value="<?= $team->status == 1 ? 'Aktif' : 'Nonaktif' ?>" disabled />
                                     </div>
                                     <div class="col-md-12" style="margin-top: 20px;">
-                                        <a href="<?= base_url('extranet/team') ?>"><button class="btn btn-primary">Back to List</button></a>
+                                        <a href="<?= base_url('extranet/team') ?>"><button class="btn btn-primary">Kembali</button></a>
                                     </div>
                                 </div>
                             </div>

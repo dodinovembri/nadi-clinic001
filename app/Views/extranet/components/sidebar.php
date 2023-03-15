@@ -29,7 +29,7 @@
         </ul>
         <ul class="childNav" data-parent="masterdata">
             <li class="nav-item"><a href="<?= base_url('extranet/user') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Pengguna</span></a></li>
-            <li class="nav-item"><a href="<?= base_url('extranet/team') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Dokter</span></a></li>
+            <li class="nav-item"><a href="<?= base_url('extranet/team') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Tim</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/appointment-type') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Jenis Janji Temu</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/department') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Departemen</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/clinic') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">Klinik</span></a></li>

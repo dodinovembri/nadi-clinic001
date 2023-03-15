@@ -15,7 +15,7 @@ class TeamController extends BaseController
         $data['config'] = $config->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getFirstRow();
         // team
         $team = new TeamModel();
-        $data['teams'] = $team->where('client_id', session()->get('client_id'))->get()->getResult();     
+        $data['teams'] = $team->where('client_id', session()->get('client_id'))->get()->getResult();
 
         return view('extranet/team/index', $data);
     }
@@ -37,16 +37,28 @@ class TeamController extends BaseController
         $team = new TeamModel();
 
         $image1 = $this->request->getFile('image1');
-        $image1_name = $image1->getRandomName();
-        $image1->move('assets/images/team/', $image1_name);
+        if ($image1 != '') {
+            $image1_name = $image1->getRandomName();
+            $image1->move('assets/images/team/', $image1_name);
+        } else {
+            $image1_name = null;
+        }
 
         $image2 = $this->request->getFile('image2');
-        $image2_name = $image2->getRandomName();
-        $image2->move('assets/images/team/', $image2_name);    
-        
+        if ($image2 != '') {
+            $image2_name = $image2->getRandomName();
+            $image2->move('assets/images/team/', $image2_name);
+        } else {
+            $image2_name = null;
+        }
+
         $image3 = $this->request->getFile('image3');
-        $image3_name = $image3->getRandomName();
-        $image3->move('assets/images/team/', $image3_name);            
+        if ($image3 != '') {
+            $image3_name = $image3->getRandomName();
+            $image3->move('assets/images/team/', $image3_name);
+        } else {
+            $image3_name = null;
+        }
 
         $team->insert([
             'created_at' => date('Y-m-d H:i:s'),
@@ -93,6 +105,9 @@ class TeamController extends BaseController
         // team       
         $team = new TeamModel();
         $data['team'] = $team->where('id', $id)->where('client_id', session()->get('client_id'))->get()->getFirstRow();
+        // department
+        $department = new DepartmentModel();
+        $data['departments'] = $department->where('client_id', session()->get('client_id'))->where('status', 1)->get()->getResult();        
 
         return view('extranet/team/edit', $data);
     }
@@ -119,8 +134,8 @@ class TeamController extends BaseController
             $team->update($id, [
                 'image2' => $image2_name
             ]);
-        } 
-        
+        }
+
         // image 3
         $image3 = $this->request->getFile('image3');
         if ($image3 != '') {
@@ -129,7 +144,7 @@ class TeamController extends BaseController
             $team->update($id, [
                 'image3' => $image3_name
             ]);
-        } 
+        }
 
         $team->update($id, [
             'modified_at' => date('Y-m-d H:i:s'),
