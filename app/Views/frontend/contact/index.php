@@ -60,31 +60,27 @@
 									</li>
 								</ul>
 								<fieldset class="left">
-									<label><?= ucwords($config_menu->first_name) ?></label>
+									<label><?= ucwords($config_menu->name) ?></label>
 									<div class="block">
-										<input class="text_input" name="first_name" type="text" value="" />
-									</div>
-									<label><?= ucwords($config_menu->date_of_birth) ?></label>
-									<div class="block">
-										<input class="text_input" type="text" name="date_of_birth" value="" />
+										<input class="text_input" name="name" type="text" value="" />
 									</div>
 									<label><?= ucwords($config_menu->phone_number) ?></label>
 									<div class="block">
 										<input class="text_input" name="phone_number" type="text" value="" />
 									</div>
+									<label><?= ucwords($config_menu->email) ?></label>
+									<div class="block">
+										<input class="text_input" type="text" name="email" value="" />
+									</div>
 								</fieldset>
 								<fieldset class="right">
-									<label><?= ucwords($config_menu->last_name) ?></label>
+									<label><?= ucwords($config_menu->date_of_birth) ?></label>
 									<div class="block">
-										<input class="text_input" type="text" name="last_name" value="" />
+										<input class="text_input" type="text" name="date_of_birth" value="" />
 									</div>
 									<label><?= ucwords($config_menu->code_number) ?></label>
 									<div class="block">
 										<input class="text_input" type="text" name="code_number" value="" />
-									</div>
-									<label><?= ucwords($config_menu->email) ?></label>
-									<div class="block">
-										<input class="text_input" type="text" name="email" value="" />
 									</div>
 								</fieldset>
 								<fieldset style="clear:both;">

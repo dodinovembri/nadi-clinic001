@@ -48,8 +48,8 @@
 						</ul>
 					</div>
 					<div class="page_header_right">
-						<form class="search">
-							<input class="search_input" type="text" value="<?= ucfirst($config_menu->search_placeholder) ?>" placeholder="<?= ucfirst($config_menu->search_placeholder) ?>" />
+						<form class="search" action="<?= base_url($trial_name . '/blog/search') ?>" method="get">
+							<input class="search_input" name="keyword" type="text" value="<?= ucfirst($config_menu->search_placeholder) ?>" placeholder="<?= ucfirst($config_menu->search_placeholder) ?>" />
 						</form>
 					</div>
 				</div>

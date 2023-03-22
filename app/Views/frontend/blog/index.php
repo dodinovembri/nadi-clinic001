@@ -40,8 +40,8 @@
 						</ul>
 					</div>
 					<div class="page_header_right">
-						<form class="search">
-							<input class="search_input" type="text" value="<?= ucfirst($config_menu->search_placeholder) ?>" placeholder="<?= ucfirst($config_menu->search_placeholder) ?>" />
+						<form class="search" action="<?= base_url($trial_name. '/blog/search') ?>" method="get">
+							<input class="search_input" name="keyword" type="text" value="<?= ucfirst($config_menu->search_placeholder) ?>" placeholder="<?= ucfirst($config_menu->search_placeholder) ?>" />
 						</form>
 					</div>
 				</div>
@@ -78,16 +78,16 @@
 									<div class="post_footer clearfix">
 										<ul class="post_footer_details">
 											<li><?= ucwords($config_menu->posted_in) ?></li>
-											<li><a href="#"><?= $value->category_name ?></a></li>
+											<li><a href="<?= base_url($trial_name . '/blog/category/' . $value->category_id) ?>"><?= $value->category_name ?></a></li>
 										</ul>
-										<ul class="post_footer_details">
-											<li><?= ucwords($config_menu->posted_by) ?></li>
-											<li>
-												<a href="#" title="John Doe">
-													John Doe
-												</a>
-											</li>
-										</ul>
+										<?php if ($value->creator_name){ ?>
+											<ul class="post_footer_details">
+												<li><?= ucwords($config_menu->posted_by) ?></li>
+												<li>
+													<?= ucwords($value->creator_name) ?>
+												</li>
+											</ul>
+										<?php } ?>
 									</div>
 								</div>
 							</li>
@@ -107,271 +107,21 @@
 					<div class="sidebar_box first">
 						<ul class="categories clearfix page_margin_top">
 							<?php foreach ($blog_categories as $key => $value) { ?>
-								<li><a href="<?= base_url($trial_name . '/blog_category/show/' . $value->id) ?>" title="<?= ucwords($value->name) ?>"><?= ucwords($value->name) ?></a></li>
+								<li><a href="<?= base_url($trial_name . '/blog/category/' . $value->id) ?>" title="<?= ucwords($value->name) ?>"><?= ucwords($value->name) ?></a></li>
 							<?php } ?>
 						</ul>
 					</div>
-					<!-- most commented -->
-					<!-- <div class="sidebar_box">
-						<div class="clearfix">
-							<div class="header_left">
-								<h3 class="box_header">
-									<?= ucwords($config_menu->most_commented) ?>
-								</h3>
-							</div>
-							<div class="header_right">
-								<a href="#" id="most_commented_prev" class="scrolling_list_control_left icon_small_arrow left_black"></a>
-								<a href="#" id="most_commented_next" class="scrolling_list_control_right icon_small_arrow right_black"></a>
-							</div>
-						</div>
-						<div class="scrolling_list_wrapper">
-							<ul class="scrolling_list most_commented">
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
-										</span>
-										<span class="number">
-											18
-										</span>
-									</a>
-									<abbr title="29 May 2012" class="timeago">29 May 2012</abbr>
-								</li>
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Lorem ipsum dolor sit amat velum.
-										</span>
-										<span class="number">
-											16
-										</span>
-									</a>
-									<abbr title="04 Apr 2012" class="timeago">04 Apr 2012</abbr>
-								</li>
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
-										</span>
-										<span class="number">
-											9
-										</span>
-									</a>
-									<abbr title="02 Feb 2012" class="timeago">02 Feb 2012</abbr>
-								</li>
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Lorem ipsum dolor sit amat velum, consectetur adipiscing elit.
-										</span>
-										<span class="number">
-											7
-										</span>
-									</a>
-									<abbr title="24 Jan 2011" class="timeago">24 Jan 2011</abbr>
-								</li>
-							</ul>
-						</div>
-					</div> -->
-					<!-- most viewed -->
-					<!-- <div class="sidebar_box">
-						<div class="clearfix">
-							<div class="header_left">
-								<h3 class="box_header">
-									Most Viewed
-								</h3>
-							</div>
-							<div class="header_right">
-								<a href="#" id="most_viewed_prev" class="scrolling_list_control_left icon_small_arrow left_black"></a>
-								<a href="#" id="most_viewed_next" class="scrolling_list_control_right icon_small_arrow right_black"></a>
-							</div>
-						</div>
-						<div class="scrolling_list_wrapper">
-							<ul class="scrolling_list most_viewed">
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
-										</span>
-										<span class="number">
-											423
-										</span>
-									</a>
-									<abbr title="29 May 2012" class="timeago">29 May 2012</abbr>
-								</li>
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Lorem ipsum dolor sit amat velum.
-										</span>
-										<span class="number">
-											231
-										</span>
-									</a>
-									<abbr title="04 Apr 2012" class="timeago">04 Apr 2012</abbr>
-								</li>
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
-										</span>
-										<span class="number">
-											184
-										</span>
-									</a>
-									<abbr title="02 Feb 2012" class="timeago">02 Feb 2012</abbr>
-								</li>
-								<li class="icon_small_arrow right_black">
-									<a href="indexb878.html?page=post" class="clearfix">
-										<span class="left">
-											Lorem ipsum dolor sit amat velum, consectetur adipiscing elit.
-										</span>
-										<span class="number">
-											97
-										</span>
-									</a>
-									<abbr title="24 Jan 2011" class="timeago">24 Jan 2011</abbr>
-								</li>
-							</ul>
-						</div>
-					</div> -->
-					<!-- photostream -->
-					<!-- <div class="sidebar_box">
-						<h3 class="box_header">
-							Photostream
-						</h3>
-						<ul class="photostream clearfix">
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_01.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_01.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_02.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_02.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_03.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_03.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_04.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_04.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_05.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_05.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_06.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_06.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_07.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_07.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-							<li class="gallery_box">
-								<img src="images/samples/75x75/image_08.jpg" alt="" />
-								<ul class="controls">
-									<li>
-										<a href="images/samples/image_08.jpg" rel="photostream" class="fancybox open_lightbox"></a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div> -->
-					<!-- archives -->
-					<!-- <div class="sidebar_box">
-						<h3 class="box_header">
-							Archives
-						</h3>
-						<ul class="columns list clearfix">
-							<li class="column_left icon_small_arrow right_black">
-								<a href="#" title="April 2012">
-									April 2012
-								</a>
-							</li>
-							<li class="column_right icon_small_arrow right_black">
-								<a href="#" title="May 2012">
-									May 2012
-								</a>
-							</li>
-							<li class="column_left icon_small_arrow right_black">
-								<a href="#" title="June 2012">
-									June 2012
-								</a>
-							</li>
-							<li class="column_right icon_small_arrow right_black">
-								<a href="#" title="July 2012">
-									July 2012
-								</a>
-							</li>
-							<li class="column_left icon_small_arrow right_black">
-								<a href="#" title="August 2012">
-									August 2012
-								</a>
-							</li>
-							<li class="column_right icon_small_arrow right_black">
-								<a href="#" title="November 2012">
-									November 2012
-								</a>
-							</li>
-						</ul>
-					</div> -->
 					<!-- make an appointment -->
 					<div class="sidebar_box">
-						<h3 class="box_header">
-							Make An Appointment
-						</h3>
-						<p class="info">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin.
-						</p>
+						<h3 class="box_header"><?= ucwords($config_menu->make_an_appointment) ?></h3>
+						<p class="info"><?= $config->make_appointment_description ?></p>
 						<ul class="contact_data">
-							<li class="clearfix">
-								<span class="social_icon phone"></span>
-								<p class="value">
-									by phone: <strong>1-800-643-4300</strong>
-								</p>
-							</li>
-							<li class="clearfix">
-								<span class="social_icon mail"></span>
-								<p class="value">
-									by e-mail: <a href="https://quanticalabs.com/cdn-cgi/l/email-protection#98f5fdfcf1fbfdf6ecfdead8f5f9f1f4b6fbf7f5"><span class="__cf_email__" data-cfemail="48252d2c212b2d263c2d3a0825292124662b2725">[email&#160;protected]</span></a>
-								</p>
-							</li>
-							<li class="clearfix">
-								<span class="social_icon form"></span>
-								<p class="value">
-									or <a href="index53a6.html?page=contact" title="Contact form">fill in the form</a> on our contact page
-								</p>
-							</li>
+							<?php foreach ($appointment_types as $key => $value) { ?>
+								<li class="clearfix">
+									<span class="social_icon <?= $value->icon ?>"></span>
+									<p class="value"><?= $value->description ?></p>
+								</li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>

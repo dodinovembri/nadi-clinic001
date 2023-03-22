@@ -41,7 +41,7 @@
 					<li class="home_box <?php if ($key == 0) { ?> light_blue animated_element animation-fadeIn duration-500 <?php } ?> <?php if ($key == 1) { ?> blue animated_element animation-slideRight duration-800 delay-250 <?php } ?>  ">
 						<h2><a href="#"><?= $value->title ?></a></h2>
 						<div class="news clearfix">
-							<p class="text"><?= $value->description ?></p><a class="more light icon_small_arrow margin_right_white" href="#" title="<?= $config_menu->read_more ?>"><?= $config_menu->read_more ?></a>
+							<p class="text"><?= $value->description ?></p><a class="more light icon_small_arrow margin_right_white" href="<?= base_url('timetable') ?>" title="<?= $config_menu->read_more ?>"><?= $config_menu->read_more ?></a>
 						</div>
 					</li>
 				<?php } ?>
@@ -92,7 +92,7 @@
 										<div class="post_footer">
 											<ul class="post_footer_details">
 												<li><?= ucwords($config_menu->posted_in) ?></li>
-												<li><a href="#"><?= $value->category_name ?></a></li>
+												<li><a href="<?= base_url($trial_name . '/blog/category/' . $value->category_id) ?>"><?= $value->category_name ?></a></li>
 											</ul>
 										</div>
 									</div>
@@ -126,7 +126,7 @@
 										<div class="post_footer">
 											<ul class="post_footer_details">
 												<li><?= ucwords($config_menu->posted_in) ?></li>
-												<li><a href="#"><?= $value->category_name ?></a></li>
+												<li><a href="<?= base_url($trial_name . '/blog/category/' . $value->category_id) ?>"><?= $value->category_name ?></a></li>
 											</ul>
 										</div>
 									</div>
@@ -136,7 +136,7 @@
 						</ul>
 					</div>
 					<div class="show_all clearfix">
-						<a class="more" href="#"><?= ucwords($config_menu->show_all) ?> &rarr;</a>
+						<a class="more" href="<?= base_url($trial_name . '/blog') ?>"><?= ucwords($config_menu->show_all) ?> &rarr;</a>
 					</div>
 				</div>
 				<div class="page_right">
@@ -150,7 +150,7 @@
 									</div>
 									<div class="clearfix">
 										<div class="item_content clearfix">
-											<a class="thumb_image" href="#">
+											<a class="thumb_image" href="<?= base_url($trial_name . '/timetable/department/show/' . $value->id) ?>">
 												<img src="<?= base_url('assets/images/department/' . $value->image) ?>" alt="" />
 											</a>
 											<p><?= $value->description ?></p>

@@ -3,6 +3,7 @@
 namespace App\Controllers\Frontend;
 
 use App\Models\AppointmentModel;
+use App\Models\AppointmentTypeModel;
 use App\Models\ClientModel;
 use App\Models\ConfigModel;
 use App\Models\ConfigMenuModel;
@@ -58,13 +59,14 @@ class Homecontroller extends BaseController
         $footer_feature = new FooterFeatureModel();
         $data['footer_features'] = $footer_feature->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // apppointment type
-        $appointment = new AppointmentModel();
-        $data['appointment_types'] = $appointment->where('client_id', $client_id)->where('status', 1)->get()->getResult();
+        $appointment_type = new AppointmentTypeModel();
+        $data['appointment_types'] = $appointment_type->where('client_id', $client_id)->where('status', 1)->get()->getResult();
         // blog & blog categories
         $db = \Config\Database::connect();        
         $data['blogs'] = $db->query("
             SELECT 
                 clinic001_blog.*,
+                clinic001_blog_category.id as category_id,
                 clinic001_blog_category.name as category_name
             FROM clinic001_blog JOIN clinic001_blog_category
             ON clinic001_blog.blog_category_id = clinic001_blog_category.id

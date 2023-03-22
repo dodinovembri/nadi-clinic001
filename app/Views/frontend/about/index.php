@@ -32,11 +32,6 @@
 							<li><?= ucwords($config_menu->about) ?></li>
 						</ul>
 					</div>
-					<div class="page_header_right">
-						<form class="search">
-							<input class="search_input" type="text" value="<?= ucfirst($config_menu->search_placeholder) ?>" placeholder="<?= ucfirst($config_menu->search_placeholder) ?>" />
-						</form>
-					</div>
 				</div>
 				<div class="clearfix">
 					<div class="gallery_item_details_list clearfix page_margin_top">
@@ -45,7 +40,7 @@
 								<div class="column_left">
 									<div class="gallery_box">
 										<ul class="image_carousel">
-											<?php for ($i = 1; $i <= 6; $i++) {
+											<?php for ($i = 1; $i <= 3; $i++) {
 												$image = "image" . (string)$i;
 												if ($about->$image == null) continue; ?>
 												<li class="current_slide">
@@ -94,11 +89,6 @@
 												</a>
 												<div class="text">
 													<?= ucfirst($value->answer) ?>
-													<div class="item_footer clearfix">
-														<a title="<?= ucfirst($config_menu->read_more) ?>" href="#" class="more">
-															<?= ucfirst($config_menu->read_more) ?> &rarr;
-														</a>
-													</div>
 												</div>
 											</li>
 										</ul>
@@ -118,11 +108,6 @@
 										</a>
 										<div class="text">
 											<?= ucfirst($value->description) ?>
-											<div class="item_footer clearfix">
-												<a title="<?= ucfirst($config_menu->read_more) ?>" href="#" class="more">
-													<?= ucfirst($config_menu->read_more) ?> &rarr;
-												</a>
-											</div>
 										</div>
 									</li>
 								<?php } ?>
